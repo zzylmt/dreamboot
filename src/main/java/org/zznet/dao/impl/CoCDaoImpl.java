@@ -9,7 +9,6 @@ import org.zznet.entity.ThePage;
 /**
  * Created by zz on 2017/1/10.
  */
-
 @Service("cocdao")
 @Transactional
 public class CoCDaoImpl implements CoCDao {
