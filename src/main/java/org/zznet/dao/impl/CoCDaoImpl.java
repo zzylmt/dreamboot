@@ -1,10 +1,13 @@
 package org.zznet.dao.impl;
 
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.zznet.dao.CoCDao;
 import org.zznet.entity.CoCInfo;
 import org.zznet.entity.ThePage;
+
+import javax.annotation.Resource;
 
 /**
  * Created by zz on 2017/1/10.
@@ -12,6 +15,9 @@ import org.zznet.entity.ThePage;
 @Service("cocdao")
 @Transactional
 public class CoCDaoImpl implements CoCDao {
+    @Resource
+    private JdbcTemplate jdbcTemplate;
+
     @Override
     public CoCInfo getCoC(int id) {
         return null;
