@@ -23,6 +23,16 @@ public class MerchantInfo {
     private String createdate;
     private int mstatus;
 
+    private String cocname;
+
+    public String getCocname() {
+        return cocname;
+    }
+
+    public void setCocname(String cocname) {
+        this.cocname = cocname;
+    }
+
     public int getCreaterid() {
         return createrid;
     }
