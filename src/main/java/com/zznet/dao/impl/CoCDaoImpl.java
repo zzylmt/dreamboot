@@ -122,8 +122,9 @@ public class CoCDaoImpl implements CoCDao, PageSize {
         ThePage<CoCInfo> cocinfopage = new ThePage<>();
 
         String sql = "select a.id, a.cocname, a.province_code, a.city_code, a.area_code, a.memo, a.headpic, a.contact, a.telno, a.addr, a.createrid, a" +
-                ".createdate, a.cstatus,b.nickname from cocinfo as a LEFT JOIN dbadmin b on a.createrid=b.id where a.cocname like '%?%' order by a.createdate limit ?,?";
-        String sql_count = "select count(*) from cocinfo as a LEFT JOIN dbadmin b on a.createrid=b.id where a.cocname like '%?%' ";
+                ".createdate, a.cstatus,b.nickname from cocinfo as a LEFT JOIN dbadmin b on a.createrid=b.id where a.cocname like ? order by a.createdate " +
+                "limit ?,?";
+        String sql_count = "select count(*) from cocinfo as a LEFT JOIN dbadmin b on a.createrid=b.id where a.cocname like ? ";
 
         if (pageno <= 0) {
             pageno = 1;
@@ -150,14 +151,12 @@ public class CoCDaoImpl implements CoCDao, PageSize {
             return a;
         };
 
-        totalrecord = jdbcTemplate.queryForObject(sql_count,
-                new Object[]{cocname}, Integer.class);
+        totalrecord = jdbcTemplate.queryForObject(sql_count, new Object[]{"%" + cocname + "%"}, Integer.class);
         cocinfopage.setTotalrecord(totalrecord);
 
         totalpage = (int) Math.ceil((double) totalrecord / (double) pagesize);
 
-        cocinfopage.setPageItems(jdbcTemplate.query(sql, new Object[]{cocname,
-                startrecord, pagesize}, mapper));
+        cocinfopage.setPageItems(jdbcTemplate.query(sql, new Object[]{"%" + cocname + "%", startrecord, pagesize}, mapper));
 
         cocinfopage.setCurrent(pageno);
         if (totalpage <= 0) {

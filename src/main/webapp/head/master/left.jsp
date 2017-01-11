@@ -1,4 +1,4 @@
-<%@ page language="java" import="org.zznet.entity.DBadmin" pageEncoding="UTF-8" %>
+<%@ page language="java" import="com.zznet.entity.DBadmin" pageEncoding="UTF-8" %>
 <%
     boolean isLegal = false;
     DBadmin admininfo = (DBadmin) session.getAttribute("dbadmininfo");
@@ -68,7 +68,7 @@
                             class="fa fa-circle-o"></i> 新增商会 </a></li>
                     <li class="<% if("2".equalsIgnoreCase(childnode) && "2".equalsIgnoreCase(parentnode))
                     {out.print("active");}%>"><a
-                            href="${pageContext.request.contextPath}/sys/CoClist?curpageno=1"><i
+                            href="${pageContext.request.contextPath}/sys/coclist?cocname=&curpageno=1"><i
                             class="fa fa-circle-o"></i> 商会列表 </a></li>
                 </ul>
             </li>

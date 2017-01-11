@@ -1,30 +1,32 @@
 package com.zznet.controller;
 
+import com.zznet.dao.CoCDao;
+import com.zznet.entity.CoCInfo;
+import com.zznet.entity.ThePage;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import com.zznet.dao.GoodsDao;
-import com.zznet.entity.GoodsInfo;
-import com.zznet.entity.ThePage;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * Created by zz on 2016/10/1.
+ * Created by zz on 2017/1/11.
  */
 @Controller
-public class GoodsController {
-    @Resource(name = "goodsdao")
-    private GoodsDao goodsDaoImpl;
+public class CoCController {
+    @Resource(name = "cocdao")
+    private CoCDao cocDaoImpl;
 
-    @RequestMapping("/sys/goodslist")
-    public String sysarticlelist(HttpServletRequest request, @RequestParam(value = "createrid") int createrid, @RequestParam(value = "curpageno") int curpageno) throws Exception {
+    @RequestMapping("/sys/coclist")
+    public String sysarticlelist(HttpServletRequest request, @RequestParam(value = "cocname") String cocname, @RequestParam(value = "curpageno") int curpageno)
+            throws Exception {
+
         try {
-            ThePage<GoodsInfo> goodspage = new ThePage<>();
+            ThePage<CoCInfo> goodspage = new ThePage<>();
 
             if (curpageno != -1) {
-                goodspage = goodsDaoImpl.getAreaPageByCreater(createrid, curpageno);
+                goodspage = cocDaoImpl.getCoCByName(cocname, curpageno);
             }
 
             int prepage;
@@ -47,11 +49,13 @@ public class GoodsController {
             request.setAttribute("currentpageno", goodspage.getCurrent());
             request.setAttribute("nextpage", nextpage);
             request.setAttribute("prepage", prepage);
+
+            request.setAttribute("cocname", cocname);
         } catch (Exception e) {
             e.printStackTrace();
             return "sys/login";
         }
 
-        return "sys/goodslist";
+        return "sys/coclist";
     }
 }
