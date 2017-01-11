@@ -1,11 +1,11 @@
-package org.zznet.dao.impl;
+package com.zznet.dao.impl;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.zznet.dao.CoCDao;
-import org.zznet.entity.CoCInfo;
-import org.zznet.entity.ThePage;
+import com.zznet.dao.CoCDao;
+import com.zznet.entity.CoCInfo;
+import com.zznet.entity.ThePage;
 
 import javax.annotation.Resource;
 
