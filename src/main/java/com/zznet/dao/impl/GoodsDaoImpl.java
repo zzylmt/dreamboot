@@ -1,15 +1,18 @@
 package com.zznet.dao.impl;
 
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
-import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 import com.zznet.common.PageSize;
 import com.zznet.dao.GoodsDao;
 import com.zznet.entity.GoodsInfo;
 import com.zznet.entity.ThePage;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
+import org.springframework.jdbc.support.GeneratedKeyHolder;
+import org.springframework.jdbc.support.KeyHolder;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.sql.PreparedStatement;
 
 /**
  * Created by zz on 2016/12/23.
@@ -19,6 +22,70 @@ import javax.annotation.Resource;
 public class GoodsDaoImpl implements GoodsDao, PageSize {
     @Resource
     private JdbcTemplate jdbcTemplate;
+
+    public GoodsInfo addGoods(final GoodsInfo goods_old) {
+
+        final String mysql = "INSERT INTO goodsinfo (goodspic,goodstitle,goodsname,memo,gprice,salesurl,merchantid,createrid,createdate,goodsclass,goodcount," +
+                "readcount,score,gstatus ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+
+        GoodsInfo goodsinfo;
+        KeyHolder keyHolder = new GeneratedKeyHolder();
+
+        this.jdbcTemplate.update(connection -> {
+                    PreparedStatement ps = connection.prepareStatement(mysql,
+                            new String[]{"id"});
+                    ps.setString(1, goods_old.getGoodspic());
+                    ps.setString(2, goods_old.getGoodstitle());
+                    ps.setString(3, goods_old.getGoodsname());
+                    ps.setString(4, goods_old.getMemo());
+                    ps.setBigDecimal(5, goods_old.getGprice());
+                    ps.setString(6, goods_old.getSalesurl());
+                    ps.setInt(7, goods_old.getMerchantid());
+                    ps.setInt(8, goods_old.getCreaterid());
+                    ps.setString(9, goods_old.getCreatedate());
+                    ps.setInt(10, goods_old.getGoodsclass());
+                    ps.setInt(11, goods_old.getGoodcount());
+                    ps.setInt(12, goods_old.getReadcount());
+                    ps.setBigDecimal(13, goods_old.getScore());
+                    ps.setInt(14, goods_old.getGstatus());
+                    return ps;
+                }
+                , keyHolder);
+        goodsinfo = goods_old;
+        goodsinfo.setId(keyHolder.getKey().intValue());
+
+        return goodsinfo;
+    }
+
+    @Override
+    public boolean delete(int id) {
+        String mysql = "DELETE from goodsinfo where id=?";
+
+        boolean result = false;
+
+        try {
+            this.jdbcTemplate.update(mysql, id);
+            result = true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+
+    @Override
+    public boolean update(GoodsInfo goodsinfo) {
+        String mysql = "update goodsinfo set goodspic=?,goodstitle=?,goodsname=?,memo=?,gprice=?,salesurl=?,merchantid=?,createrid=?,createdate=?,goodsclass=?,goodcount=?,readcount=?,score=?,gstatus=? where id=?";
+
+        boolean result = false;
+
+        try {
+            this.jdbcTemplate.update(mysql, goodsinfo.getGoodspic(), goodsinfo.getGoodstitle(), goodsinfo.getGoodsname(), goodsinfo.getMemo(), goodsinfo.getGprice(), goodsinfo.getSalesurl(), goodsinfo.getMerchantid(), goodsinfo.getCreaterid(), goodsinfo.getCreatedate(), goodsinfo.getGoodsclass(), goodsinfo.getGoodcount(), goodsinfo.getReadcount(), goodsinfo.getScore(), goodsinfo.getGstatus(), goodsinfo.getId());
+            result = true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
 
     @Override
     public GoodsInfo getGoods(int id) {

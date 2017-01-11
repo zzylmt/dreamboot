@@ -1,12 +1,12 @@
 package com.zznet.dao.impl;
 
+import com.zznet.dao.DBadminDao;
+import com.zznet.entity.DBadmin;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-import com.zznet.dao.DBadminDao;
-import com.zznet.entity.DBadmin;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -62,10 +62,31 @@ public class DBadminDaoImpl implements DBadminDao {
     }
 
     public boolean update(DBadmin userinfo) {
-        return false;
+        String mysql = "update dbadmin set username=?,pswd=?,userlevel=?,nickname=?,roleid=?,mobileno=?,email=? where id=?";
+
+        boolean result = false;
+
+        try {
+            this.jdbcTemplate.update(mysql, userinfo.getUsername(), userinfo.getPswd(), userinfo.getUserlevel(), userinfo.getNickname(),
+                    userinfo.getRoleid(), userinfo.getMobileno(), userinfo.getEmail(), userinfo.getId());
+            result = true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
     }
 
     public boolean delete(int id) {
-        return false;
+        String mysql = "delete from dbadmin where id=?";
+
+        boolean result = false;
+
+        try {
+            this.jdbcTemplate.update(mysql, id);
+            result = true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
     }
 }

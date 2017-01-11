@@ -71,6 +71,4 @@ public class ColumnDaoImpl implements ColumnDao {
         }
         return result;
     }
-
-
 }

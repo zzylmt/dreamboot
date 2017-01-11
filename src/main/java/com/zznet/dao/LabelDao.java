@@ -8,7 +8,7 @@ import com.zznet.entity.ThePage;
  * Created by zz on 2016/9/28 15:59.
  */
 public interface LabelDao {
-    LabelInfo addLabel();
+    LabelInfo addLabel(final LabelInfo label_old);
 
     boolean delete(int id);
 
