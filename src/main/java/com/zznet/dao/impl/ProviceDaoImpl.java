@@ -23,7 +23,7 @@ public class ProviceDaoImpl implements ProviceDao, PageSize {
 
     @Override
     public List<ProvinceInfo> getProviceList() {
-        String mysql = "select a.code, a.name from provinces as a";
+        String mysql = "select a.code, a.name from province as a";
         List<ProvinceInfo> provincesList = new ArrayList<>();
         try {
             RowMapper<ProvinceInfo> mapper = (rs, rowNum) -> {
@@ -42,7 +42,7 @@ public class ProviceDaoImpl implements ProviceDao, PageSize {
 
     @Override
     public List<ProvinceInfo> getProviceList(String name) {
-        String mysql = "select a.code, a.name from provinces as a where a.name like '%?%'";
+        String mysql = "select a.code, a.name from province as a where a.name like ?";
         List<ProvinceInfo> provincesList = new ArrayList<>();
         try {
             RowMapper<ProvinceInfo> mapper = (rs, rowNum) -> {
@@ -51,7 +51,7 @@ public class ProviceDaoImpl implements ProviceDao, PageSize {
                 a.setName(rs.getString(2));
                 return a;
             };
-            provincesList = jdbcTemplate.query(mysql, new Object[]{name}, mapper);
+            provincesList = jdbcTemplate.query(mysql, new Object[]{"%"+name+"%"}, mapper);
         } catch (NullPointerException e) {
             e.printStackTrace();
         }
@@ -61,7 +61,7 @@ public class ProviceDaoImpl implements ProviceDao, PageSize {
 
     @Override
     public ProvinceInfo getProvice(String code) {
-        String sql = "select a.code, a.name from provinces as a where a.code = ? ";
+        String sql = "select a.code, a.name from province as a where a.code = ? ";
 
         ProvinceInfo articleInfo = new ProvinceInfo();
         try {

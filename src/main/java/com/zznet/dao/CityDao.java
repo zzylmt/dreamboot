@@ -10,6 +10,8 @@ import java.util.List;
 public interface CityDao {
     List<CityInfo> getCityList();
 
+    List<CityInfo> getCityListByParent(String parentcode);
+
     CityInfo getCity(String code);
 
     List<CityInfo> getCityList(String name);

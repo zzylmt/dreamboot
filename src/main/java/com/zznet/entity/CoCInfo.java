@@ -5,7 +5,7 @@ package com.zznet.entity;
  */
 public class CoCInfo {
     private int id;
-    private String CoCname;
+    private String cocname;
     private String province_code;
     private String city_code;
     private String area_code;
@@ -17,6 +17,60 @@ public class CoCInfo {
     private int createrid;
     private String createdate;
     private int cstatus;
+    private String cstatusname;
+
+    public String getCstatusname() {
+        return cstatusname;
+    }
+
+    public void setCstatusname(String cstatusname) {
+        this.cstatusname = cstatusname;
+    }
+
+    public String getCocname() {
+        return cocname;
+    }
+
+    public void setCocname(String cocname) {
+        this.cocname = cocname;
+    }
+
+    private String provincename;
+    private String cityname;
+    private String areaname;
+    private String creatername;
+
+    public String getCreatername() {
+        return creatername;
+    }
+
+    public void setCreatername(String creatername) {
+        this.creatername = creatername;
+    }
+
+    public String getProvincename() {
+        return provincename;
+    }
+
+    public void setProvincename(String provincename) {
+        this.provincename = provincename;
+    }
+
+    public String getCityname() {
+        return cityname;
+    }
+
+    public void setCityname(String cityname) {
+        this.cityname = cityname;
+    }
+
+    public String getAreaname() {
+        return areaname;
+    }
+
+    public void setAreaname(String areaname) {
+        this.areaname = areaname;
+    }
 
     public int getCreaterid() {
         return createrid;
@@ -40,14 +94,6 @@ public class CoCInfo {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getCoCname() {
-        return CoCname;
-    }
-
-    public void setCoCname(String coCname) {
-        CoCname = coCname;
     }
 
     public String getProvince_code() {

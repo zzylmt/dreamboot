@@ -10,6 +10,8 @@ import java.util.List;
 public interface StreetDao {
     List<StreetInfo> getStreetList();
 
+    List<StreetInfo> getStreetListByParent(String parentcode);
+
     StreetInfo getStreet(String code);
 
     List<StreetInfo> getStreetList(String name);

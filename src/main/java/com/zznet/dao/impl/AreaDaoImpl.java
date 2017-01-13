@@ -1,12 +1,12 @@
 package com.zznet.dao.impl;
 
+import com.zznet.common.PageSize;
+import com.zznet.dao.AreaDao;
+import com.zznet.entity.AreaInfo;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-import com.zznet.common.PageSize;
-import com.zznet.dao.AreaDao;
-import com.zznet.entity.AreaInfo;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
@@ -43,8 +43,8 @@ public class AreaDaoImpl implements AreaDao, PageSize {
     }
 
     @Override
-    public List<AreaInfo> getAreaList(String name) {
-        String mysql = "select a.code, a.name, a.parent_code from area as a where a.name like '%?%'";
+    public List<AreaInfo> getAreaListByParent(String parentcode) {
+        String mysql = "select a.code, a.name, a.parent_code from area as a where a.parent_code = ?";
         List<AreaInfo> areaList = new ArrayList<>();
         try {
             RowMapper<AreaInfo> mapper = (rs, rowNum) -> {
@@ -54,7 +54,27 @@ public class AreaDaoImpl implements AreaDao, PageSize {
                 a.setParent_code(rs.getString(3));
                 return a;
             };
-            areaList = jdbcTemplate.query(mysql, new Object[]{name}, mapper);
+            areaList = jdbcTemplate.query(mysql, new Object[]{parentcode}, mapper);
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+        }
+
+        return areaList;
+    }
+
+    @Override
+    public List<AreaInfo> getAreaList(String name) {
+        String mysql = "select a.code, a.name, a.parent_code from area as a where a.name like ?";
+        List<AreaInfo> areaList = new ArrayList<>();
+        try {
+            RowMapper<AreaInfo> mapper = (rs, rowNum) -> {
+                AreaInfo a = new AreaInfo();
+                a.setCode(rs.getString(1));
+                a.setName(rs.getString(2));
+                a.setParent_code(rs.getString(3));
+                return a;
+            };
+            areaList = jdbcTemplate.query(mysql, new Object[]{"%"+name+"%"}, mapper);
         } catch (NullPointerException e) {
             e.printStackTrace();
         }

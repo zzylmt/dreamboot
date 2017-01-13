@@ -33,7 +33,7 @@ public class CoCDaoImpl implements CoCDao, PageSize {
         jdbcTemplate.update(connection -> {
                     PreparedStatement ps = connection.prepareStatement(mysql,
                             new String[]{"id"});
-                    ps.setString(1, coc_old.getCoCname());
+                    ps.setString(1, coc_old.getCocname());
                     ps.setString(2, coc_old.getProvince_code());
                     ps.setString(3, coc_old.getCity_code());
                     ps.setString(4, coc_old.getArea_code());
@@ -77,7 +77,7 @@ public class CoCDaoImpl implements CoCDao, PageSize {
         boolean result = false;
 
         try {
-            this.jdbcTemplate.update(mysql, cocinfo.getCoCname(), cocinfo.getProvince_code(), cocinfo.getCity_code(), cocinfo.getArea_code(), cocinfo.getMemo()
+            this.jdbcTemplate.update(mysql, cocinfo.getCocname(), cocinfo.getProvince_code(), cocinfo.getCity_code(), cocinfo.getArea_code(), cocinfo.getMemo()
                     , cocinfo.getHeadpic(), cocinfo.getContact(), cocinfo.getTelno(), cocinfo.getAddr(), cocinfo.getCreaterid(), cocinfo.getCreatedate(), cocinfo.getCstatus(), cocinfo.getId());
             result = true;
         } catch (Exception e) {
@@ -97,7 +97,7 @@ public class CoCDaoImpl implements CoCDao, PageSize {
                     new Object[]{id}, (rs, rowNum) -> {
                         CoCInfo a = new CoCInfo();
                         a.setId(rs.getInt(1));
-                        a.setCoCname(rs.getString(2));
+                        a.setCocname(rs.getString(2));
                         a.setProvince_code(rs.getString(3));
                         a.setCity_code(rs.getString(4));
                         a.setArea_code(rs.getString(5));
@@ -122,13 +122,16 @@ public class CoCDaoImpl implements CoCDao, PageSize {
         ThePage<CoCInfo> cocinfopage = new ThePage<>();
 
         String sql = "select a.id, a.cocname, a.province_code, a.city_code, a.area_code, a.memo, a.headpic, a.contact, a.telno, a.addr, a.createrid, a" +
-                ".createdate, a.cstatus,b.nickname from cocinfo as a LEFT JOIN dbadmin b on a.createrid=b.id where a.cocname like ? order by a.createdate " +
-                "limit ?,?";
+                ".createdate, a.cstatus,b.nickname,province.`name` as provincename,city.`name` as cityname,area.`name` as areaname,d1.typename as statusname from cocinfo as a LEFT " +
+                "JOIN dbadmin b on a.createrid=b.id LEFT JOIN province province on a.province_code=province.`code` LEFT JOIN city city on a.city_code=city" +
+                ".`code` LEFT JOIN area area on a.area_code=area.`code` LEFT JOIN dict d1 on d1.typevalue =a.cstatus where a.cocname like ? and " +
+                "d1.itype='iStatus' order by a.createdate limit ?,?";
         String sql_count = "select count(*) from cocinfo as a LEFT JOIN dbadmin b on a.createrid=b.id where a.cocname like ? ";
 
         if (pageno <= 0) {
             pageno = 1;
         }
+
         int startrecord = (pageno - 1) * pagesize;
         int totalrecord;
         int totalpage;
@@ -136,7 +139,7 @@ public class CoCDaoImpl implements CoCDao, PageSize {
         RowMapper<CoCInfo> mapper = (rs, rowNum) -> {
             CoCInfo a = new CoCInfo();
             a.setId(rs.getInt(1));
-            a.setCoCname(rs.getString(2));
+            a.setCocname(rs.getString(2));
             a.setProvince_code(rs.getString(3));
             a.setCity_code(rs.getString(4));
             a.setArea_code(rs.getString(5));
@@ -148,6 +151,11 @@ public class CoCDaoImpl implements CoCDao, PageSize {
             a.setCreaterid(rs.getInt(11));
             a.setCreatedate(rs.getString(12));
             a.setCstatus(rs.getInt(13));
+            a.setCreatername(rs.getString(14));
+            a.setProvincename(rs.getString(15));
+            a.setCityname(rs.getString(16));
+            a.setAreaname(rs.getString(17));
+            a.setCstatusname(rs.getString(18));
             return a;
         };
 

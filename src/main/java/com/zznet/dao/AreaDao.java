@@ -10,6 +10,8 @@ import java.util.List;
 public interface AreaDao {
     List<AreaInfo> getAreaList();
 
+    List<AreaInfo> getAreaListByParent(String parentcode);
+
     AreaInfo getArea(String code);
 
     List<AreaInfo> getAreaList(String name);

@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/fonts/FontAwesome/css/font-awesome.min.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/dist/css/AdminLTE.min.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/dist/css/skins/_all-skins.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/master/sys.css">
 <!--[if lt IE 9]>
 <script src="${pageContext.request.contextPath}/plugins/html5shiv.js"></script>
 <script src="${pageContext.request.contextPath}/plugins/respond.min.js"></script>
