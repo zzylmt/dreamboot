@@ -13,6 +13,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.sql.PreparedStatement;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by zz on 2017/1/10.
@@ -72,7 +74,7 @@ public class CoCDaoImpl implements CoCDao, PageSize {
 
     @Override
     public boolean update(CoCInfo cocinfo) {
-        String mysql = "update cocinfo set a.cocname=?,a.province_code=?,a.city_code=?,a.area_code=?,a.memo=?,a.headpic=?,a.contact=?,a.telno=?,a.addr=?,a.createrid=?,a.createdate=?,a.cstatus where a.id=?";
+        String mysql = "update cocinfo set cocname=?,province_code=?,city_code=?,area_code=?,memo=?,headpic=?,contact=?,telno=?,addr=?,createrid=?,createdate=?,cstatus=? where id=?";
 
         boolean result = false;
 
@@ -173,5 +175,25 @@ public class CoCDaoImpl implements CoCDao, PageSize {
         cocinfopage.setTotalpages(totalpage);
 
         return cocinfopage;
+    }
+
+    @Override
+    public List<CoCInfo> getCoCList() {
+        String mysql = "select a.id, a.cocname from cocinfo as a where a.cstatus=1 order by a.createdate limit 0,100";
+
+        List<CoCInfo> cocList = new ArrayList<>();
+        try {
+            RowMapper<CoCInfo> mapper = (rs, rowNum) -> {
+                CoCInfo a = new CoCInfo();
+                a.setId(rs.getInt(1));
+                a.setCocname(rs.getString(2));
+                return a;
+            };
+            cocList = jdbcTemplate.query(mysql, mapper);
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+        }
+
+        return cocList;
     }
 }

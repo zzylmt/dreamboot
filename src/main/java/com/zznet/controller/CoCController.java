@@ -124,7 +124,7 @@ public class CoCController {
             return "sys/login";
         }
 
-        return "redirect:sys/cocinfo" + cocinfo.getId() + "result=" + result;
+        return "redirect:/sys/cocinfo/" + cocinfo.getId() + "?result=" + result;
     }
 
 }

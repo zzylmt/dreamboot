@@ -15,5 +15,5 @@ public interface GoodsDao {
 
     GoodsInfo getGoods(int id);
 
-    ThePage<GoodsInfo> getAreaPageByCreater(int createrid, int pageno);
+    ThePage<GoodsInfo> getGoodsPageByCreater(int createrid, int pageno);
 }

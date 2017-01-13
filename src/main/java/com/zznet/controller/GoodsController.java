@@ -1,14 +1,18 @@
 package com.zznet.controller;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import com.zznet.dao.DictDao;
 import com.zznet.dao.GoodsDao;
+import com.zznet.entity.Dict;
 import com.zznet.entity.GoodsInfo;
 import com.zznet.entity.ThePage;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * Created by zz on 2016/10/1.
@@ -18,13 +22,16 @@ public class GoodsController {
     @Resource(name = "goodsdao")
     private GoodsDao goodsDaoImpl;
 
-    @RequestMapping("/sys/goodslist")
-    public String sysarticlelist(HttpServletRequest request, @RequestParam(value = "createrid") int createrid, @RequestParam(value = "curpageno") int curpageno) throws Exception {
+    @Resource(name = "dictdao")
+    private DictDao dictDaoImpl;
+
+    @RequestMapping("/sys/mygoodslist")
+    public String sysmygoodslist(HttpServletRequest request, @RequestParam(value = "createrid") int createrid, @RequestParam(value = "curpageno") int curpageno) throws Exception {
         try {
             ThePage<GoodsInfo> goodspage = new ThePage<>();
 
             if (curpageno != -1) {
-                goodspage = goodsDaoImpl.getAreaPageByCreater(createrid, curpageno);
+                goodspage = goodsDaoImpl.getGoodsPageByCreater(createrid, curpageno);
             }
 
             int prepage;
@@ -52,6 +59,22 @@ public class GoodsController {
             return "sys/login";
         }
 
-        return "sys/goodslist";
+        return "sys/mygoodslist";
     }
+
+    @RequestMapping("/sys/goodsinfo/{gid}")
+    public String sysgoodssave(HttpServletRequest request, @PathVariable int gid) throws Exception {
+        try {
+            GoodsInfo goodsinfo = goodsDaoImpl.getGoods(gid);
+            List<Dict> gstatusList = dictDaoImpl.getDictList("iStatus");
+
+
+            request.setAttribute("goodsinfo", goodsinfo);
+            request.setAttribute("gstatusList", gstatusList);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "sys/goodsedit";
+    }
+
 }

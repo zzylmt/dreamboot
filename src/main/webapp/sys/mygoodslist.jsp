@@ -59,7 +59,12 @@
                                     <td></td>
                                     <td>${thelist.goodsclass}</td>
                                     <td>${thelist.goodcount}</td>
-                                    <td></td>
+                                    <td>
+                                        <a href="${pageContext.request.contextPath}/sys/goodsinfo/${thelist.id}"
+                                           class="btn btn-default btn-sm"><i class="fa fa-edit"></i> 详情</a>
+                                        <a href="${pageContext.request.contextPath}/sys/delmygoods?gid=${thelist.id}&createrid=${thelist.createrid}&curpageno=${currentpageno}"
+                                           class="btn btn-default btn-sm"><i class="fa fa-times"></i> 删除</a>
+                                    </td>
                                 </tr>
                             </c:forEach>
                         </c:otherwise>

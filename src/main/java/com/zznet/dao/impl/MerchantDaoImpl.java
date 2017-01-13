@@ -127,8 +127,11 @@ public class MerchantDaoImpl implements MerchantDao, PageSize {
     public ThePage<MerchantInfo> getMerchantByName(String merchantname, int pageno) {
         ThePage<MerchantInfo> merchantpage = new ThePage<>();
 
-        String sql = "select a.id,a.merchantname,a.province_code,a.city_code,a.area_code,a.memo,a.headpic,a.contact,a.telno,a.addr,a.cocid,c.cocname,a.goodcount,a.score,a.createrid,a.createdate,a.mstatus, \tb.nickname from merchantinfo as a left join dbadmin b on a.createrid = b.id left join cocinfo c on a.cocid=c.id where a.merchantname like '%?%' order by a.createdate limit ?,?";
-        String sql_count = "select count(*) from merchantinfo as a left join dbadmin b on a.createrid = b.id left join cocinfo c on a.cocid=c.id where a.merchantname like '%?%' ";
+        String sql = "select a.id,a.merchantname,a.province_code,a.city_code,a.area_code,a.memo,a.headpic,a.contact,a.telno,a.addr,a.cocid,c.cocname,a" +
+                ".goodcount,a.score,a.createrid,a.createdate,a.mstatus, b.nickname from merchantinfo as a left join dbadmin b on a.createrid = b.id left join" +
+                " cocinfo c on a.cocid=c.id where a.merchantname like ? order by a.createdate limit ?,?";
+        String sql_count = "select count(*) from merchantinfo as a left join dbadmin b on a.createrid = b.id left join cocinfo c on a.cocid=c.id where a" +
+                ".merchantname like ? ";
 
         if (pageno <= 0) {
             pageno = 1;
@@ -160,12 +163,12 @@ public class MerchantDaoImpl implements MerchantDao, PageSize {
         };
 
         totalrecord = jdbcTemplate.queryForObject(sql_count,
-                new Object[]{merchantname}, Integer.class);
+                new Object[]{"%" + merchantname + "%"}, Integer.class);
         merchantpage.setTotalrecord(totalrecord);
 
         totalpage = (int) Math.ceil((double) totalrecord / (double) pagesize);
 
-        merchantpage.setPageItems(jdbcTemplate.query(sql, new Object[]{merchantname,
+        merchantpage.setPageItems(jdbcTemplate.query(sql, new Object[]{"%" + merchantname + "%",
                 startrecord, pagesize}, mapper));
 
         merchantpage.setCurrent(pageno);

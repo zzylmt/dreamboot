@@ -86,7 +86,7 @@
                             class="fa fa-circle-o"></i> 新增商户 </a></li>
                     <li class="<% if("2".equalsIgnoreCase(childnode) && "3".equalsIgnoreCase(parentnode))
                     {out.print("active");}%>"><a
-                            href="${pageContext.request.contextPath}/sys/merchantlist?curpageno=1"><i
+                            href="${pageContext.request.contextPath}/sys/merchantlist?curpageno=1&mername="><i
                             class="fa fa-circle-o"></i> 商户列表 </a></li>
                 </ul>
             </li>
@@ -104,8 +104,8 @@
                             class="fa fa-circle-o"></i> 新增商品 </a></li>
                     <li class="<% if("2".equalsIgnoreCase(childnode) && "5".equalsIgnoreCase(parentnode))
                     {out.print("active");}%>"><a
-                            href="${pageContext.request.contextPath}/sys/goodslist?createrid=0&curpageno=1"><i
-                            class="fa fa-circle-o"></i> 商品查询 </a></li>
+                            href="${pageContext.request.contextPath}/sys/mygoodslist?createrid=<%=sid%>&curpageno=1"><i
+                            class="fa fa-circle-o"></i> 我的商品查询 </a></li>
                 </ul>
             </li>
 

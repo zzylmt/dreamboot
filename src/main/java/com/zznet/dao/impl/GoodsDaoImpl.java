@@ -121,7 +121,7 @@ public class GoodsDaoImpl implements GoodsDao, PageSize {
     }
 
     @Override
-    public ThePage<GoodsInfo> getAreaPageByCreater(int createrid, int pageno) {
+    public ThePage<GoodsInfo> getGoodsPageByCreater(int createrid, int pageno) {
         ThePage<GoodsInfo> goodsinfopage = new ThePage<>();
 
         String sql = "select a.id,a.goodspic,a.goodstitle,a.goodsname,a.memo,a.gprice,a.salesurl,a.merchantid,a.createrid,a.createdate,a.goodsclass,a" +
