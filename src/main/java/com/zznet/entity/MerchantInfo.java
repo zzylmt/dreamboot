@@ -24,6 +24,43 @@ public class MerchantInfo {
     private int mstatus;
 
     private String cocname;
+    private String creatername;
+
+    public String getCreatername() {
+        return creatername;
+    }
+
+    public void setCreatername(String creatername) {
+        this.creatername = creatername;
+    }
+
+    private String provincename;
+    private String cityname;
+    private String areaname;
+
+    public String getProvincename() {
+        return provincename;
+    }
+
+    public void setProvincename(String provincename) {
+        this.provincename = provincename;
+    }
+
+    public String getCityname() {
+        return cityname;
+    }
+
+    public void setCityname(String cityname) {
+        this.cityname = cityname;
+    }
+
+    public String getAreaname() {
+        return areaname;
+    }
+
+    public void setAreaname(String areaname) {
+        this.areaname = areaname;
+    }
 
     public String getCocname() {
         return cocname;

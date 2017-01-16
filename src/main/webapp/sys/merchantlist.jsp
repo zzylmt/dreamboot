@@ -10,7 +10,7 @@
 <body class="hold-transition skin-blue sidebar-mini">
 <jsp:include page="${pageContext.request.contextPath}/head/master/top.jsp"/>
 <jsp:include page="${pageContext.request.contextPath}/head/master/left.jsp">
-    <jsp:param name="parentnode" value="5"/>
+    <jsp:param name="parentnode" value="3"/>
     <jsp:param name="childnode" value="2"/>
 </jsp:include>
 <div class="content-wrapper">
@@ -79,10 +79,10 @@
                                                                 <c:when test="${thelist.mstatus==0}">class="warning"</c:when>
                                                             </c:choose>>
                                                         <td>${thelist.merchantname}</td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
+                                                        <td>${thelist.provincename} ${thelist.cityname} ${thelist.areaname}</td>
+                                                        <td>${thelist.contact}</td>
+                                                        <td>${thelist.telno}</td>
+                                                        <td>${thelist.cocname}</td>
                                                         <td>
                                                             <a href="${pageContext.request.contextPath}/sys/merchantinfo/${thelist.id}"
                                                                class="btn btn-default btn-sm"><i class="fa fa-edit"></i> 详情</a>

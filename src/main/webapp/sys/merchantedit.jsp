@@ -36,13 +36,13 @@
                   id="goodsform">
                 <input type="hidden" id="mid" name="mid" value="${merchantinfo.id }">
                 <div class="form-group">
-                    <label for="goodsname" class="col-md-1 control-label"><i class="fa fa-fw fa-pencil-square-o"></i>
+                    <label for="merchantname" class="col-md-1 control-label"><i class="fa fa-fw fa-pencil-square-o"></i>
                         商品名:</label>
                     <div class="col-md-5">
-                        <input type="text" class="form-control" id="goodsname" name="goodsname" placeholder="商户名" value="${merchantinfo.merchantname }">
+                        <input type="text" class="form-control" id="merchantname" name="merchantname" placeholder="商户名" value="${merchantinfo.merchantname }">
                     </div>
                     <label for="cocid" class="col-md-1 control-label"><i class="fa fa-fw fa-pencil-square-o"></i>
-                        标题:</label>
+                        所属商会:</label>
                     <div class="col-md-5">
                         <select class="select2-data-array form-control" id="cocid" name="cocid" autocomplete="off">
                             <c:forEach items="${coclist}" var="coclist">
@@ -53,7 +53,6 @@
                         </select>
                     </div>
                 </div>
-
 
                 <div class="form-group">
                     <label for="province_code" class="col-md-1 control-label"><i class="fa fa-fw fa-pencil-square-o"></i>
@@ -97,7 +96,7 @@
                 <div class="form-group">
                     <div class="col-md-5 col-md-offset-1">
                         <img id="pic1img" src="${merchantinfo.headpic }" height="80" width="100">
-                        <input type="hidden" id="merchantpic" name="goodspic" value="${merchantinfo.headpic }">
+                        <input type="hidden" id="headpic" name="headpic" value="${merchantinfo.headpic }">
                         <input type="button" id="pic1" name="pic1" class="btn btn-sm btn-primary btn-flat"
                                value="选择展示缩略图">
                     </div>
@@ -118,12 +117,20 @@
                     <label for="contact" class="col-md-1 control-label"><i class="fa fa-fw fa-pencil-square-o"></i>
                         联系人:</label>
                     <div class="col-md-5">
-                        <input type="text" class="form-control" id="contact" name="contact" placeholder="联系人" value="">
+                        <input type="text" class="form-control" id="contact" name="contact" placeholder="联系人" value="${merchantinfo.contact }">
                     </div>
                     <label for="telno" class="col-md-1 control-label"><i class="fa fa-fw fa-pencil-square-o"></i>
                         联系电话:</label>
                     <div class="col-md-5">
-                        <input type="text" class="form-control" id="telno" name="telno" placeholder="联系电话" value="">
+                        <input type="text" class="form-control" id="telno" name="telno" placeholder="联系电话" value="${merchantinfo.telno }">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="addr" class="col-md-1 control-label"><i class="fa fa-fw fa-pencil-square-o"></i>
+                        联系人:</label>
+                    <div class="col-md-11">
+                        <input type="text" class="form-control" id="addr" name="addr" placeholder="地址" value="${merchantinfo.addr }">
                     </div>
                 </div>
 

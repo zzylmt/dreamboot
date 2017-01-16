@@ -34,6 +34,40 @@ public class MerchantController {
     @Resource(name = "dictdao")
     private DictDao dictDaoImpl;
 
+
+    @RequestMapping("/sys/merchantsave")
+    public String sysmerchantsave(HttpServletRequest request, @RequestParam(value = "mid") int mid, @RequestParam(value = "merchantname") String merchantname, @RequestParam(value = "cocid") int cocid, @RequestParam(value = "province_code") String
+            province_code, @RequestParam(value = "city_code") String city_code, @RequestParam(value = "area_code") String area_code, @RequestParam(value = "memo")
+                                          String memo, @RequestParam(value = "headpic") String headpic, @RequestParam(value = "contact") String contact,
+                                  @RequestParam(value = "telno") String telno, @RequestParam(value = "addr") String addr, @RequestParam(value = "mstatus") int mstatus)
+            throws Exception {
+        MerchantInfo merchantinfo;
+        boolean result;
+        try {
+            merchantinfo = merchantDaoImpl.getMerchant(mid);
+
+            merchantinfo.setMerchantname(merchantname);
+            merchantinfo.setProvince_code(province_code);
+            merchantinfo.setArea_code(area_code);
+            merchantinfo.setCity_code(city_code);
+            merchantinfo.setMemo(memo);
+            merchantinfo.setHeadpic(headpic);
+            merchantinfo.setContact(contact);
+            merchantinfo.setTelno(telno);
+            merchantinfo.setAddr(addr);
+            merchantinfo.setCocid(cocid);
+            merchantinfo.setMstatus(mstatus);
+
+            result = merchantDaoImpl.update(merchantinfo);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "sys/login";
+        }
+
+        return "redirect:/sys/merchantinfo/" + merchantinfo.getId() + "?result=" + result;
+    }
+
+
     @RequestMapping("/sys/merchantlist")
     public String sysmerchantlist(HttpServletRequest request, @RequestParam(value = "mername") String mername, @RequestParam(value = "curpageno") int
             curpageno)

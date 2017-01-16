@@ -76,7 +76,7 @@ public class MerchantDaoImpl implements MerchantDao, PageSize {
 
     @Override
     public boolean update(MerchantInfo merchantinfo) {
-        String mysql = "update merchantinfo set a.merchantname=?,a.province_code=?,a.city_code=?,a.area_code=?,a.memo=?,a.headpic=?,a.contact=?,a.telno=?,a.addr=?,a.cocid=?,a.goodscount=?,a.score=?,a.createrid=?,a.createdate=?,a.mstatus where a.id=?";
+        String mysql = "update merchantinfo set merchantname=?,province_code=?,city_code=?,area_code=?,memo=?,headpic=?,contact=?,telno=?,addr=?,cocid=?,goodcount=?,score=?,createrid=?,createdate=?,mstatus=? where id=?";
 
         boolean result = false;
 
@@ -128,9 +128,11 @@ public class MerchantDaoImpl implements MerchantDao, PageSize {
         ThePage<MerchantInfo> merchantpage = new ThePage<>();
 
         String sql = "select a.id,a.merchantname,a.province_code,a.city_code,a.area_code,a.memo,a.headpic,a.contact,a.telno,a.addr,a.cocid,c.cocname,a" +
-                ".goodcount,a.score,a.createrid,a.createdate,a.mstatus, b.nickname from merchantinfo as a left join dbadmin b on a.createrid = b.id left join" +
-                " cocinfo c on a.cocid=c.id where a.merchantname like ? order by a.createdate limit ?,?";
-        String sql_count = "select count(*) from merchantinfo as a left join dbadmin b on a.createrid = b.id left join cocinfo c on a.cocid=c.id where a" +
+                ".goodcount,a.score,a.createrid,a.createdate,a.mstatus, b.nickname,province.`name` as provincename,city.`name` as cityname,area.`name` as areaname from merchantinfo as a left join dbadmin b on a.createrid = b.id left join" +
+                " cocinfo c on a.cocid=c.id LEFT JOIN province province on a.province_code=province.`code` LEFT JOIN city city on a.city_code=city.`code` " +
+                "LEFT JOIN area area on a.area_code=area.`code` where a.merchantname like ? order by a.createdate limit ?,?";
+        String sql_count = "select count(*) from merchantinfo as a left join dbadmin b on a.createrid = b.id left join cocinfo c on a.cocid=c.id LEFT JOIN " +
+                "province province on a.province_code=province.`code` LEFT JOIN city city on a.city_code=city.`code` LEFT JOIN area area on a.area_code=area.`code` where a" +
                 ".merchantname like ? ";
 
         if (pageno <= 0) {
@@ -159,6 +161,10 @@ public class MerchantDaoImpl implements MerchantDao, PageSize {
             a.setCreaterid(rs.getInt(15));
             a.setCreatedate(rs.getString(16));
             a.setMstatus(rs.getInt(17));
+            a.setCreatername(rs.getString(18));
+            a.setProvincename(rs.getString(19));
+            a.setCityname(rs.getString(20));
+            a.setAreaname(rs.getString(21));
             return a;
         };
 
