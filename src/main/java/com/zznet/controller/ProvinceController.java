@@ -1,11 +1,8 @@
 package com.zznet.controller;
 
 import com.zznet.dao.ProviceDao;
-
 import com.zznet.entity.ProvinceInfo;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.JSONObject.*;
+import net.sf.json.JSONObject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -28,11 +25,20 @@ public class ProvinceController {
         response.setContentType("text/xml;charset=utf-8");
         PrintWriter out = null;
         String json = "{}";
-        JSONObject jsonObj = new JSONObject();
-
-        List<ProvinceInfo> provinceList = proviceDaoImpl.getProviceList();
-
+        JSONObject jsonObj = JSONObject.fromObject(json);
+        try {
+            out = response.getWriter();
+            List<ProvinceInfo> provinceList = proviceDaoImpl.getProviceList();
+            jsonObj.put("provinceList", provinceList);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (out != null) {
+                out.println(jsonObj.toString());
+                out.flush();
+                out.close();
+            }
+        }
         return null;
     }
-
 }
