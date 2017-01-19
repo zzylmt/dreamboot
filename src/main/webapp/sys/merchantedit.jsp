@@ -171,6 +171,46 @@
 
         $(".select2-data-array").select2();
 
+        $("#province_code").on("change", function () {
+            $("#city_code").empty();
+            $.ajax({
+                url: "${pageContext.request.contextPath}/getcitylist/" + $("#province_code").val(),
+                contentType: "application/json",
+                type: "post",
+                dataType: "json",
+                timeout: 500000,
+                error: function (xmlHttpRequest, error) {
+                    alert("请求失败");
+                },
+                success: function (data) {
+                    var str = "";
+                    $.each(data.cityList, function (n, value) {
+                        str +="<option value='"+ value.code +"'>" + value.name + "</option>";
+                    });
+                    $("#city_code").append(str);
+                }
+            });
+        });
+        $("#city_code").on("change", function () {
+            $("#area_code").empty();
+            $.ajax({
+                url: "${pageContext.request.contextPath}/getarealist/" + $("#city_code").val(),
+                contentType: "application/json",
+                type: "post",
+                dataType: "json",
+                timeout: 500000,
+                error: function (xmlHttpRequest, error) {
+                    alert("请求失败");
+                },
+                success: function (data) {
+                    var str = "";
+                    $.each(data.areaList, function (n, value) {
+                        str +="<option value='"+ value.code +"'>" + value.name + "</option>";
+                    });
+                    $("#area_code").append(str);
+                }
+            });
+        });
         KindEditor.ready(function (K) {
             var editor = K.editor({
                 resizeType: 1,

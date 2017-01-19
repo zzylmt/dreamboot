@@ -14,5 +14,5 @@ public interface AreaDao {
 
     AreaInfo getArea(String code);
 
-    List<AreaInfo> getAreaList(String name);
+    List<AreaInfo> getAreaList(String name, String pcode);
 }

@@ -63,8 +63,16 @@ public class AreaDaoImpl implements AreaDao, PageSize {
     }
 
     @Override
-    public List<AreaInfo> getAreaList(String name) {
+    public List<AreaInfo> getAreaList(String name, String pcode) {
         String mysql = "select a.code, a.name, a.parent_code from area as a where a.name like ?";
+
+        StringBuilder sb_sql = new StringBuilder();
+
+        if ("".equalsIgnoreCase(pcode)) {
+            sb_sql = sb_sql.append(" and a.parent_code = ").append(pcode);
+        }
+        mysql = mysql + sb_sql;
+
         List<AreaInfo> areaList = new ArrayList<>();
         try {
             RowMapper<AreaInfo> mapper = (rs, rowNum) -> {

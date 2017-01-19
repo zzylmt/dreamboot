@@ -62,9 +62,14 @@ public class CityDaoImpl implements CityDao, PageSize {
     }
 
     @Override
-    public List<CityInfo> getCityList(String name) {
+    public List<CityInfo> getCityList(String name, String pcode) {
         String mysql = "select a.code, a.name, a.parent_code from city as a where a.name like ?";
+        StringBuilder sb_sql = new StringBuilder();
 
+        if ("".equalsIgnoreCase(pcode)) {
+            sb_sql = sb_sql.append(" and a.parent_code = ").append(pcode);
+        }
+        mysql = mysql + sb_sql;
 
         List<CityInfo> cityList = new ArrayList<>();
         try {
@@ -75,7 +80,7 @@ public class CityDaoImpl implements CityDao, PageSize {
                 a.setParent_code(rs.getString(3));
                 return a;
             };
-            cityList = jdbcTemplate.query(mysql, new Object[]{"%"+name+"%"}, mapper);
+            cityList = jdbcTemplate.query(mysql, new Object[]{"%" + name + "%"}, mapper);
         } catch (NullPointerException e) {
             e.printStackTrace();
         }

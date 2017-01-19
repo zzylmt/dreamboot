@@ -14,5 +14,5 @@ public interface CityDao {
 
     CityInfo getCity(String code);
 
-    List<CityInfo> getCityList(String name);
+    List<CityInfo> getCityList(String name, String pcode);
 }
