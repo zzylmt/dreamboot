@@ -97,7 +97,7 @@ public class CoCController {
     }
 
     @RequestMapping("/sys/cocsave")
-    public String syscocsave(HttpServletRequest request, @RequestParam(value = "cocname") String cocname, @RequestParam(value = "province_code") String
+    public String syscocsave(@RequestParam(value = "cocname") String cocname, @RequestParam(value = "province_code") String
             province_code, @RequestParam(value = "city_code") String city_code, @RequestParam(value = "area_code") String area_code, @RequestParam(value = "memo")
                                      String memo, @RequestParam(value = "cocid") int cocid, @RequestParam(value = "headpic") String headpic, @RequestParam(value = "contact") String contact,
                              @RequestParam(value = "telno") String telno, @RequestParam(value = "addr") String addr, @RequestParam(value = "cstatus") int cstatus)

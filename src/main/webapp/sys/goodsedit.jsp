@@ -68,28 +68,50 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="contact" class="col-md-1 control-label"><i class="fa fa-fw fa-pencil-square-o"></i>
-                        联系人:</label>
+                    <label for="gprice" class="col-md-1 control-label"><i class="fa fa-fw fa-pencil-square-o"></i>
+                        价格:</label>
                     <div class="col-md-5">
-                        <input type="text" class="form-control" id="contact" name="contact" placeholder="联系人" value="">
+                        <input type="text" class="form-control" id="gprice" name="gprice" placeholder="价格" value="${goodsinfo.gprice}">
                     </div>
-                    <label for="telno" class="col-md-1 control-label"><i class="fa fa-fw fa-pencil-square-o"></i>
-                        联系电话:</label>
+                    <label for="merchantid" class="col-md-1 control-label"><i class="fa fa-fw fa-pencil-square-o"></i>
+                        所属商户:</label>
                     <div class="col-md-5">
-                        <input type="text" class="form-control" id="telno" name="telno" placeholder="联系电话" value="">
+                        <select class="select2-data-array form-control" id="merchantid" name="merchantid" autocomplete="off">
+                            <c:forEach items="${merchantlist}" var="merchantlist">
+                                <option value="${merchantlist.id}" <c:choose>
+                                    <c:when test="${merchantlist.id==goodsinfo.merchantid }">selected="selected"</c:when>
+                                </c:choose>>${merchantlist.merchantname}</option>
+                            </c:forEach>
+                        </select>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="memo" class="col-md-1 control-label"><i
-                            class="fa fa-fw fa-pencil-square-o"></i>
+                    <label for="salesurl" class="col-md-1 control-label"><i class="fa fa-fw fa-pencil-square-o"></i>
+                        销售网址:</label>
+                    <div class="col-md-5">
+                        <input type="text" class="form-control" id="salesurl" name="salesurl" placeholder="销售网址" value="${goodsinfo.salesurl}">
+                    </div>
+                    <label for="goodsclass" class="col-md-1 control-label"><i class="fa fa-fw fa-pencil-square-o"></i>
+                        商品分类:</label>
+                    <div class="col-md-5">
+                        <select class="select2-data-array form-control" id="goodsclass" name="goodsclass" autocomplete="off">
+                            <c:forEach items="${goodsclassList}" var="goodsclassList">
+                                <option value="${goodsclassList.id}" <c:choose>
+                                    <c:when test="${goodsclassList.id==goodsinfo.goodsclass }">selected="selected"</c:when>
+                                </c:choose>>${goodsclassList.goodsclassname}</option>
+                            </c:forEach>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="memo" class="col-md-1 control-label"><i class="fa fa-fw fa-pencil-square-o"></i>
                         简介:</label>
                     <div class="col-md-11">
                         <textarea class="form-control" id="memo" name="memo">${goodsinfo.memo}</textarea>
                     </div>
                 </div>
-
-
                 <button class="btn btn-primary btn-flat" id="savebtn">保存</button>
             </form>
         </section>
@@ -130,7 +152,7 @@
                         showRemote: false,
                         imageUrl: K('#pic1img').val(),
                         clickFn: function (url) {
-                            $('#pic1img').attr("src", url);
+                            $('#pic1img').attr("src", '${pageContext.request.contextPath}' + url);
                             $('#goodspic').val(url);
                             editor.hideDialog();
                         }

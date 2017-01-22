@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -33,7 +36,6 @@ public class MerchantController {
 
     @Resource(name = "dictdao")
     private DictDao dictDaoImpl;
-
 
     @RequestMapping("/sys/merchantsave")
     public String sysmerchantsave(HttpServletRequest request, @RequestParam(value = "mid") int mid, @RequestParam(value = "merchantname") String merchantname, @RequestParam(value = "cocid") int cocid, @RequestParam(value = "province_code") String
@@ -67,6 +69,35 @@ public class MerchantController {
         return "redirect:/sys/merchantinfo/" + merchantinfo.getId() + "?result=" + result;
     }
 
+    @RequestMapping("/sys/newMerchant")
+    public String sysnewMerchant(HttpSession session, HttpServletRequest request)
+            throws Exception {
+        MerchantInfo merchantinfo_old = new MerchantInfo();
+        MerchantInfo merchantinfo_new;
+        try {
+            merchantinfo_old.setMerchantname("商户名");
+            merchantinfo_old.setProvince_code("360000");
+            merchantinfo_old.setArea_code("361000");
+            merchantinfo_old.setCity_code("360101");
+            merchantinfo_old.setMemo("商户介绍");
+            merchantinfo_old.setAddr("地址");
+            merchantinfo_old.setMstatus(0);
+
+            DBadmin admininfo = (DBadmin) session.getAttribute("dbadmininfo");
+            merchantinfo_old.setCreaterid(admininfo.getId());
+
+            Calendar calendarstart = Calendar.getInstance();
+            merchantinfo_old.setCreatedate(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(calendarstart.getTime()));
+
+            merchantinfo_new = merchantDaoImpl.addMerchant(merchantinfo_old);
+            request.setAttribute("merchantinfo", merchantinfo_new);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "sys/login";
+        }
+
+        return "redirect:/sys/merchantinfo/" + merchantinfo_new.getId();
+    }
 
     @RequestMapping("/sys/merchantlist")
     public String sysmerchantlist(HttpServletRequest request, @RequestParam(value = "mername") String mername, @RequestParam(value = "curpageno") int

@@ -43,7 +43,7 @@ public class GoodsClassDaoImpl implements GoodsClassDao {
 
     @Override
     public List<GoodsClass> getGoodsClass(String classname) {
-        String mysql = "select a.id, a.goodsclassname,a.parentid,a.clevel from goodsclass as a where goodsclassname like '%?%' limit 1,15";
+        String mysql = "select a.id, a.goodsclassname,a.parentid,a.clevel from goodsclass as a where goodsclassname like ? limit 0,50";
         List<GoodsClass> goodsclassList = new ArrayList<>();
         try {
             RowMapper<GoodsClass> mapper = (rs, rowNum) -> {
@@ -54,7 +54,7 @@ public class GoodsClassDaoImpl implements GoodsClassDao {
                 a.setClevel(rs.getInt(4));
                 return a;
             };
-            goodsclassList = jdbcTemplate.query(mysql, mapper);
+            goodsclassList = jdbcTemplate.query(mysql, new Object[]{"%" + classname + "%"}, mapper);
         } catch (NullPointerException e) {
             e.printStackTrace();
         }

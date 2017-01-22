@@ -17,7 +17,7 @@
 <div class="wrapper">
     <jsp:include page="${pageContext.request.contextPath}/head/master/top.jsp"/>
     <jsp:include page="${pageContext.request.contextPath}/head/master/left.jsp">
-        <jsp:param name="parentnode" value="2"/>
+        <jsp:param name="parentnode" value="3"/>
         <jsp:param name="childnode" value="2"/>
     </jsp:include>
 
@@ -45,6 +45,7 @@
                         所属商会:</label>
                     <div class="col-md-5">
                         <select class="select2-data-array form-control" id="cocid" name="cocid" autocomplete="off">
+                            <option value="0">--请选择--</option>
                             <c:forEach items="${coclist}" var="coclist">
                                 <option value="${coclist.id}" <c:choose>
                                     <c:when test="${coclist.id==merchantinfo.cocid }">selected="selected"</c:when>
@@ -142,7 +143,6 @@
                         <textarea class="form-control" id="memo" name="memo">${merchantinfo.memo}</textarea>
                     </div>
                 </div>
-
 
                 <button class="btn btn-primary btn-flat" id="savebtn">保存</button>
             </form>

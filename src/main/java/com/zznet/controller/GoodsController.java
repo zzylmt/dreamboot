@@ -1,10 +1,10 @@
 package com.zznet.controller;
 
 import com.zznet.dao.DictDao;
+import com.zznet.dao.GoodsClassDao;
 import com.zznet.dao.GoodsDao;
-import com.zznet.entity.Dict;
-import com.zznet.entity.GoodsInfo;
-import com.zznet.entity.ThePage;
+import com.zznet.dao.MerchantDao;
+import com.zznet.entity.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.math.BigDecimal;
 import java.util.List;
 
 /**
@@ -24,6 +25,12 @@ public class GoodsController {
 
     @Resource(name = "dictdao")
     private DictDao dictDaoImpl;
+
+    @Resource(name = "merchantdao")
+    private MerchantDao merchantDaoImpl;
+
+    @Resource(name = "goodsclassdao")
+    private GoodsClassDao goodsclassDaoImpl;
 
     @RequestMapping("/sys/mygoodslist")
     public String sysmygoodslist(HttpServletRequest request, @RequestParam(value = "createrid") int createrid, @RequestParam(value = "curpageno") int curpageno) throws Exception {
@@ -63,18 +70,54 @@ public class GoodsController {
     }
 
     @RequestMapping("/sys/goodsinfo/{gid}")
-    public String sysgoodssave(HttpServletRequest request, @PathVariable int gid) throws Exception {
+    public String sysgoodsinfo(HttpServletRequest request, @PathVariable int gid) throws Exception {
         try {
             GoodsInfo goodsinfo = goodsDaoImpl.getGoods(gid);
             List<Dict> gstatusList = dictDaoImpl.getDictList("iStatus");
-
+            List<GoodsClass> goodsclassList = goodsclassDaoImpl.getGoodsClass("");
+            List<MerchantInfo> merchantlist = merchantDaoImpl.getMerchantByName("", 1).getPageItems();
 
             request.setAttribute("goodsinfo", goodsinfo);
             request.setAttribute("gstatusList", gstatusList);
+            request.setAttribute("goodsclassList", goodsclassList);
+            request.setAttribute("merchantlist", merchantlist);
         } catch (Exception e) {
             e.printStackTrace();
         }
         return "sys/goodsedit";
     }
 
+    @RequestMapping("/sys/goodssave")
+    public String sysgoodssave(@RequestParam(value = "gid") int gid,
+                               @RequestParam(value = "goodspic") String goodspic,
+                               @RequestParam(value = "goodstitle") String goodstitle,
+                               @RequestParam(value = "goodsname") String goodsname,
+                               @RequestParam(value = "memo") String memo,
+                               @RequestParam(value = "gprice") BigDecimal gprice,
+                               @RequestParam(value = "salesurl") String salesurl,
+                               @RequestParam(value = "merchantid") int merchantid,
+                               @RequestParam(value = "goodsclass") int goodsclass,
+                               @RequestParam(value = "gstatus") int gstatus) throws Exception {
+        boolean result;
+        GoodsInfo goodsinfo;
+        try {
+            goodsinfo = goodsDaoImpl.getGoods(gid);
+            
+            goodsinfo.setGprice(gprice);
+            goodsinfo.setGoodspic(goodspic);
+            goodsinfo.setGoodstitle(goodstitle);
+            goodsinfo.setGoodsname(goodsname);
+            goodsinfo.setMemo(memo);
+            goodsinfo.setSalesurl(salesurl);
+            goodsinfo.setMerchantid(merchantid);
+            goodsinfo.setGstatus(gstatus);
+            goodsinfo.setGoodsclass(goodsclass);
+
+            result = goodsDaoImpl.update(goodsinfo);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "sys/login";
+        }
+        return "redirect:/sys/goodsinfo/" + goodsinfo.getId() + "?result=" + result;
+    }
 }
