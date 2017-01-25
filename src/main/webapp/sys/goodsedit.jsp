@@ -17,7 +17,7 @@
 <div class="wrapper">
     <jsp:include page="${pageContext.request.contextPath}/head/master/top.jsp"/>
     <jsp:include page="${pageContext.request.contextPath}/head/master/left.jsp">
-        <jsp:param name="parentnode" value="2"/>
+        <jsp:param name="parentnode" value="5"/>
         <jsp:param name="childnode" value="2"/>
     </jsp:include>
 
@@ -32,8 +32,7 @@
             </ol>
         </section>
         <section class="content">
-            <form action="${pageContext.request.contextPath}/sys/goodssave" class="form-horizontal" method="post"
-                  id="goodsform">
+            <form action="${pageContext.request.contextPath}/sys/goodssave" class="form-horizontal" method="post" id="goodsform">
                 <input type="hidden" id="gid" name="gid" value="${goodsinfo.id }">
                 <div class="form-group">
                     <label for="goodsname" class="col-md-1 control-label"><i class="fa fa-fw fa-pencil-square-o"></i>

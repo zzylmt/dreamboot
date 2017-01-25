@@ -26,7 +26,7 @@ public class GoodsDaoImpl implements GoodsDao, PageSize {
     public GoodsInfo addGoods(final GoodsInfo goods_old) {
 
         final String mysql = "INSERT INTO goodsinfo (goodspic,goodstitle,goodsname,memo,gprice,salesurl,merchantid,createrid,createdate,goodsclass,goodcount," +
-                "readcount,score,gstatus ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+                "readcount,score,gstatus ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
         GoodsInfo goodsinfo;
         KeyHolder keyHolder = new GeneratedKeyHolder();

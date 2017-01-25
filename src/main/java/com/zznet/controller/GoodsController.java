@@ -12,7 +12,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.math.BigDecimal;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -31,6 +34,37 @@ public class GoodsController {
 
     @Resource(name = "goodsclassdao")
     private GoodsClassDao goodsclassDaoImpl;
+
+    @RequestMapping("/sys/newgoods")
+    public String sysnewgoods(HttpSession session, HttpServletRequest request) throws Exception {
+        GoodsInfo goodsinfo_old = new GoodsInfo();
+        GoodsInfo goodsinfo_new;
+        try {
+            goodsinfo_old.setGoodstitle("商品标题");
+            goodsinfo_old.setGoodsname("商品名");
+            goodsinfo_old.setMemo("商品描述");
+            goodsinfo_old.setGprice(new BigDecimal(1));
+
+            DBadmin admininfo = (DBadmin) session.getAttribute("dbadmininfo");
+
+            goodsinfo_old.setCreaterid(admininfo.getId());
+
+            Calendar calendarstart = Calendar.getInstance();
+            goodsinfo_old.setCreatedate(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(calendarstart.getTime()));
+
+            goodsinfo_old.setGoodcount(0);
+            goodsinfo_old.setReadcount(0);
+            goodsinfo_old.setScore(new BigDecimal(0));
+            goodsinfo_old.setGstatus(0);
+            goodsinfo_new = goodsDaoImpl.addGoods(goodsinfo_old);
+            request.setAttribute("goodsinfo", goodsinfo_new);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "sys/login";
+        }
+
+        return "redirect:/sys/goodsinfo/" + goodsinfo_new.getId();
+    }
 
     @RequestMapping("/sys/mygoodslist")
     public String sysmygoodslist(HttpServletRequest request, @RequestParam(value = "createrid") int createrid, @RequestParam(value = "curpageno") int curpageno) throws Exception {
