@@ -41,8 +41,8 @@
                 <a href="#">
                     <i class="fa fa-dashboard"></i> <span>文章管理</span>
                     <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
                 </a>
                 <ul class="treeview-menu">
                     <li class="<% if("1".equalsIgnoreCase(childnode) && "1".equalsIgnoreCase(parentnode)) {out.print("active");}%>">
@@ -59,8 +59,8 @@
                 <a href="#">
                     <i class="fa fa-dashboard"></i> <span>商会管理</span>
                     <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
                 </a>
                 <ul class="treeview-menu">
                     <li class="<% if("1".equalsIgnoreCase(childnode) && "2".equalsIgnoreCase(parentnode))
@@ -77,8 +77,8 @@
                 <a href="#">
                     <i class="fa fa-dashboard"></i> <span>商户管理</span>
                     <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
                 </a>
                 <ul class="treeview-menu">
                     <li class="<% if("1".equalsIgnoreCase(childnode) && "3".equalsIgnoreCase(parentnode))
@@ -95,8 +95,8 @@
                 <a href="#">
                     <i class="fa fa-dashboard"></i> <span>商品管理</span>
                     <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
                 </a>
                 <ul class="treeview-menu">
                     <li class="<% if("1".equalsIgnoreCase(childnode) && "5".equalsIgnoreCase(parentnode))
@@ -110,12 +110,28 @@
             </li>
 
 
+            <li class="treeview <% if("7".equalsIgnoreCase(parentnode)) {out.print("active");}%>">
+                <a href="#">
+                    <i class="fa fa-dashboard"></i> <span>订单管理</span>
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="<% if("1".equalsIgnoreCase(childnode) && "7".equalsIgnoreCase(parentnode))
+                    {out.print("active");}%>"><a
+                            href="${pageContext.request.contextPath}/sys/orderlist?dbuserid=0&curpageno=1&startdate=&enddate="><i
+                            class="fa fa-circle-o"></i> 订单查询 </a></li>
+                </ul>
+            </li>
+
+
             <li class="<% if("4".equalsIgnoreCase(parentnode)) {out.print("active");}%> treeview">
                 <a href="#">
                     <i class="fa fa-dashboard"></i> <span>栏目管理</span>
                     <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
                 </a>
                 <ul class="treeview-menu">
                     <li class="<% if("1".equalsIgnoreCase(childnode) && "4".equalsIgnoreCase(parentnode)) {out.print("active");}%>">

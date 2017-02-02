@@ -10,6 +10,11 @@ public class MainController {
         return "sys/syslogin";
     }
 
+    @RequestMapping(value={"/iuser/", "/iuser"})
+    public String iuser() {
+        return "iuser/login";
+    }
+
     @RequestMapping("/")
     public String index() {
         return "index";

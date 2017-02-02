@@ -1,5 +1,7 @@
 package com.zznet.entity;
 
+import java.math.BigDecimal;
+
 /**
  * Created by zz on 2016/9/27 14:01.
  */
@@ -12,8 +14,9 @@ public class DBuser {
     private String qq;
     private String mobileno;
     private String addr;
-    private int score;
+    private BigDecimal score;
     private String headpic;
+    private String wx;
 
     public int getId() {
         return id;
@@ -79,11 +82,11 @@ public class DBuser {
         this.addr = addr;
     }
 
-    public int getScore() {
+    public BigDecimal getScore() {
         return score;
     }
 
-    public void setScore(int score) {
+    public void setScore(BigDecimal score) {
         this.score = score;
     }
 
@@ -93,5 +96,13 @@ public class DBuser {
 
     public void setHeadpic(String headpic) {
         this.headpic = headpic;
+    }
+
+    public String getWx() {
+        return wx;
+    }
+
+    public void setWx(String wx) {
+        this.wx = wx;
     }
 }

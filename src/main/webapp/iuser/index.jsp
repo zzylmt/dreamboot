@@ -1,18 +1,18 @@
 <%@ page language="java" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ include file="../head/master/init.jsp" %>
+<%@ include file="../head/customer/init.jsp" %>
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-    <title>首页--江西风格网络后台管理系统</title>
-    <jsp:include page="${pageContext.request.contextPath}/head/master/css.jsp"/>
+    <title>我的风格</title>
+    <jsp:include page="${pageContext.request.contextPath}/head/customer/css.jsp"/>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/fonts/ionicons.min.css">
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
-    <jsp:include page="${pageContext.request.contextPath}/head/master/top.jsp"/>
-    <jsp:include page="${pageContext.request.contextPath}/head/master/left.jsp"/>
+    <jsp:include page="${pageContext.request.contextPath}/head/customer/top.jsp"/>
+    <jsp:include page="${pageContext.request.contextPath}/head/customer/left.jsp"/>
     <div class="content-wrapper">
         <section class="content-header">
             <h1>
@@ -73,7 +73,7 @@
     </div>
 </div>
 </body>
-<jsp:include page="${pageContext.request.contextPath}/head/master/js.jsp"/>
+<jsp:include page="${pageContext.request.contextPath}/head/customer/js.jsp"/>
 <script type="text/javascript">
     $(function () {
     });

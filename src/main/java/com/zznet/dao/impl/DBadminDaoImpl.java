@@ -17,7 +17,6 @@ import java.util.List;
 @Repository("dbadmindao")
 @Transactional
 public class DBadminDaoImpl implements DBadminDao {
-
     @Resource
     private JdbcTemplate jdbcTemplate;
 

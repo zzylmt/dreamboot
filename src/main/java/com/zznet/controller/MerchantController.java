@@ -38,7 +38,7 @@ public class MerchantController {
     private DictDao dictDaoImpl;
 
     @RequestMapping("/sys/merchantsave")
-    public String sysmerchantsave(HttpServletRequest request, @RequestParam(value = "mid") int mid, @RequestParam(value = "merchantname") String merchantname, @RequestParam(value = "cocid") int cocid, @RequestParam(value = "province_code") String
+    public String sysmerchantsave(@RequestParam(value = "mid") int mid, @RequestParam(value = "merchantname") String merchantname, @RequestParam(value = "cocid") int cocid, @RequestParam(value = "province_code") String
             province_code, @RequestParam(value = "city_code") String city_code, @RequestParam(value = "area_code") String area_code, @RequestParam(value = "memo")
                                           String memo, @RequestParam(value = "headpic") String headpic, @RequestParam(value = "contact") String contact,
                                   @RequestParam(value = "telno") String telno, @RequestParam(value = "addr") String addr, @RequestParam(value = "mstatus") int mstatus)
