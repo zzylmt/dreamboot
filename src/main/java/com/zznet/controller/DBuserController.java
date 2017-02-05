@@ -3,6 +3,7 @@ package com.zznet.controller;
 import com.zznet.dao.DBuserDao;
 import com.zznet.entity.DBuser;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -19,9 +20,9 @@ public class DBuserController {
     private DBuserDao dbuserDaoImpl;
 
     @RequestMapping("/iuser/login")
-    public String syslogin(HttpServletRequest request,
-                           @RequestParam(value = "username") String username,
-                           @RequestParam(value = "pswd") String pswd) throws Exception {
+    public String iuserlogin(HttpServletRequest request,
+                             @RequestParam(value = "username") String username,
+                             @RequestParam(value = "pswd") String pswd) throws Exception {
         try {
             DBuser dbuser;
             dbuser = dbuserDaoImpl.checkDBuser(username, pswd);
@@ -44,5 +45,20 @@ public class DBuserController {
         }
 
         return "iuser/index";
+    }
+
+
+    @RequestMapping("/iuser/userinfo/{userid}")
+    public String iuserinfo(HttpServletRequest request,
+                            @PathVariable int userid) throws Exception {
+        try {
+            DBuser dbuser = dbuserDaoImpl.getDBuser(userid);
+            request.setAttribute("dbuser", dbuser);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "iuser/login";
+        }
+
+        return "iuser/userinfo";
     }
 }
