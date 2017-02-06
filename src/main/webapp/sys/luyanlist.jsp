@@ -23,7 +23,6 @@
             <ol class="breadcrumb">
                 <li><a href="index.jsp"><i class="fa fa-dashboard"></i> 主页</a></li>
                 <li><a href="#"><i class="fa fa-pencil-square-o"></i> 路演企业</a></li>
-
             </ol>
         </section>
         <section class="content">
