@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>我的风格站</title>
 
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/fonts/dreambootfonts.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/fonts/FontAwesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/customer/owl.carousel.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/customer/owl.theme.css">
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/customer/settings.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/customer/glasscase.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/customer/style.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/customer/dreamboot.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/customer/responsive.css">
     <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-precomposed.png">
     <link rel="shortcut icon" type="image/ico" href="images/favicon.ico">
