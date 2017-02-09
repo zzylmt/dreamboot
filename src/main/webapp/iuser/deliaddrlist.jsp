@@ -12,7 +12,7 @@
 <div class="wrapper">
     <jsp:include page="${pageContext.request.contextPath}/head/customer/top.jsp"/>
     <jsp:include page="${pageContext.request.contextPath}/head/customer/left.jsp">
-        <jsp:param name="parentnode" value="1"/>
+        <jsp:param name="parentnode" value="2"/>
     </jsp:include>
 
     <div class="content-wrapper">
@@ -61,8 +61,8 @@
                                                             <td>${thelist.detailinfo}</td>
                                                             <td>${thelist.isdefault}</td>
                                                             <td>
-                                                                <a href="${pageContext.request.contextPath}/iuser/deliaddrinfo/${thelist.userid}/${thelist.orderno}">详情</a>
-                                                                <a href="${pageContext.request.contextPath}/iuser/deldeliaddr/${thelist.userid}/${thelist.orderno}">删除</a>
+                                                                <a href="${pageContext.request.contextPath}/iuser/deliaddrinfo/${thelist.userid}/${thelist.orderno}" class="btn btn-info">详情</a>
+                                                                <a href="${pageContext.request.contextPath}/iuser/deldeliaddr/${thelist.userid}/${thelist.orderno}" class="btn btn-danger">删除</a>
                                                             </td>
                                                         </tr>
                                                     </c:forEach>
@@ -70,13 +70,10 @@
                                             </c:choose>
                                             </tbody>
                                         </table>
-
                                     </div>
                                 </div>
-
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>

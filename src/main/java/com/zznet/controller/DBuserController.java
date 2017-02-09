@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.math.BigDecimal;
 
 /**
  * Created by zz on 2017/2/2.
@@ -47,7 +48,6 @@ public class DBuserController {
         return "iuser/index";
     }
 
-
     @RequestMapping("/iuser/userinfo/{userid}")
     public String iuserinfo(HttpServletRequest request,
                             @PathVariable int userid) throws Exception {
@@ -61,4 +61,46 @@ public class DBuserController {
 
         return "iuser/userinfo";
     }
+
+    @RequestMapping("/iuser/dbusersave")
+    public String iuserdbusersave(
+            @RequestParam(value = "userid") int userid,
+            @RequestParam(value = "username") String username,
+            @RequestParam(value = "pswd") String pswd,
+            @RequestParam(value = "repswd") String repswd,
+            @RequestParam(value = "qq") String qq,
+            @RequestParam(value = "nickname") String nickname,
+            @RequestParam(value = "addr") String addr,
+            @RequestParam(value = "score") BigDecimal score,
+            @RequestParam(value = "mobileno") String mobileno,
+            @RequestParam(value = "headpic",required = false) String headpic,
+            @RequestParam(value = "wx") String wx,
+            @RequestParam(value = "email") String email, HttpSession session) throws Exception {
+        DBuser dbuser = dbuserDaoImpl.getDBuser(userid);
+
+        if (!"".equalsIgnoreCase(pswd) && pswd.equals(repswd)) {
+            dbuser.setPswd(pswd);
+        }
+
+        boolean result;
+        try {
+            dbuser.setUsername(username);
+            dbuser.setQq(qq);
+            dbuser.setNickname(nickname);
+            dbuser.setAddr(addr);
+            dbuser.setMobileno(mobileno);
+            dbuser.setEmail(email);
+            dbuser.setScore(score);
+            dbuser.setHeadpic(headpic);
+            dbuser.setWx(wx);
+
+            result = dbuserDaoImpl.update(dbuser);
+            session.setAttribute("dbuser", dbuser);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "/sys/login";
+        }
+        return "redirect:/iuser/userinfo/" + dbuser.getId() + "?result=" + result;
+    }
+
 }

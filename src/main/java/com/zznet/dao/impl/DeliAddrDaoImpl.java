@@ -63,11 +63,53 @@ public class DeliAddrDaoImpl implements DeliAddrDao {
 
     @Override
     public boolean update(DeliAddr deliaddr) {
-        return false;
+        String mysql = "UPDATE deliaddr set provincecode=?,citycode=?,areacode=?,streetcode=?,detailinfo=?,isdefault=?,telno=?,consignee=? where userid=? and " +
+                "orderno=?";
+        boolean result = false;
+
+        try {
+            this.jdbcTemplate.update(mysql, deliaddr.getProvincecode(), deliaddr.getCitycode(), deliaddr.getAreacode(), deliaddr.getStreetcode(), deliaddr
+                    .getDetailinfo(), deliaddr.getIsdefault(), deliaddr.getTelno(), deliaddr.getConsignee(), deliaddr.getUserid(), deliaddr.getOrderno());
+            result = true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
     }
 
     @Override
     public DeliAddr getDeliAddr(int userid, int orderno) {
-        return null;
+        String sql = "select a.userid, a.provincecode, a.citycode, a.areacode, a.streetcode, a.detailinfo, a.isdefault, a.orderno, province.`name` as " +
+                "provincename, city.`name` as cityname, area.`name` as areaname, street.`name` as streetname,dbuser.nickname,a.telno,a.consignee from " +
+                "deliaddr as a left join province on a.provincecode = province.`code` left join city on a.citycode = city.`code` left join area on area" +
+                ".`code` = a.areacode left join street on street.`code` = a.streetcode LEFT JOIN dbuser on a.userid=dbuser.id where a.userid =  ? and a" +
+                ".orderno =  ?";
+
+        DeliAddr deliAddrinfo = new DeliAddr();
+        try {
+            deliAddrinfo = this.jdbcTemplate.queryForObject(sql,
+                    new Object[]{userid, orderno}, (rs, rowNum) -> {
+                        DeliAddr a = new DeliAddr();
+                        a.setUserid(rs.getInt(1));
+                        a.setProvincecode(rs.getString(2));
+                        a.setCitycode(rs.getString(3));
+                        a.setAreacode(rs.getString(4));
+                        a.setStreetcode(rs.getString(5));
+                        a.setDetailinfo(rs.getString(6));
+                        a.setIsdefault(rs.getInt(7));
+                        a.setOrderno(rs.getInt(8));
+                        a.setProvincename(rs.getString(9));
+                        a.setCityname(rs.getString(10));
+                        a.setAreaname(rs.getString(11));
+                        a.setStreetname(rs.getString(12));
+                        a.setUsername(rs.getString(13));
+                        a.setTelno(rs.getString(14));
+                        a.setConsignee(rs.getString(15));
+                        return a;
+                    });
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return deliAddrinfo;
     }
 }

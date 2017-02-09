@@ -173,6 +173,7 @@
 
         $("#province_code").on("change", function () {
             $("#city_code").empty();
+            $("#area_code").empty();
             $.ajax({
                 url: "${pageContext.request.contextPath}/getcitylist/" + $("#province_code").val(),
                 contentType: "application/json",

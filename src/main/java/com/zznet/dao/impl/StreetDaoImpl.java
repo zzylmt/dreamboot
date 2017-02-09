@@ -44,6 +44,7 @@ public class StreetDaoImpl implements StreetDao, PageSize {
     @Override
     public List<StreetInfo> getStreetListByParent(String parentcode) {
         String mysql = "select a.code, a.name, a.parent_code from street as a where a.parent_code = ?";
+
         List<StreetInfo> streetList = new ArrayList<>();
         try {
             RowMapper<StreetInfo> mapper = (rs, rowNum) -> {

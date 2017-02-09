@@ -22,7 +22,30 @@ public class DBuserDaoImpl implements DBuserDao {
 
     @Override
     public DBuser getDBuser(int id) {
-        return null;
+        String sql = "select a.id, a.username, a.pswd, a.nickname, a.email, a.qq, a.mobileno, a.addr, a.score, a.headpic, a.wx from `dbuser` a where a.id = ? ";
+
+        DBuser dbuser = new DBuser();
+        try {
+            dbuser = this.jdbcTemplate.queryForObject(sql,
+                    new Object[]{id}, (rs, rowNum) -> {
+                        DBuser a = new DBuser();
+                        a.setId(rs.getInt(1));
+                        a.setUsername(rs.getString(2));
+                        a.setPswd(rs.getString(3));
+                        a.setNickname(rs.getString(4));
+                        a.setEmail(rs.getString(5));
+                        a.setQq(rs.getString(6));
+                        a.setMobileno(rs.getString(7));
+                        a.setAddr(rs.getString(8));
+                        a.setScore(rs.getBigDecimal(9));
+                        a.setHeadpic(rs.getString(10));
+                        a.setWx(rs.getString(11));
+                        return a;
+                    });
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return dbuser;
     }
 
     @Override
@@ -63,6 +86,17 @@ public class DBuserDaoImpl implements DBuserDao {
 
     @Override
     public boolean update(DBuser userinfo) {
-        return false;
+        String mysql = "UPDATE dbuser set username=?,pswd=?,nickname=?,email=?,qq=?,mobileno=?,addr=?,score=?,headpic=?,wx=? where id=?";
+
+        boolean result = false;
+
+        try {
+            this.jdbcTemplate.update(mysql, userinfo.getUsername(), userinfo.getPswd(), userinfo.getNickname(), userinfo.getEmail(),
+                    userinfo.getQq(), userinfo.getMobileno(), userinfo.getAddr(), userinfo.getScore(), userinfo.getHeadpic(), userinfo.getWx(), userinfo.getId());
+            result = true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
     }
 }

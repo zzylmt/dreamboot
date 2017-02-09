@@ -47,7 +47,7 @@
                         </li>
                         <li class="user-footer">
                             <div class="pull-left">
-                                <a href="${pageContext.request.contextPath}/iuser/userinfo" class="btn btn-default btn-flat">个人主页</a>
+                                <a href="${pageContext.request.contextPath}/iuser/userinfo/<%=sid%>" class="btn btn-default btn-flat">个人主页</a>
                             </div>
                             <div class="pull-right">
                                 <a href="${pageContext.request.contextPath}/iuser/logout.jsp" class="btn btn-default btn-flat">退出</a>
