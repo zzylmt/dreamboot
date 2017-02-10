@@ -2,29 +2,8 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>我的风格站</title>
-
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/fonts/dreambootfonts.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/fonts/FontAwesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/customer/owl.carousel.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/customer/owl.theme.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/customer/owl.transitions.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/customer/settings.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/customer/glasscase.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/customer/dreamboot.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/customer/responsive.css">
-    <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-precomposed.png">
-    <link rel="shortcut icon" type="image/ico" href="images/favicon.ico">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="${pageContext.request.contextPath}/plugins/html5shiv.js"></script>
-    <script src="${pageContext.request.contextPath}/plugins/respond.min.js"></script>
-    <![endif]-->
+    <jsp:include page="${pageContext.request.contextPath}/head/style/css.jsp"/>
 </head>
 <body class="home_two">
 <!--==| header Top Start |==-->
@@ -5184,15 +5163,6 @@
 </footer>
 <!--==| footer bottom End |==-->
 
-<script src="${pageContext.request.contextPath}/plugins/jQuery/jquery-2.2.3.min.js"></script>
-<script src="${pageContext.request.contextPath}/plugins/modernizr-2.6.2.min.js"></script>
-<script src="${pageContext.request.contextPath}/plugins/jquery.themepunch.plugins.min.js"></script>
-<script src="${pageContext.request.contextPath}/plugins/jquery.themepunch.revolution.min.js"></script>
-<script src="${pageContext.request.contextPath}/plugins/rev-settings.js"></script>
-<script src="${pageContext.request.contextPath}/plugins/owl.carousel.min.js"></script>
-<script src="${pageContext.request.contextPath}/bootstrap/js/bootstrap.min.js"></script>
-<script src="${pageContext.request.contextPath}/plugins/main.js"></script>
-
-
+<jsp:include page="${pageContext.request.contextPath}/head/style/js.jsp"/>
 </body>
 </html>
