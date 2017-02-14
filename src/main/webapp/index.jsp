@@ -6,35 +6,7 @@
     <jsp:include page="${pageContext.request.contextPath}/head/style/css.jsp"/>
 </head>
 <body class="home_two">
-<!--==| header Top Start |==-->
-<div class="header_top_area">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="header_top_cc_left">
-                    <ul>
-                        <li><a href="tel:88888888"><i class="fa fa-phone"></i>88888888</a></li>
-                        <li><a href="">账户管理 <i class="fa fa-angle-down"></i></a>
-                            <div class="header_top_dropdown">
-                                <ul>
-                                    <li class="first">
-                                        <a href="checkout.html">我的账户</a>
-                                    </li>
-                                    <li>
-                                        <a href="cart.html">我的购物车</a>
-                                    </li>
-                                    <li>
-                                        <a href="checkout.html">退出</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<jsp:include page="${pageContext.request.contextPath}/header_top.jsp"/>
 
 <div class="header_middle_area">
     <div class="container">
@@ -83,60 +55,11 @@
             <div class="col-md-2 col-sm-2 col-xs-12">
                 <div class="header_middle_cc_search">
                     <ul>
-                        <li><a class="fa fa-search" href=""></a>
+                        <li><a class="fa fa-search" href=""> 搜索 </a>
                             <div class="search_drpdwn">
-                                <input type="text" placeholder="|"/>
-                                <input type="submit" value=""/>
+                                <input type="text" placeholder="全站搜索"/>
+                                <input type="submit" value="" placeholder="请输入关键字"/>
                                 <a class="fa fa-search" href=""></a>
-                            </div>
-                        </li>
-                        <li><a href="">|</a></li>
-                        <li><a href="cart.html"><i class="fa fa-shopping-cart"></i>(2) </a>
-                            <div class="cart_number_drd">
-                                <div class="single_add_cart_design">
-                                    <div class="s_add_cart_left">
-                                        <div class="add_cart_h_img">
-                                            <a href=""><img src="${pageContext.request.contextPath}/image/1011663_fro.jpg" alt=""/></a>
-                                        </div>
-                                        <div class="add_cart_h_txt">
-                                            <a href="product-left-sidebar.html">Floral Print Buttoned</a>
-                                            <p>Quantity: 1</p>
-                                        </div>
-                                    </div>
-                                    <div class="s_add_cart_left_h">
-                                        <p>£25.00</p>
-                                        <a class="fa fa-times" href=""></a>
-                                    </div>
-                                </div>
-                                <div class="single_add_cart_design">
-                                    <div class="s_add_cart_left">
-                                        <div class="add_cart_h_img">
-                                            <a href=""><img src="${pageContext.request.contextPath}/image/1014254_full1.jpg" alt=""/></a>
-                                        </div>
-                                        <div class="add_cart_h_txt">
-                                            <a href="product-left-sidebar.html">Floral Print Buttoned</a>
-                                            <p>Quantity: 1</p>
-                                        </div>
-                                    </div>
-                                    <div class="s_add_cart_left_h">
-                                        <p>£25.00</p>
-                                        <a class="fa fa-times" href=""></a>
-                                    </div>
-                                </div>
-                                <div class="single_add_cart_design sp_des">
-                                    <div class="s_add_cart_left_bld">
-                                        <p>Subtotal</p>
-                                    </div>
-                                    <div class="s_add_cart_left_h bold_h">
-                                        <p>£55.00</p>
-                                    </div>
-                                </div>
-                                <div class="bottom_add_c_h">
-                                    <ul>
-                                        <li><a href="cart.html"><i class="fa fa-shopping-cart"></i>View Cart</a></li>
-                                        <li><a href="checkout.html">Checkout<i class="fa fa-angle-right"></i></a></li>
-                                    </ul>
-                                </div>
                             </div>
                         </li>
                     </ul>
@@ -156,7 +79,7 @@
                 <div class="only-for-mobile">
                     <div class="col-xs-12">
                         <ul class="ofm">
-                            <li class="m_nav"><i class="fa fa-bars"></i> Navigation</li>
+                            <li class="m_nav"><i class="fa fa-bars"></i> 导航</li>
                         </ul>
 
                         <!-- MOBILE MENU -->
@@ -164,7 +87,7 @@
                             <div id='cssmenu'>
                                 <ul>
                                     <li class='has-sub'>
-                                        <a href='index.html'><span>Home</span></a>
+                                        <a href='index.html'><span>首页</span></a>
                                         <ul class="sub-nav">
                                             <li><a href="index-two.html"><span>Home version 2</span></a></li>
                                             <li><a href="index-three.html"><span>Home version 3</span></a></li>
@@ -274,7 +197,7 @@
                              data-endspeed="300"
 
                              style="z-index: 9;border: 2px solid #444444;color: #444444;display: inline-block;font-size: 14px;font-weight: 600;line-height: 36px;padding: 0 15px;text-transform: uppercase;">
-                            <a style="color: #444444;" href="#" target="_blank">Shop Now</a>
+                            <a style="color: #444444;" href="#" target="_blank"> 现在购买 </a>
                         </div>
                     </li>
                     <!-- SLIDE  -->
@@ -313,7 +236,6 @@
                              data-elementdelay="0.1"
                              data-endelementdelay="0.1"
                              data-endspeed="300"
-
                              style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;color: #666666;font-size: 30px;font-weight: 600;letter-spacing: 3px;text-transform: uppercase;">
                             spring/summer .15
                         </div>
@@ -329,9 +251,8 @@
                              data-elementdelay="0.1"
                              data-endelementdelay="0.1"
                              data-endspeed="300"
-
                              style="z-index: 9;border: 2px solid #444444;color: #444444;display: inline-block;font-size: 14px;font-weight: 600;line-height: 36px;padding: 0 15px;text-transform: uppercase;">
-                            <a style="color: #444444;" href="#" target="_blank">Shop Now</a>
+                            <a style="color: #444444;" href="#" target="_blank"> 现在购买 </a>
                         </div>
                     </li>
                     <li data-transition="parallaxtoright,parallaxtoleft" data-slotamount="7" data-masterspeed="600" data-saveperformance="off">
@@ -389,7 +310,7 @@
                              data-endspeed="300"
 
                              style="z-index: 9;border: 2px solid #fff;color: #fff;display: inline-block;font-size: 14px;font-weight: 600;line-height: 36px;padding: 0 15px;text-transform: uppercase;">
-                            <a style="color: #fff;" href="#" target="_blank">Shop Now</a>
+                            <a style="color: #fff;" href="#" target="_blank"> 现在购买 </a>
                         </div>
                     </li>
                 </ul>
@@ -405,7 +326,7 @@
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="common_heading">
-                    <h2>WELCOME TO OUR SHOP</h2>
+                    <h2>欢 迎 光 临 我 的 风 格</h2>
                     <div class="bery-hr medium star">
                         <div class="icon-wrapper">
                             <i class="fa fa-star"></i>
@@ -439,7 +360,7 @@
                                                 <h3>collection</h3>
                                                 <h2>women's</h2>
                                                 <h4>save up to 25% off</h4>
-                                                <a href="#" class="btn-shop">Shop Now </a>
+                                                <a href="#" class="btn-shop">现在购买 </a>
                                             </div>
                                         </div>
                                     </div>
@@ -454,7 +375,7 @@
                                             <div class="banner-texthome">
                                                 <h3>NEW ARRIVALS</h3>
                                                 <h2>ACESSORIES</h2>
-                                                <a href="#" class="btn-shop">Shop Now </a>
+                                                <a href="#" class="btn-shop">现在购买 </a>
                                             </div>
                                         </div>
                                     </div>
@@ -470,7 +391,7 @@
                                     <div class="banner-texthome">
                                         <h3>NEW ARRIVALS</h3>
                                         <h2>For women</h2>
-                                        <a href="#" class="btn-shop">Shop Now </a>
+                                        <a href="#" class="btn-shop">现在购买 </a>
                                     </div>
                                 </div>
                             </div>
@@ -5044,125 +4965,7 @@
 </div>
 <!--==| Home Service END |==-->
 
-<!--==| footer top start |==-->
-<footer class="fotter_top_area">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="footer_top">
-                    <div class="row">
-                        <div class="col-md-3 col-sm-3 col-xs-12">
-                            <div class="footer_wid">
-                                <h2>Rosette</h2>
-                                <div class="first_wid_text">
-                                    <p>Suspendisse metus diam, pulvinar nec mas sa non, dignis sim imperdiet nulla. Suspen disse malesuada diam id ante
-                                        mole.</p>
-                                </div>
-                                <h3>find us on</h3>
-                                <div class="first_wid_social">
-                                    <ul>
-                                        <li><a class="fa fa-facebook" href=""></a></li>
-                                        <li><a class="fa fa-twitter" href=""></a></li>
-                                        <li><a class="fa fa-youtube" href=""></a></li>
-                                        <li><a class="fa fa-tumblr" href=""></a></li>
-                                        <li><a class="fa fa-pinterest" href=""></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-2 col-xs-12">
-                            <div class="footer_wid">
-                                <h3>MY ACCOUNT</h3>
-                                <nav class="footer_wid_menu">
-                                    <ul>
-                                        <li><a href="cart.html"><i class="fa fa-caret-right"></i>View Cart</a></li>
-                                        <li><a href=""><i class="fa fa-caret-right"></i>My Wishlist</a></li>
-                                        <li><a href="checkout.html"><i class="fa fa-caret-right"></i>Check out</a></li>
-                                        <li><a href=""><i class="fa fa-caret-right"></i>Track My Order</a></li>
-                                        <li class="last_child"><a href=""><i class="fa fa-caret-right"></i>Help</a></li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-2 col-xs-12">
-                            <div class="footer_wid">
-                                <h3>INFORMATION</h3>
-                                <nav class="footer_wid_menu">
-                                    <ul>
-                                        <li><a href=""><i class="fa fa-caret-right"></i>About Us</a></li>
-                                        <li><a href=""><i class="fa fa-caret-right"></i>Terms & condition</a></li>
-                                        <li><a href="checkout.html"><i class="fa fa-caret-right"></i>Check out</a></li>
-                                        <li><a href=""><i class="fa fa-caret-right"></i>Orders and Returns</a></li>
-                                        <li class="last_child"><a href=""><i class="fa fa-caret-right"></i>Site Map</a></li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-2 col-xs-12">
-                            <div class="footer_wid">
-                                <h3>WHY CHOOSE</h3>
-                                <nav class="footer_wid_menu">
-                                    <ul>
-                                        <li><a href=""><i class="fa fa-caret-right"></i>Product Recall</a></li>
-                                        <li><a href=""><i class="fa fa-caret-right"></i>Returns and Exchanges</a></li>
-                                        <li><a href=""><i class="fa fa-caret-right"></i>Shipping Options</a></li>
-                                        <li><a href=""><i class="fa fa-caret-right"></i>Help & FAQs</a></li>
-                                        <li class="last_child"><a href=""><i class="fa fa-caret-right"></i>Sale Only Today</a></li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-3 col-xs-12">
-                            <div class="footer_wid">
-                                <h3>NEWSLETTER SIGNUP!</h3>
-                                <p>Sign Up for Our Newsletter to receive latest news and events.</p>
-                                <div class="footer_input">
-                                    <input type="text"/>
-                                    <a class="fa fa-envelope" href=""></a>
-                                </div>
-                                <div class="footer_payment">
-                                    <ul>
-                                        <li><a href="#"><img src="${pageContext.request.contextPath}/image/visa.png" alt="visa"/></a></li>
-                                        <li><a href="#"><img src="${pageContext.request.contextPath}/image/mc.png" alt="visa"/></a></li>
-                                        <li><a href="#"><img src="${pageContext.request.contextPath}/image/discover.png" alt="visa"/></a></li>
-                                        <li><a href="#"><img src="${pageContext.request.contextPath}/image/AE.png" alt="visa"/></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-<!--==| footer top End |==-->
-
-<!--==| footer bottom start |==-->
-<footer class="footer_bottom_area">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-7 col-sm-8 col-xs-12">
-                <nav class="footer_bottom_left">
-                    <ul>
-                        <li><a href="">Site Map</a></li>
-                        <li><a href="">Search Terms</a></li>
-                        <li><a href="">Advanced Search</a></li>
-                        <li><a href="">Orders and Returns</a></li>
-                        <li class="last_child"><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="col-md-5 col-sm-4 col-xs-12">
-                <nav class="footer_bottom_right">
-                    <p>Copyright &copy; <a href="">BootExperts 2015</a></p>
-                </nav>
-            </div>
-        </div>
-    </div>
-</footer>
-<!--==| footer bottom End |==-->
-
+<jsp:include page="${pageContext.request.contextPath}/footer.jsp"/>
 <jsp:include page="${pageContext.request.contextPath}/head/style/js.jsp"/>
 </body>
 </html>

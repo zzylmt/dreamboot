@@ -49,8 +49,7 @@ public class GoodsDaoImpl implements GoodsDao, PageSize {
                     ps.setBigDecimal(13, goods_old.getScore());
                     ps.setInt(14, goods_old.getGstatus());
                     return ps;
-                }
-                , keyHolder);
+                }, keyHolder);
         goodsinfo = goods_old;
         goodsinfo.setId(keyHolder.getKey().intValue());
 

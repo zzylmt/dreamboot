@@ -45,7 +45,7 @@ CSS INDEX
     display: block;
     margin: 0 auto 15px;
 }
-a:focus { outline: 0px solid }
+a:focus { outline: 0 solid }
 img {
     max-width: 100%;
     height: auto;
@@ -73,7 +73,7 @@ a:hover { color: #000 }
 .displa_none {
     opacity:0;
     transition:all 0.4s ease 0s;
-    height:0px;
+    height:0;
     visibility:hidden;
 }
 .display_block{
@@ -208,7 +208,7 @@ a:hover {
 }
 .header_top_cc_left > ul li:hover .header_top_dropdown {
     opacity: 1;
-    top: 26.5px;
+    top: 27px;
     left: -48px;
     z-index:999;
 }
@@ -294,7 +294,7 @@ a:hover {
     min-width: 150px;
     padding: 10px 15px;
     position: absolute;
-    right: 0px;
+    right: 0;
     opacity:0;
     top: 50px;
     transition: all 300ms ease-in-out 0s;
@@ -308,7 +308,7 @@ a:hover {
     line-height: 30px;
     padding: 0;
     text-align: left;
-    font-family: Raleway;
+    font-family: Raleway, serif;
     font-size: 12px;
     display:block;
 }
@@ -318,7 +318,7 @@ a:hover {
     line-height: 30px;
     padding: 0;
     text-align: left;
-    font-family: Raleway;
+    font-family: Raleway, serif;
     font-size: 12px;
     display:block;
 }
@@ -348,7 +348,7 @@ a:hover {
     text-align: left;
 }
 .header_top_cc_right .currency_dropdown ul li.first_child{
-    border-top: 0px solid #e5e5e5;
+    border-top: 0 solid #e5e5e5;
 }
 .header_top_cc_right .currency_dropdown ul li a{
     color: #333;
@@ -386,7 +386,7 @@ a:hover {
     border-top: 1px solid #e5e5e5;
 }
 .language_dropdown ul li.first_child{
-    border-top: 0px solid #e5e5e5;
+    border-top: 0 solid #e5e5e5;
 }
 .mainmenu ul {
     list-style: outside none none;
@@ -500,16 +500,16 @@ a:hover {
     visibility:visible;
 }
 .home_three .tp-leftarrow {
-    background: rgba(0, 0, 0, 0.2) url("../img/left3h.png") no-repeat scroll 1px 2px;
+    background: rgba(0, 0, 0, 0.2) url("../../image/left3h.png") no-repeat scroll 1px 2px;
 }
 .home_three .tp-rightarrow {
-    background: rgba(0, 0, 0, 0.2) url("../img/left3h.png") no-repeat scroll 1px 2px;
+    background: rgba(0, 0, 0, 0.2) url("../../image/left3h.png") no-repeat scroll 1px 2px;
 }
 .home_two .tp-leftarrow {
-    background: rgba(0, 0, 0, 0.2) url("../img/left2h.png") no-repeat scroll 1px 2px;
+    background: rgba(0, 0, 0, 0.2) url("../../image/left2h.png") no-repeat scroll 1px 2px;
 }
 .home_two .tp-rightarrow {
-    background: rgba(0, 0, 0, 0.2) url("../img/left2h.png") no-repeat scroll 1px 2px;
+    background: rgba(0, 0, 0, 0.2) url("../../image/left2h.png") no-repeat scroll 1px 2px;
 }
 /* mobile nav */
 .only-for-mobile {
@@ -558,7 +558,7 @@ a:hover {
     border-bottom: 2px solid #ffffff;
     color: #666666;
     cursor: pointer;
-    font-family: Cousine,Arial;
+    font-family: Cousine, Arial, serif;
     font-size: 14px;
     font-weight: bold;
     padding: 15px 40px;
@@ -764,7 +764,7 @@ ul.lev2sub {
     font-weight: bold;
     margin-top: 2px;
     text-transform: uppercase;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 .right-slide-new p {
     color: #555;
@@ -812,13 +812,12 @@ ul.lev2sub {
 }
 .s_add_cart_left_bld p {
     color: #555;
-    font-family: raleway;
+    font-family: raleway, serif;
     font-size: 15px;
     font-weight: 700;
     margin-bottom: 0;
     text-align: left;
     text-transform: uppercase;
-    margin-bottom: 0px;
 }
 .s_add_cart_left_h.bold_h p {
     font-size: 17px;
@@ -929,7 +928,7 @@ ul.lev2sub {
     font-weight: bold;
 }
 .first_wid_text p, .footer_wid p {
-    font-family: Raleway;
+    font-family: Raleway, serif;
     font-size: 14px;
     margin-bottom: 0;
     padding-top: 7px;
@@ -940,7 +939,7 @@ ul.lev2sub {
     font-size: 15px;
     font-weight: 500;
     letter-spacing: 0;
-    margin: 0px 0 20px;
+    margin: 0 0 20px;
     text-align: left;
     text-transform: uppercase;
 }
@@ -980,7 +979,7 @@ ul.lev2sub {
     border-bottom: 1px solid #494949;
 }
 .footer_wid_menu ul li.last_child{
-    border-bottom: 0px solid #2d2d2d;
+    border-bottom: 0 solid #2d2d2d;
 }
 .footer_wid_menu ul li a{
     color: #ccc;
@@ -1050,7 +1049,7 @@ ul.lev2sub {
     text-align: left;
 }
 .footer_bottom_left ul li.last_child {
-    border-right: 0px solid #666;
+    border-right: 0 solid #666;
 }
 .footer_bottom_left ul li a{
     color: #ccc;
@@ -1450,7 +1449,7 @@ ul.lev2sub {
     z-index: 999999;
 }
 .featered_products .nav-tabs {
-    border-bottom: 0px solid #ddd;
+    border-bottom: 0 solid #ddd;
 }
 .home_one .featered_products .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
     color: #2ecc71;
@@ -1463,7 +1462,7 @@ ul.lev2sub {
     border-color: #ddd #ddd transparent;
     border-image: none;
     border-style: solid;
-    border-width: 0px;
+    border-width: 0;
     color: #555;
     cursor: default;
 }
@@ -1529,7 +1528,7 @@ ul.lev2sub {
 .featered_products .badge {
     position: absolute;
     right: 47px;
-    top: 0px;
+    top: 0;
 }
 .badge .inner {
     -moz-border-bottom-colors: none;
@@ -1972,7 +1971,7 @@ ul.lev2sub {
     width: 100%;
 }
 .nd-title {
-    margin: 0px;
+    margin: 0;
     opacity: 0;
     position: relative;
     top: -150px;
@@ -2426,7 +2425,7 @@ ul.lev2sub {
 }
 .sidebar_sale h2, .sidebar_p_tags h2, .sidebar_latest_p h2 {
     color: #444444;
-    font-family: raleway;
+    font-family: raleway, serif;
     font-size: 17px;
     font-weight: 700;
     letter-spacing: 1px;
@@ -2656,7 +2655,7 @@ ul.lev2sub {
     top: 0;
 }
 .sidebar_sale h2, .sidebar_p_tags h2, .sidebar_latest_p.shop_car h2 {
-    border-bottom: 0px solid #ddd;
+    border-bottom: 0 solid #ddd;
 }
 .shop_left .sidebar_banner .banner-inner-content .banner-texthome {
     background: none;
@@ -2666,8 +2665,8 @@ ul.lev2sub {
 }
 .shop_left_select .form-control {
     border: 1px solid #eee;
-    border-radius: 0px;
-    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.075) inset;
+    border-radius: 0;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.075) inset;
     font-size: 13px;
     width: 200px;
 }
@@ -2748,7 +2747,7 @@ ul.lev2sub {
     margin-top: 35px;
 }
 .product_left_tab .nav-tabs {
-    border-bottom: 0px solid #ddd;
+    border-bottom: 0 solid #ddd;
 }
 .product_left_tab .nav-tabs > li.active > a, .product_left_tab .nav-tabs > li.active > a:hover, .product_left_tab .nav-tabs > li.active > a:focus {
     border-width: 0;
@@ -2964,7 +2963,7 @@ ul.lev2sub {
     background-image: none;
     border: 1px solid #eee;
     border-radius: 0;
-    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.075) inset;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.075) inset;
     color: #333;
     display: block;
     float: left;
@@ -3055,7 +3054,7 @@ ul.lev2sub {
     text-align: center;
 }
 .cart_detail.last {
-    border-bottom: 0px solid #ccc;
+    border-bottom: 0 solid #ccc;
 }
 .product_cart {
     border-right: 1px solid #ccc;
@@ -3103,7 +3102,7 @@ ul.lev2sub {
     font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 .product_cart p {
     padding-top: 5px;
@@ -3117,7 +3116,7 @@ ul.lev2sub {
     font-size: 10px;
     height: 16px;
     line-height: 7px;
-    padding-top: 3.5px;
+    padding-top: 4px;
     text-align: center;
     width: 16px;
 }
@@ -3238,7 +3237,7 @@ ul.lev2sub {
 }
 .cart_accord .panel {
     background-color: #fff;
-    border: 0px solid transparent;
+    border: 0 solid transparent;
     box-shadow: 0 0 0 rgba(0, 0, 0, 0.05);
     margin-bottom: 20px;
 }
@@ -3319,7 +3318,7 @@ ul.lev2sub {
     overflow: hidden;
 }
 .last_od{
-    border-bottom: 0px solid #ddd;
+    border-bottom: 0 solid #ddd;
 }
 .cc_order_d_name {
     border-right: 1px solid #ddd;
@@ -3374,13 +3373,13 @@ ul.lev2sub {
     border-style: solid;
     border-width: 0 0 1px;
     box-shadow: 0 0 0 rgba(0, 0, 0, 0.05);
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 .cc_o_d_accord .panel-default > .panel-heading + .panel-collapse > .panel-body {
     border-top-color: #fff;
 }
 .cc_o_d_accord .panel-group .panel + .panel {
-    margin-top: 0px;
+    margin-top: 0;
 }
 .cc_o_d_accord .panel-title > a {
     color: #4d4d4d;
@@ -3455,11 +3454,11 @@ ul.lev2sub {
     font-weight: 400;
 }
 .register_login .panel {
-    border: 0px solid transparent;
-    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.05);
+    border: 0 solid transparent;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.05);
 }
 .register_login .panel-group .panel-heading + .panel-collapse > .panel-body, .panel-group .panel-heading + .panel-collapse > .list-group {
-    border-top: 0px solid #ddd;
+    border-top: 0 solid #ddd;
 }
 .register_login .panel-body {
     padding: 25px 0;
@@ -3574,7 +3573,7 @@ ul.lev2sub {
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
 }
 .header_bottom_area.blog_page {
-    background: rgba(0, 0, 0, 0) url("../img/bread-bg.png") repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("../../image/bread-bg.png") repeat scroll 0 0;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2) inset;
     display: block;
     height: 60px;
@@ -3666,7 +3665,7 @@ ul.lev2sub {
 .tagged_in p, .posted_in p {
     color: #666;
     margin-left: 4px;
-    margin-bottom:0px;
+    margin-bottom:0;
 }
 .blog_text_bottom {
     border-bottom: 1px solid #dddddd;
@@ -3686,7 +3685,6 @@ ul.lev2sub {
 .main_blog .pager li > a, .main_blog .pager li > span {
     background-color: #fff;
     border: 1px solid #ddd;
-    border-radius: 0;
     color: #2ecc71;
     display: inline-block;
     padding: 5px 14px;
@@ -3716,10 +3714,9 @@ ul.lev2sub {
     margin-bottom: 30px;
 }
 .category_b_list ul, .recent_post_list ul {
-    list-style: outside none none;
+    list-style: circle outside none;
     margin: 0;
     padding: 0;
-    list-style-type: circle;
 }
 .category_b_list ul li, .recent_post_list ul li {
     list-style: outside none circle;
@@ -4038,7 +4035,7 @@ ul.lev2sub {
 }
 
 .holder2 {
-    background: rgba(0, 0, 0, 0) url("../img/arrow12.png") no-repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("../image/arrow12.png") no-repeat scroll 0 0;
     display: block;
     height: 10px;
     position: absolute;
@@ -4048,7 +4045,7 @@ ul.lev2sub {
     cursor:pointer;
 }
 .holder2.minus_btn {
-    background: rgba(0, 0, 0, 0) url("../img/arrow2.png") no-repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("../../image/arrow2.png") no-repeat scroll 0 0;
     display: block;
     height: 10px;
     position: absolute;
@@ -4074,7 +4071,7 @@ ul.lev2sub {
     margin-bottom: 27px;
 }
 .tp-leftarrow {
-    background: rgba(0, 0, 0, 0.2) url("../img/left.png") no-repeat scroll 1px 2px;
+    background: rgba(0, 0, 0, 0.2) url("../../image/left.png") no-repeat scroll 1px 2px;
     cursor: pointer;
     height: 35px;
     opacity: 1;
@@ -4088,7 +4085,7 @@ ul.lev2sub {
     width: 35px;
 }
 .tp-rightarrow {
-    background: rgba(0, 0, 0, 0.2) url("../img/left.png") no-repeat scroll 1px 2px;
+    background: rgba(0, 0, 0, 0.2) url("../../image/left.png") no-repeat scroll 1px 2px;
     cursor: pointer;
     height: 35px;
     opacity: 1;
@@ -4164,10 +4161,10 @@ ul.lev2sub {
     background-color: #2ecc71;
 }
 .cat_filter_box input[type="text"] {
-    margin-top: 0px;
+    margin-top: 0;
     background: #f3f4f6;
     text-align: center;
-    padding: 5px 0px;
+    padding: 5px 0;
 }
 .header_middle_cc_search {
     margin-top: 14px;
