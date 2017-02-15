@@ -8,7 +8,6 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/fonts/FontAwesome/css/font-awesome.min.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/dist/css/AdminLTE.min.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/dist/css/skins/_all-skins.min.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/customer/dreamboot.css">
 
 <link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/ico/favicon.ico"/>
 

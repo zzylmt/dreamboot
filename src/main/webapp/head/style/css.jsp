@@ -4,15 +4,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="${pageContext.request.contextPath}/fonts/dreambootfonts.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/fonts/FontAwesome/css/font-awesome.min.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/customer/owl.carousel.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/customer/owl.theme.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/customer/owl.transitions.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/customer/settings.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/customer/glasscase.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/fonts/FontAwesome/css/font-awesome.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style/owl.carousel.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style/owl.theme.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style/owl.transitions.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style/settings.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style/glasscase.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/customer/dreamboot.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/customer/responsive.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style/dreamboot.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style/responsive.css">
 
 <link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/ico/favicon.ico"/>
 
