@@ -5,7 +5,7 @@
 <html lang="zh">
 <head>
     <title>我的文章列表--江西风格网络后台管理系统</title>
-    <jsp:include page="${pageContext.request.contextPath}/head/master/css.jsp"/>
+    <jsp:include page="../head/master/css.jsp"/>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <jsp:include page="${pageContext.request.contextPath}/head/master/top.jsp"/>
