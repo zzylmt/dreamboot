@@ -6,12 +6,12 @@
 <html>
 <head>
     <title>路演企业列表--江西股权交易中心门户后台管理系统</title>
-    <jsp:include page="${pageContext.request.contextPath}/head/master/css.jsp"/>
+    <jsp:include page="/head/master/css.jsp"/>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
-    <jsp:include page="${pageContext.request.contextPath}/head/master/top.jsp"/>
-    <jsp:include page="${pageContext.request.contextPath}/head/master/left.jsp">
+    <jsp:include page="/head/master/top.jsp"/>
+    <jsp:include page="/head/master/left.jsp">
         <jsp:param name="parentnode" value="2"/>
         <jsp:param name="childnode" value="2"/>
     </jsp:include>
@@ -347,5 +347,5 @@
     </div>
 </div>
 </body>
-<jsp:include page="${pageContext.request.contextPath}/head/master/js.jsp"/>
+<jsp:include page="/head/master/js.jsp"/>
 </html>

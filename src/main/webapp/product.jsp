@@ -3,11 +3,11 @@
 <html lang="zh">
 <head>
 	<title>商品信息</title>
-	<jsp:include page="${pageContext.request.contextPath}/head/style/css.jsp"/>
+	<jsp:include page="/head/style/css.jsp"/>
 </head>
 <body class="shop_left">
-<jsp:include page="${pageContext.request.contextPath}/header_top.jsp"/>
-<jsp:include page="${pageContext.request.contextPath}/header.jsp"/>
+<jsp:include page="/header_top.jsp"/>
+<jsp:include page="/header.jsp"/>
 
 <!--==| header bottom Start |==-->
 <div class="header_bottom_area blog_page">
@@ -2084,8 +2084,8 @@
 </div>
 <!--==| Home Service END |==-->
 
-<jsp:include page="${pageContext.request.contextPath}/footer.jsp" />
-<jsp:include page="${pageContext.request.contextPath}/head/style/js.jsp" />
+<jsp:include page="/footer.jsp" />
+<jsp:include page="/head/style/js.jsp" />
 <script src="${pageContext.request.contextPath}/plugins/style/jquery.glasscase.minf195.js"></script>
 <script type="text/javascript">
 	$(function () {

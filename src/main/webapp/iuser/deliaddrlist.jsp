@@ -5,13 +5,13 @@
 <html lang="zh">
 <head>
     <title>收货地址管理--我的风格</title>
-    <jsp:include page="${pageContext.request.contextPath}/head/customer/css.jsp"/>
+    <jsp:include page="/head/customer/css.jsp"/>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/fonts/ionicons.min.css">
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
-    <jsp:include page="${pageContext.request.contextPath}/head/customer/top.jsp"/>
-    <jsp:include page="${pageContext.request.contextPath}/head/customer/left.jsp">
+    <jsp:include page="/head/customer/top.jsp"/>
+    <jsp:include page="/head/customer/left.jsp">
         <jsp:param name="parentnode" value="2"/>
     </jsp:include>
 
@@ -81,7 +81,7 @@
     </div>
 </div>
 </body>
-<jsp:include page="${pageContext.request.contextPath}/head/customer/js.jsp"/>
+<jsp:include page="/head/customer/js.jsp"/>
 <script type="text/javascript">
     $(function () {
     });

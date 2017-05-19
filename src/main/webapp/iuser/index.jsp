@@ -5,14 +5,14 @@
 <html lang="zh">
 <head>
     <title>我的风格</title>
-    <jsp:include page="${pageContext.request.contextPath}/head/customer/css.jsp"/>
+    <jsp:include page="/head/customer/css.jsp"/>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/fonts/ionicons.min.css">
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
-    <jsp:include page="${pageContext.request.contextPath}/head/customer/top.jsp"/>
-    <jsp:include page="${pageContext.request.contextPath}/head/customer/left.jsp"/>
+    <jsp:include page="/head/customer/top.jsp"/>
+    <jsp:include page="/head/customer/left.jsp"/>
     <div class="content-wrapper">
         <section class="content-header">
             <h1>
@@ -73,7 +73,7 @@
     </div>
 </div>
 </body>
-<jsp:include page="${pageContext.request.contextPath}/head/customer/js.jsp"/>
+<jsp:include page="/head/customer/js.jsp"/>
 <script type="text/javascript">
     $(function () {
     });

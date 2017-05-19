@@ -5,14 +5,14 @@
 <html lang="zh">
 <head>
     <title>首页--江西风格网络后台管理系统</title>
-    <jsp:include page="${pageContext.request.contextPath}/head/master/css.jsp"/>
+    <jsp:include page="/head/master/css.jsp"/>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/fonts/ionicons.min.css">
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
-    <jsp:include page="${pageContext.request.contextPath}/head/master/top.jsp"/>
-    <jsp:include page="${pageContext.request.contextPath}/head/master/left.jsp"/>
+    <jsp:include page="/head/master/top.jsp"/>
+    <jsp:include page="/head/master/left.jsp"/>
     <div class="content-wrapper">
         <section class="content-header">
             <h1>
@@ -73,7 +73,7 @@
     </div>
 </div>
 </body>
-<jsp:include page="${pageContext.request.contextPath}/head/master/js.jsp"/>
+<jsp:include page="/head/master/js.jsp"/>
 <script type="text/javascript">
     $(function () {
     });

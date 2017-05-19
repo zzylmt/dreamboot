@@ -5,12 +5,12 @@
 <html lang="zh">
 <head>
     <title>个人信息管理--风格网络</title>
-    <jsp:include page="${pageContext.request.contextPath}/head/customer/css.jsp"/>
+    <jsp:include page="/head/customer/css.jsp"/>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
-    <jsp:include page="${pageContext.request.contextPath}/head/customer/top.jsp"/>
-    <jsp:include page="${pageContext.request.contextPath}/head/customer/left.jsp"/>
+    <jsp:include page="/head/customer/top.jsp"/>
+    <jsp:include page="/head/customer/left.jsp"/>
 
     <div class="content-wrapper">
         <section class="content-header">
@@ -128,7 +128,7 @@
     </div>
 </div>
 </body>
-<jsp:include page="${pageContext.request.contextPath}/head/customer/js.jsp"/>
+<jsp:include page="/head/customer/js.jsp"/>
 <script type="text/javascript">
     $(function () {
         $("#infosave_btn").on("click", function () {

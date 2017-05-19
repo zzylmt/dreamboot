@@ -3,11 +3,11 @@
 <html lang="zh">
 <head>
     <title>我的风格站</title>
-    <jsp:include page="${pageContext.request.contextPath}/head/style/css.jsp"/>
+    <jsp:include page="/head/style/css.jsp"/>
 </head>
 <body class="home_two">
-<jsp:include page="${pageContext.request.contextPath}/header_top.jsp"/>
-<jsp:include page="${pageContext.request.contextPath}/header.jsp"/>
+<jsp:include page="/header_top.jsp"/>
+<jsp:include page="/header.jsp"/>
 
 <!--==| Slider START |==-->
 <div class="slider_area_home1 slider_area_home2">
@@ -4839,7 +4839,7 @@
 </div>
 <!--==| Home Service END |==-->
 
-<jsp:include page="${pageContext.request.contextPath}/footer.jsp"/>
-<jsp:include page="${pageContext.request.contextPath}/head/style/js.jsp"/>
+<jsp:include page="/footer.jsp"/>
+<jsp:include page="/head/style/js.jsp"/>
 </body>
 </html>

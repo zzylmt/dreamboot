@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<%@ include file="../head/master/init.jsp" %>
+<%@ include file="/head/master/init.jsp" %>
 <%
     String result = request.getParameter("result");
 %>
@@ -10,13 +10,13 @@
 <head>
     <title>文章编辑--江西风格网络后台管理系统</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/select2/css/select2.min.css">
-    <jsp:include page="${pageContext.request.contextPath}/head/master/css.jsp"/>
+    <jsp:include page="/head/master/css.jsp"/>
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
-    <jsp:include page="${pageContext.request.contextPath}/head/master/top.jsp"/>
-    <jsp:include page="${pageContext.request.contextPath}/head/master/left.jsp">
+    <jsp:include page="/head/master/top.jsp"/>
+    <jsp:include page="/head/master/left.jsp">
         <jsp:param name="parentnode" value="1"/>
     </jsp:include>
 
@@ -103,7 +103,7 @@
     </div>
 </div>
 </body>
-<jsp:include page="${pageContext.request.contextPath}/head/master/js.jsp"/>
+<jsp:include page="/head/master/js.jsp"/>
 
 <script type="text/javascript" src="${pageContext.request.contextPath}/plugins/select2/js/select2.min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/plugins/select2/js/i18n/zh-CN.js"></script>

@@ -5,11 +5,11 @@
 <html lang="zh">
 <head>
     <title>商品列表--江西风格网络后台管理系统</title>
-    <jsp:include page="${pageContext.request.contextPath}/head/master/css.jsp"/>
+    <jsp:include page="/head/master/css.jsp"/>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
-<jsp:include page="${pageContext.request.contextPath}/head/master/top.jsp"/>
-<jsp:include page="${pageContext.request.contextPath}/head/master/left.jsp">
+<jsp:include page="/head/master/top.jsp"/>
+<jsp:include page="/head/master/left.jsp">
     <jsp:param name="parentnode" value="5"/>
     <jsp:param name="childnode" value="2"/>
 </jsp:include>
@@ -102,5 +102,5 @@
 </div>
 
 </body>
-<jsp:include page="${pageContext.request.contextPath}/head/master/js.jsp"/>
+<jsp:include page="/head/master/js.jsp"/>
 </html>

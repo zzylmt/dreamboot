@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8"/>
     <title>登陆--江西风格网络后台管理系统</title>
-    <jsp:include page="${pageContext.request.contextPath}/head/master/css.jsp"/>
+    <jsp:include page="/head/master/css.jsp"/>
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
@@ -31,7 +31,7 @@
         </form>
     </div>
 </div>
-<jsp:include page="${pageContext.request.contextPath}/head/master/js.jsp"/>
+<jsp:include page="/head/master/js.jsp"/>
 </body>
 <script type="text/javascript">
     $(document).ready(function () {
