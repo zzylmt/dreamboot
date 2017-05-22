@@ -16,7 +16,7 @@ public class DreambootApplication {
     @Bean
     public EmbeddedServletContainerFactory servletContainer() {
         TomcatEmbeddedServletContainerFactory factory = new TomcatEmbeddedServletContainerFactory();
-        factory.setPort(9000);
+        factory.setPort(9010);
         return factory;
     }
 }
