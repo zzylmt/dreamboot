@@ -5,9 +5,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class MainController {
-    @RequestMapping(value={"/sys/", "/sys"})
+    @RequestMapping(value={"/master/", "/master"})
     public String sysindex() {
-        return "sys/syslogin";
+        return "master/login";
     }
 
     @RequestMapping(value={"/iuser/", "/iuser"})

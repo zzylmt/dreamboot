@@ -21,9 +21,6 @@ public class DreambootApplication {
     public EmbeddedServletContainerFactory servletContainer() {
         TomcatEmbeddedServletContainerFactory factory = new TomcatEmbeddedServletContainerFactory();
         factory.setPort(9010);
-
-        System.out.println(env.getProperty("spring.datasource.username"));
-
         return factory;
     }
 }

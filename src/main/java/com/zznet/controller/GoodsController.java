@@ -35,8 +35,8 @@ public class GoodsController {
     @Resource(name = "goodsclassdao")
     private GoodsClassDao goodsclassDaoImpl;
 
-    @RequestMapping("/sys/newgoods")
-    public String sysnewgoods(HttpSession session, HttpServletRequest request) throws Exception {
+    @RequestMapping("/master/newgoods")
+    public String masternewgoods(HttpSession session, HttpServletRequest request) throws Exception {
         GoodsInfo goodsinfo_old = new GoodsInfo();
         GoodsInfo goodsinfo_new;
         try {
@@ -60,14 +60,14 @@ public class GoodsController {
             request.setAttribute("goodsinfo", goodsinfo_new);
         } catch (Exception e) {
             e.printStackTrace();
-            return "sys/login";
+            return "master/login";
         }
 
-        return "redirect:/sys/goodsinfo/" + goodsinfo_new.getId();
+        return "redirect:/master/goodsinfo/" + goodsinfo_new.getId();
     }
 
-    @RequestMapping("/sys/mygoodslist")
-    public String sysmygoodslist(HttpServletRequest request, @RequestParam(value = "createrid") int createrid, @RequestParam(value = "curpageno") int curpageno) throws Exception {
+    @RequestMapping("/master/mygoodslist")
+    public String mastermygoodslist(HttpServletRequest request, @RequestParam(value = "createrid") int createrid, @RequestParam(value = "curpageno") int curpageno) throws Exception {
         try {
             ThePage<GoodsInfo> goodspage = new ThePage<>();
 
@@ -97,14 +97,14 @@ public class GoodsController {
             request.setAttribute("prepage", prepage);
         } catch (Exception e) {
             e.printStackTrace();
-            return "sys/login";
+            return "master/login";
         }
 
-        return "sys/mygoodslist";
+        return "master/mygoodslist";
     }
 
-    @RequestMapping("/sys/goodsinfo/{gid}")
-    public String sysgoodsinfo(HttpServletRequest request, @PathVariable int gid) throws Exception {
+    @RequestMapping("/master/goodsinfo/{gid}")
+    public String mastergoodsinfo(HttpServletRequest request, @PathVariable int gid) throws Exception {
         try {
             GoodsInfo goodsinfo = goodsDaoImpl.getGoods(gid);
             List<Dict> gstatusList = dictDaoImpl.getDictList("iStatus");
@@ -118,11 +118,11 @@ public class GoodsController {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return "sys/goodsedit";
+        return "master/goodsedit";
     }
 
-    @RequestMapping("/sys/goodssave")
-    public String sysgoodssave(@RequestParam(value = "gid") int gid,
+    @RequestMapping("/master/goodssave")
+    public String mastergoodssave(@RequestParam(value = "gid") int gid,
                                @RequestParam(value = "goodspic") String goodspic,
                                @RequestParam(value = "goodstitle") String goodstitle,
                                @RequestParam(value = "goodsname") String goodsname,
@@ -150,8 +150,8 @@ public class GoodsController {
             result = goodsDaoImpl.update(goodsinfo);
         } catch (Exception e) {
             e.printStackTrace();
-            return "sys/login";
+            return "master/login";
         }
-        return "redirect:/sys/goodsinfo/" + goodsinfo.getId() + "?result=" + result;
+        return "redirect:/master/goodsinfo/" + goodsinfo.getId() + "?result=" + result;
     }
 }

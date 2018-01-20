@@ -1,6 +1,5 @@
 package com.zznet.dao;
 
-import com.zznet.entity.CoCInfo;
 import com.zznet.entity.DeliAddr;
 
 import java.util.List;

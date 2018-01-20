@@ -1,4 +1,4 @@
-<%@ page language="java" import="com.zznet.entity.DBadmin" pageEncoding="UTF-8" %>
+<%@ page import="com.zznet.entity.DBadmin" pageEncoding="UTF-8" %>
 <%
     boolean isLegal = false;
     DBadmin admininfo = (DBadmin) session.getAttribute("dbadmininfo");
@@ -35,7 +35,7 @@
                 <a href="#"><i class="fa fa-circle text-success"></i> 在线</a>
             </div>
         </div>
-        <ul class="sidebar-menu">
+        <ul class="sidebar-menu" data-widget="tree">
             <li class="header">功能项</li>
             <li class="treeview <% if("1".equalsIgnoreCase(parentnode)) {out.print("active");}%>">
                 <a href="#">
@@ -46,30 +46,25 @@
                 </a>
                 <ul class="treeview-menu">
                     <li class="<% if("1".equalsIgnoreCase(childnode) && "1".equalsIgnoreCase(parentnode)) {out.print("active");}%>">
-                        <a href="${pageContext.request.contextPath}/sys/newarticle"><i class="fa fa-circle-o"></i> 新增文章
+                        <a href="${pageContext.request.contextPath}/master/newarticle"><i class="fa fa-circle-o"></i> 新增文章
                         </a></li>
                     <li class="<% if("2".equalsIgnoreCase(childnode) && "1".equalsIgnoreCase(parentnode)) {out.print("active");}%>">
-                        <a href="${pageContext.request.contextPath}/sys/myarticlelist?curpageno=1"><i
+                        <a href="${pageContext.request.contextPath}/master/myarticlelist?curpageno=1"><i
                                 class="fa fa-circle-o"></i> 我的文章 </a></li>
                 </ul>
             </li>
 
-
-            <li class="treeview <% if("2".equalsIgnoreCase(parentnode)) {out.print("active");}%>">
+            <li class="<% if("2".equalsIgnoreCase(parentnode)) {out.print("active");}%> treeview">
                 <a href="#">
-                    <i class="fa fa-dashboard"></i> <span>商会管理</span>
+                    <i class="fa fa-dashboard"></i> <span>栏目管理</span>
                     <span class="pull-right-container">
                       <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li class="<% if("1".equalsIgnoreCase(childnode) && "2".equalsIgnoreCase(parentnode))
-                    {out.print("active");}%>"><a href="${pageContext.request.contextPath}/sys/newCoC"><i
-                            class="fa fa-circle-o"></i> 新增商会 </a></li>
-                    <li class="<% if("2".equalsIgnoreCase(childnode) && "2".equalsIgnoreCase(parentnode))
-                    {out.print("active");}%>"><a
-                            href="${pageContext.request.contextPath}/sys/coclist?cocname=&curpageno=1"><i
-                            class="fa fa-circle-o"></i> 商会列表 </a></li>
+                    <li class="<% if("1".equalsIgnoreCase(childnode) && "2".equalsIgnoreCase(parentnode)) {out.print("active");}%>">
+                        <a href="${pageContext.request.contextPath}/master/columnlist"><i class="fa fa-circle-o"></i> 栏目管理</a>
+                    </li>
                 </ul>
             </li>
 
@@ -82,11 +77,11 @@
                 </a>
                 <ul class="treeview-menu">
                     <li class="<% if("1".equalsIgnoreCase(childnode) && "3".equalsIgnoreCase(parentnode))
-                    {out.print("active");}%>"><a href="${pageContext.request.contextPath}/sys/newMerchant"><i
+                    {out.print("active");}%>"><a href="${pageContext.request.contextPath}/master/newMerchant"><i
                             class="fa fa-circle-o"></i> 新增商户 </a></li>
                     <li class="<% if("2".equalsIgnoreCase(childnode) && "3".equalsIgnoreCase(parentnode))
                     {out.print("active");}%>"><a
-                            href="${pageContext.request.contextPath}/sys/merchantlist?curpageno=1&mername="><i
+                            href="${pageContext.request.contextPath}/master/merchantlist?curpageno=1&mername="><i
                             class="fa fa-circle-o"></i> 商户列表 </a></li>
                 </ul>
             </li>
@@ -100,15 +95,14 @@
                 </a>
                 <ul class="treeview-menu">
                     <li class="<% if("1".equalsIgnoreCase(childnode) && "5".equalsIgnoreCase(parentnode))
-                    {out.print("active");}%>"><a href="${pageContext.request.contextPath}/sys/newgoods"><i
+                    {out.print("active");}%>"><a href="${pageContext.request.contextPath}/master/newgoods"><i
                             class="fa fa-circle-o"></i> 新增商品 </a></li>
                     <li class="<% if("2".equalsIgnoreCase(childnode) && "5".equalsIgnoreCase(parentnode))
                     {out.print("active");}%>"><a
-                            href="${pageContext.request.contextPath}/sys/mygoodslist?createrid=<%=sid%>&curpageno=1"><i
+                            href="${pageContext.request.contextPath}/master/mygoodslist?createrid=<%=sid%>&curpageno=1"><i
                             class="fa fa-circle-o"></i> 我的商品查询 </a></li>
                 </ul>
             </li>
-
 
             <li class="treeview <% if("7".equalsIgnoreCase(parentnode)) {out.print("active");}%>">
                 <a href="#">
@@ -120,28 +114,12 @@
                 <ul class="treeview-menu">
                     <li class="<% if("1".equalsIgnoreCase(childnode) && "7".equalsIgnoreCase(parentnode))
                     {out.print("active");}%>"><a
-                            href="${pageContext.request.contextPath}/sys/orderlist?dbuserid=0&curpageno=1&startdate=&enddate="><i
+                            href="${pageContext.request.contextPath}/master/orderlist?dbuserid=0&curpageno=1&startdate=&enddate="><i
                             class="fa fa-circle-o"></i> 订单查询 </a></li>
                 </ul>
             </li>
 
-
-            <li class="<% if("4".equalsIgnoreCase(parentnode)) {out.print("active");}%> treeview">
-                <a href="#">
-                    <i class="fa fa-dashboard"></i> <span>栏目管理</span>
-                    <span class="pull-right-container">
-                      <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li class="<% if("1".equalsIgnoreCase(childnode) && "4".equalsIgnoreCase(parentnode)) {out.print("active");}%>">
-                        <a href="${pageContext.request.contextPath}/sys/columnlist"><i class="fa fa-circle-o"></i> 栏目管理</a>
-                    </li>
-                </ul>
-            </li>
         </ul>
-
-
     </section>
     <!-- /.sidebar -->
 </aside>
