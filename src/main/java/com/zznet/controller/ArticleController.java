@@ -30,8 +30,8 @@ public class ArticleController {
     @Resource(name = "columndao")
     private ColumnDao columnDaoImpl;
 
-    @RequestMapping("/sys/newarticle")
-    public String sysnewarticle(HttpSession session,HttpServletRequest request) throws Exception {
+    @RequestMapping("/master/newarticle")
+    public String masternewarticle(HttpSession session,HttpServletRequest request) throws Exception {
         ArticleInfo articleInfo_old = new ArticleInfo();
         ArticleInfo articleInfo_new;
         try {
@@ -59,14 +59,14 @@ public class ArticleController {
             request.setAttribute("articleInfo", articleInfo_new);
         } catch (Exception e) {
             e.printStackTrace();
-            return "sys/login";
+            return "master/login";
         }
 
-        return "redirect:articleedit/" + articleInfo_new.getId();
+        return "redirect:myarticleedit/" + articleInfo_new.getId();
     }
 
-    @RequestMapping("/sys/myarticlelist")
-    public String sysarticlelist(HttpServletRequest request,HttpSession session, @RequestParam(value = "curpageno") int curpageno) throws
+    @RequestMapping("/master/myarticlelist")
+    public String masterarticlelist(HttpServletRequest request,HttpSession session, @RequestParam(value = "curpageno") int curpageno) throws
             Exception {
         try {
             ThePage<ArticleInfo> articlepage = new ThePage<>();
@@ -98,14 +98,14 @@ public class ArticleController {
             request.setAttribute("prepage", prepage);
         } catch (Exception e) {
             e.printStackTrace();
-            return "sys/login";
+            return "master/login";
         }
 
-        return "sys/myarticlelist";
+        return "master/myarticlelist";
     }
 
-    @RequestMapping("/sys/articleedit/{aid}")
-    public String sysarticleedit(HttpServletRequest request, @PathVariable int aid) throws Exception {
+    @RequestMapping("/master/myarticleedit/{aid}")
+    public String mastermyarticleedit(HttpServletRequest request, @PathVariable int aid) throws Exception {
         try {
             ArticleInfo articleInfo = articleDaoImpl.getArticle(aid);
             List<ColumnInfo> columnInfoList = columnDaoImpl.getColList();
@@ -114,26 +114,26 @@ public class ArticleController {
             request.setAttribute("columnInfoList", columnInfoList);
         } catch (Exception e) {
             e.printStackTrace();
-            return "sys/login";
+            return "master/login";
         }
 
-        return "sys/articleedit";
+        return "master/myarticleedit";
     }
 
-    @RequestMapping("/sys/articledel/{aid}")
-    public String sysarticledel(@PathVariable int aid) throws Exception {
+    @RequestMapping("/master/articledel/{aid}")
+    public String masterarticledel(@PathVariable int aid) throws Exception {
         try {
             articleDaoImpl.delete(aid);
         } catch (Exception e) {
             e.printStackTrace();
-            return "sys/login";
+            return "master/login";
         }
 
-        return "redirect:/sys/myarticlelist?curpageno=1";
+        return "redirect:/master/myarticlelist?curpageno=1";
     }
 
-    @RequestMapping("/sys/articlesave")
-    public String sysarticlesave(
+    @RequestMapping("/master/articlesave")
+    public String masterarticlesave(
             @RequestParam(value = "atitle") String atitle,
             @RequestParam(value = "articleid") int articleid,
             @RequestParam(value = "atitle_min") String atitle_min,
@@ -156,10 +156,10 @@ public class ArticleController {
             result = articleDaoImpl.update(articleInfo_old);
         } catch (Exception e) {
             e.printStackTrace();
-            return "sys/login";
+            return "master/login";
         }
 
-        return "redirect:articleedit/" + articleid + "?result=" + result;
+        return "redirect:myarticleedit/" + articleid + "?result=" + result;
     }
 
     @RequestMapping("/articlebycol/{curpageno}/{cid}")

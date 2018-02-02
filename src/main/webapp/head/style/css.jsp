@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style/owl.transitions.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style/settings.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style/glasscase.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap3/css/bootstrap.min.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style/dreamboot.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style/responsive.css">
 

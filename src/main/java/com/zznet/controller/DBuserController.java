@@ -98,7 +98,7 @@ public class DBuserController {
             session.setAttribute("dbuser", dbuser);
         } catch (Exception e) {
             e.printStackTrace();
-            return "/sys/login";
+            return "/iuser/login";
         }
         return "redirect:/iuser/userinfo/" + dbuser.getId() + "?result=" + result;
     }

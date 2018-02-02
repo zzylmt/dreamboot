@@ -9,12 +9,12 @@
 <head>
     <title>收货地址详情--风格网络</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/select2/css/select2.min.css">
-    <jsp:include page="${pageContext.request.contextPath}/head/customer/css.jsp"/>
+    <jsp:include page="/head/customer/css.jsp"/>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
-    <jsp:include page="${pageContext.request.contextPath}/head/customer/top.jsp"/>
-    <jsp:include page="${pageContext.request.contextPath}/head/customer/left.jsp"/>
+    <jsp:include page="/head/customer/top.jsp"/>
+    <jsp:include page="/head/customer/left.jsp"/>
 
     <div class="content-wrapper">
         <section class="content-header">
@@ -145,7 +145,7 @@
     </div>
 </div>
 </body>
-<jsp:include page="${pageContext.request.contextPath}/head/customer/js.jsp"/>
+<jsp:include page="/head/customer/js.jsp"/>
 <script type="text/javascript" src="${pageContext.request.contextPath}/plugins/select2/js/select2.min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/plugins/select2/js/i18n/zh-CN.js"></script>
 <script type="text/javascript">

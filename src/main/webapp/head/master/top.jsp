@@ -1,4 +1,4 @@
-<%@ page language="java" import="com.zznet.entity.DBadmin" pageEncoding="UTF-8" %>
+<%@ page import="com.zznet.entity.DBadmin" pageEncoding="UTF-8" %>
 <%
     boolean isLegal = false;
     DBadmin admininfo = (DBadmin) session.getAttribute("dbadmininfo");
@@ -52,7 +52,7 @@
                                 <a href="#" class="btn btn-default btn-flat">个人主页</a>
                             </div>
                             <div class="pull-right">
-                                <a href="${pageContext.request.contextPath}/sys/logout.jsp" class="btn btn-default btn-flat">退出</a>
+                                <a href="${pageContext.request.contextPath}/master/logout.jsp" class="btn btn-default btn-flat">退出</a>
                             </div>
                         </li>
                     </ul>

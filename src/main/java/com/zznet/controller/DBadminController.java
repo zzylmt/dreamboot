@@ -19,8 +19,8 @@ public class DBadminController {
     @Resource(name = "dbadmindao")
     private DBadminDao dbadminDaoImpl;
 
-    @RequestMapping("/sys/login")
-    public String syslogin(HttpServletRequest request,
+    @RequestMapping("/master/login")
+    public String masterlogin(HttpServletRequest request,
                            @RequestParam(value = "username") String username,
                            @RequestParam(value = "pswd") String pswd) throws Exception {
         try {
@@ -32,17 +32,17 @@ public class DBadminController {
                 session.setAttribute("dbadmininfo", admininfo);
                 session.setMaxInactiveInterval(60 * 60 * 24);
             } else {
-                return "sys/login";
+                return "master/login";
             }
         } catch (NullPointerException e) {
             e.printStackTrace();
             request.setAttribute("msg", "用户名或密码错误:" + username);
-            return "sys/login";
+            return "master/login";
         } catch (Exception e) {
             e.printStackTrace();
-            return "sys/login";
+            return "master/login";
         }
 
-        return "sys/sysindex";
+        return "master/index";
     }
 }

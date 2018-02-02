@@ -3,11 +3,11 @@
 <html lang="zh">
 <head>
     <title>我的风格站</title>
-    <jsp:include page="head/style/css.jsp"/>
+    <jsp:include page="/head/style/css.jsp"/>
 </head>
 <body class="home_two">
-<jsp:include page="header_top.jsp"/>
-<jsp:include page="header.jsp"/>
+<jsp:include page="/header_top.jsp"/>
+<jsp:include page="/header.jsp"/>
 
 <!--==| Slider START |==-->
 <div class="slider_area_home1 slider_area_home2">
@@ -71,7 +71,7 @@
                              data-endspeed="300"
 
                              style="z-index: 9;border: 2px solid #444444;color: #444444;display: inline-block;font-size: 14px;font-weight: 600;line-height: 36px;padding: 0 15px;text-transform: uppercase;">
-                            <a style="color: #444444;" href="${pageContext.request.contextPath}/product.jsp" target="_blank"> 现在购买 </a>
+                            <a style="color: #444444;" href="#" target="_blank"> 现在购买 </a>
                         </div>
                     </li>
                     <!-- SLIDE  -->
@@ -126,13 +126,13 @@
                              data-endelementdelay="0.1"
                              data-endspeed="300"
                              style="z-index: 9;border: 2px solid #444444;color: #444444;display: inline-block;font-size: 14px;font-weight: 600;line-height: 36px;padding: 0 15px;text-transform: uppercase;">
-                            <a style="color: #444444;" href="${pageContext.request.contextPath}/product.jsp" target="_blank"> 现在购买 </a>
+                            <a style="color: #444444;" href="#" target="_blank"> 现在购买 </a>
                         </div>
                     </li>
                     <li data-transition="parallaxtoright,parallaxtoleft" data-slotamount="7" data-masterspeed="600" data-saveperformance="off">
                         <!-- MAIN IMAGE -->
-                        <a href="${pageContext.request.contextPath}/product.jsp"><img src="${pageContext.request.contextPath}/image/slide3.jpg" alt="slider1" data-bgposition="center top" data-bgfit="cover"
-                             data-bgrepeat="no-repeat"></a>
+                        <img src="${pageContext.request.contextPath}/image/slide3.jpg" alt="slider1" data-bgposition="center top" data-bgfit="cover"
+                             data-bgrepeat="no-repeat">
                         <!-- LAYERS -->
 
                         <!-- LAYER NR. 2 -->
@@ -184,7 +184,7 @@
                              data-endspeed="300"
 
                              style="z-index: 9;border: 2px solid #fff;color: #fff;display: inline-block;font-size: 14px;font-weight: 600;line-height: 36px;padding: 0 15px;text-transform: uppercase;">
-                            <a style="color: #fff;" href="${pageContext.request.contextPath}/product.jsp" target="_blank"> 现在购买 </a>
+                            <a style="color: #fff;" href="#" target="_blank"> 现在购买 </a>
                         </div>
                     </li>
                 </ul>
@@ -217,7 +217,7 @@
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="banner-top">
                                     <div class="banner-inner-content">
-                                        <a href="${pageContext.request.contextPath}/product.jsp"><img src="${pageContext.request.contextPath}/image/banner-1.jpg" alt=""/></a>
+                                        <img src="${pageContext.request.contextPath}/image/banner-1.jpg" alt=""/>
                                         <div class="overlay"></div>
                                     </div>
                                 </div>
@@ -234,7 +234,7 @@
                                                 <h3>collection</h3>
                                                 <h2>women's</h2>
                                                 <h4>save up to 25% off</h4>
-                                                <a href="${pageContext.request.contextPath}/product.jsp" class="btn-shop">现在购买 </a>
+                                                <a href="#" class="btn-shop">现在购买 </a>
                                             </div>
                                         </div>
                                     </div>
@@ -249,7 +249,7 @@
                                             <div class="banner-texthome">
                                                 <h3>NEW ARRIVALS</h3>
                                                 <h2>ACESSORIES</h2>
-                                                <a href="${pageContext.request.contextPath}/product.jsp" class="btn-shop">现在购买 </a>
+                                                <a href="#" class="btn-shop">现在购买 </a>
                                             </div>
                                         </div>
                                     </div>
@@ -265,7 +265,7 @@
                                     <div class="banner-texthome">
                                         <h3>NEW ARRIVALS</h3>
                                         <h2>For women</h2>
-                                        <a href="${pageContext.request.contextPath}/product.jsp" class="btn-shop">现在购买 </a>
+                                        <a href="#" class="btn-shop">现在购买 </a>
                                     </div>
                                 </div>
                             </div>
@@ -327,7 +327,7 @@
                                                     <a class="fa fa-search" href="" data-toggle="modal" data-target="#hometwom1"></a>
                                                 </div>
                                                 <div class="cart-icon">
-                                                    <a class="fa fa-shopping-cart" href="${pageContext.request.contextPath}/product.jsp"></a>
+                                                    <a class="fa fa-shopping-cart" href=""></a>
                                                 </div>
                                                 <div class="featured_info">
                                                     <a href="product-left-sidebar.html">Split Side Pink Crepe</a>
@@ -369,7 +369,7 @@
                                                     <a class="fa fa-search" href="" data-toggle="modal" data-target="#hometwom2"></a>
                                                 </div>
                                                 <div class="cart-icon">
-                                                    <a class="fa fa-shopping-cart" href="${pageContext.request.contextPath}/product.jsp"></a>
+                                                    <a class="fa fa-shopping-cart" href=""></a>
                                                 </div>
                                                 <div class="featured_info">
                                                     <a href="product-left-sidebar.html">Floral Print Buttoned</a>
@@ -406,7 +406,7 @@
                                                     <a class="fa fa-search" href="" data-toggle="modal" data-target="#hometwom3"></a>
                                                 </div>
                                                 <div class="cart-icon">
-                                                    <a class="fa fa-shopping-cart" href="${pageContext.request.contextPath}/product.jsp"></a>
+                                                    <a class="fa fa-shopping-cart" href=""></a>
                                                 </div>
                                                 <div class="featured_info">
                                                     <a href="product-left-sidebar.html">Printed smocked dress</a>
@@ -443,7 +443,7 @@
                                                     <a class="fa fa-search" href="" data-toggle="modal" data-target="#hometwom4"></a>
                                                 </div>
                                                 <div class="cart-icon">
-                                                    <a class="fa fa-shopping-cart" href="${pageContext.request.contextPath}/product.jsp"></a>
+                                                    <a class="fa fa-shopping-cart" href=""></a>
                                                 </div>
                                                 <div class="featured_info">
                                                     <a href="product-left-sidebar.html">Eva skater dress</a>
@@ -4839,7 +4839,7 @@
 </div>
 <!--==| Home Service END |==-->
 
-<jsp:include page="${pageContext.request.contextPath}/footer.jsp"/>
-<jsp:include page="${pageContext.request.contextPath}/head/style/js.jsp"/>
+<jsp:include page="/footer.jsp"/>
+<jsp:include page="/head/style/js.jsp"/>
 </body>
 </html>

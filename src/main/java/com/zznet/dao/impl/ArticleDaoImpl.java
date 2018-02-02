@@ -25,8 +25,7 @@ public class ArticleDaoImpl implements ArticleDao, PageSize {
 
     public ArticleInfo addArticle(final ArticleInfo articleinfo_old) {
 
-        final String mysql = "INSERT INTO articleinfo (atitle,atitle_min,thumb_pic,atext,createrid,createdatetime," +
-                "columnid,readcount,goodcount,orderscore,PROFILE,astatus ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
+        final String mysql = "INSERT INTO articleinfo (atitle,atitle_min,thumb_pic,atext,createrid,createdatetime,columnid,readcount,goodcount,orderscore,PROFILE,astatus ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
 
         ArticleInfo articleinfo;
         KeyHolder keyHolder = new GeneratedKeyHolder();
@@ -57,7 +56,7 @@ public class ArticleDaoImpl implements ArticleDao, PageSize {
 
     public ArticleInfo getArticle(int id) {
         String sql = "SELECT a.id,a.atitle,a.atitle_min,a.thumb_pic,a.atext,a.createrid,c.nickname,date_format(a" +
-                ".createdatetime,'%y-%m-%d %h:%i:%s'),a.columnid,a.readcount,a.goodcount,a.orderscore,b.columnname,a" +
+                ".createdatetime,'%Y-%m-%d %k:%i:%s'),a.columnid,a.readcount,a.goodcount,a.orderscore,b.columnname,a" +
                 ".profile,a.astatus from articleinfo a LEFT JOIN columninfo b on a.columnid=b.id LEFT JOIN dbadmin c on a" +
                 ".createrid=c.id where a.id = ? ";
 
@@ -152,8 +151,8 @@ public class ArticleDaoImpl implements ArticleDao, PageSize {
     public ThePage<ArticleInfo> getArticleByDBadmin(int adminid, int pageno) {
         ThePage<ArticleInfo> articlepage = new ThePage<>();
 
-        String sql = "select a.id,a.atitle,a.atitle_min,a.thumb_pic,a.atext,a.createrid,c.nickname,date_format(a.createdatetime,'%y-%m-%d %h:%i:%s'),a" +
-                ".columnid,a.readcount,a.goodcount,a.orderscore,b.columnname,a.profile,a.astatus from articleinfo a left join columninfo b on a.columnid = b.id left join dbadmin c on a.createrid=c.id where a.createrid = ? order by a.orderscore limit ?,?";
+        String sql = "select a.id,a.atitle,a.atitle_min,a.thumb_pic,a.atext,a.createrid,c.nickname,date_format(a.createdatetime,'%Y-%m-%d %k:%i:%s'),a" +
+                ".columnid,a.readcount,a.goodcount,a.orderscore,b.columnname,a.profile,a.astatus from articleinfo a left join columninfo b on a.columnid = b.id left join dbadmin c on a.createrid=c.id where a.createrid = ? order by a.id desc,a.orderscore limit ?,?";
         String sql_count = "SELECT COUNT(*) from articleinfo a LEFT JOIN columninfo b on a.columnid=b.id LEFT JOIN dbadmin c on a.createrid=c.id where a.createrid=? ";
 
         if (pageno <= 0) {

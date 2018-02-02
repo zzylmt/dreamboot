@@ -3,11 +3,11 @@
 <html lang="zh">
 <head>
 	<title>商品信息</title>
-	<jsp:include page="head/style/css.jsp"/>
+	<jsp:include page="/head/style/css.jsp"/>
 </head>
 <body class="shop_left">
-<jsp:include page="header_top.jsp"/>
-<jsp:include page="header.jsp"/>
+<jsp:include page="/header_top.jsp"/>
+<jsp:include page="/header.jsp"/>
 
 <!--==| header bottom Start |==-->
 <div class="header_bottom_area blog_page">
@@ -2084,9 +2084,9 @@
 </div>
 <!--==| Home Service END |==-->
 
-<jsp:include page="footer.jsp" />
-<jsp:include page="head/style/js.jsp" />
-<script src="plugins/style/jquery.glasscase.minf195.js"></script>
+<jsp:include page="/footer.jsp" />
+<jsp:include page="/head/style/js.jsp" />
+<script src="${pageContext.request.contextPath}/plugins/style/jquery.glasscase.minf195.js"></script>
 <script type="text/javascript">
 	$(function () {
         $("#zoom1").glassCase({ 'widthDisplay': 456, 'heightDisplay': 470, 'isSlowZoom': true });
