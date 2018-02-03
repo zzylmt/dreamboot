@@ -31,7 +31,7 @@ public class ArticleController {
     private ColumnDao columnDaoImpl;
 
     @RequestMapping("/master/newarticle")
-    public String masternewarticle(HttpSession session,HttpServletRequest request) throws Exception {
+    public String masternewarticle(HttpSession session,HttpServletRequest request) {
         ArticleInfo articleInfo_old = new ArticleInfo();
         ArticleInfo articleInfo_new;
         try {
@@ -66,8 +66,7 @@ public class ArticleController {
     }
 
     @RequestMapping("/master/myarticlelist")
-    public String masterarticlelist(HttpServletRequest request,HttpSession session, @RequestParam(value = "curpageno") int curpageno) throws
-            Exception {
+    public String masterarticlelist(HttpServletRequest request,HttpSession session, @RequestParam(value = "curpageno") int curpageno) {
         try {
             ThePage<ArticleInfo> articlepage = new ThePage<>();
             DBadmin admininfo = (DBadmin) session.getAttribute("dbadmininfo");
@@ -105,7 +104,7 @@ public class ArticleController {
     }
 
     @RequestMapping("/master/myarticleedit/{aid}")
-    public String mastermyarticleedit(HttpServletRequest request, @PathVariable int aid) throws Exception {
+    public String mastermyarticleedit(HttpServletRequest request, @PathVariable int aid) {
         try {
             ArticleInfo articleInfo = articleDaoImpl.getArticle(aid);
             List<ColumnInfo> columnInfoList = columnDaoImpl.getColList();
@@ -121,7 +120,7 @@ public class ArticleController {
     }
 
     @RequestMapping("/master/articledel/{aid}")
-    public String masterarticledel(@PathVariable int aid) throws Exception {
+    public String masterarticledel(@PathVariable int aid) {
         try {
             articleDaoImpl.delete(aid);
         } catch (Exception e) {
@@ -141,7 +140,7 @@ public class ArticleController {
             @RequestParam(value = "atext") String atext,
             @RequestParam(value = "profile") String profile,
             @RequestParam(value = "astatus") int astatus,
-            @RequestParam(value = "columnid") int columnid) throws Exception {
+            @RequestParam(value = "columnid") int columnid) {
         boolean result;
         try {
             ArticleInfo articleInfo_old = articleDaoImpl.getArticle(articleid);
@@ -163,8 +162,7 @@ public class ArticleController {
     }
 
     @RequestMapping("/articlebycol/{curpageno}/{cid}")
-    public String articlebycollist(HttpServletRequest request, @PathVariable int curpageno, @PathVariable int cid)
-            throws Exception {
+    public String articlebycollist(HttpServletRequest request, @PathVariable int curpageno, @PathVariable int cid) {
         try {
             ThePage<ArticleInfo> articlepage;
             articlepage = articleDaoImpl.getArticleByCol(cid, curpageno);

@@ -91,7 +91,7 @@ public class MerchantDaoImpl implements MerchantDao, PageSize {
 
     @Override
     public MerchantInfo getMerchant(int id) {
-        String sql = "select a.id,a.merchantname,a.province_code,a.city_code,a.area_code,a.memo,a.headpic,a.contact,a.telno,a.addr,a.cocid,c.cocname,a.goodcount,a.score,a.createrid,a.createdate,a.mstatus, b.nickname from merchantinfo as a left join dbadmin b on a.createrid = b.id left join cocinfo c on a.cocid=c.id where a.id = ? ";
+        String sql = "select a.id,a.merchantname,a.province_code,a.city_code,a.area_code,a.memo,a.headpic,a.contact,a.telno,a.addr,a.cocid,'',a.goodcount,a.score,a.createrid,a.createdate,a.mstatus, b.nickname from merchantinfo as a left join dbadmin b on a.createrid = b.id where a.id = ? ";
 
         MerchantInfo merchantInfo = new MerchantInfo();
         try {
@@ -127,13 +127,8 @@ public class MerchantDaoImpl implements MerchantDao, PageSize {
     public ThePage<MerchantInfo> getMerchantByName(String merchantname, int pageno) {
         ThePage<MerchantInfo> merchantpage = new ThePage<>();
 
-        String sql = "select a.id,a.merchantname,a.province_code,a.city_code,a.area_code,a.memo,a.headpic,a.contact,a.telno,a.addr,a.cocid,c.cocname,a" +
-                ".goodcount,a.score,a.createrid,a.createdate,a.mstatus, b.nickname,province.`name` as provincename,city.`name` as cityname,area.`name` as areaname from merchantinfo as a left join dbadmin b on a.createrid = b.id left join" +
-                " cocinfo c on a.cocid=c.id LEFT JOIN province province on a.province_code=province.`code` LEFT JOIN city city on a.city_code=city.`code` " +
-                "LEFT JOIN area area on a.area_code=area.`code` where a.merchantname like ? order by a.createdate limit ?,?";
-        String sql_count = "select count(*) from merchantinfo as a left join dbadmin b on a.createrid = b.id left join cocinfo c on a.cocid=c.id LEFT JOIN " +
-                "province province on a.province_code=province.`code` LEFT JOIN city city on a.city_code=city.`code` LEFT JOIN area area on a.area_code=area.`code` where a" +
-                ".merchantname like ? ";
+        String sql = "select a.id,a.merchantname,a.province_code,a.city_code,a.area_code,a.memo,a.headpic,a.contact,a.telno,a.addr,a.cocid,'',a.goodcount,a.score,a.createrid,a.createdate,a.mstatus, b.nickname,province.`name` as provincename,city.`name` as cityname,area.`name` as areaname from merchantinfo as a left join dbadmin b on a.createrid = b.id LEFT JOIN province province on a.province_code=province.`code` LEFT JOIN city city on a.city_code=city.`code` LEFT JOIN area area on a.area_code=area.`code` where a.merchantname like ? order by a.createdate limit ?,?";
+        String sql_count = "select count(*) from merchantinfo as a left join dbadmin b on a.createrid = b.id LEFT JOIN province province on a.province_code=province.`code` LEFT JOIN city city on a.city_code=city.`code` LEFT JOIN area area on a.area_code=area.`code` where a.merchantname like ? ";
 
         if (pageno <= 0) {
             pageno = 1;
@@ -168,14 +163,12 @@ public class MerchantDaoImpl implements MerchantDao, PageSize {
             return a;
         };
 
-        totalrecord = jdbcTemplate.queryForObject(sql_count,
-                new Object[]{"%" + merchantname + "%"}, Integer.class);
+        totalrecord = jdbcTemplate.queryForObject(sql_count,new Object[]{"%" + merchantname + "%"}, Integer.class);
         merchantpage.setTotalrecord(totalrecord);
 
         totalpage = (int) Math.ceil((double) totalrecord / (double) pagesize);
 
-        merchantpage.setPageItems(jdbcTemplate.query(sql, new Object[]{"%" + merchantname + "%",
-                startrecord, pagesize}, mapper));
+        merchantpage.setPageItems(jdbcTemplate.query(sql, new Object[]{"%" + merchantname + "%",startrecord, pagesize}, mapper));
 
         merchantpage.setCurrent(pageno);
         if (totalpage <= 0) {

@@ -21,8 +21,8 @@ public class DBadminController {
 
     @RequestMapping("/master/login")
     public String masterlogin(HttpServletRequest request,
-                           @RequestParam(value = "username") String username,
-                           @RequestParam(value = "pswd") String pswd) throws Exception {
+                              @RequestParam(value = "username") String username,
+                              @RequestParam(value = "pswd") String pswd) {
         try {
             DBadmin admininfo;
             admininfo = dbadminDaoImpl.checkDBadmin(username, pswd);

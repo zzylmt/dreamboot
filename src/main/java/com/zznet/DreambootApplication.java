@@ -13,11 +13,7 @@ import java.util.Properties;
 
 @SpringBootApplication
 public class DreambootApplication {
-
     public static void main(String[] args) {
         SpringApplication.run(DreambootApplication.class, args);
     }
-
-
-
 }

@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ include file="../head/master/init.jsp" %>
 <!DOCTYPE html>
@@ -84,9 +84,9 @@
                                                         <td>${thelist.telno}</td>
                                                         <td>${thelist.cocname}</td>
                                                         <td>
-                                                            <a href="${pageContext.request.contextPath}/sys/merchantinfo/${thelist.id}"
+                                                            <a href="${pageContext.request.contextPath}/master/merchantinfo/${thelist.id}"
                                                                class="btn btn-default btn-sm"><i class="fa fa-edit"></i> 详情</a>
-                                                            <a href="${pageContext.request.contextPath}/sys/delmerchant?mid=${thelist.id}&mername=${mername}&curpageno=${currentpageno}"
+                                                            <a href="${pageContext.request.contextPath}/master/delmerchant?mid=${thelist.id}&mername=${mername}&curpageno=${currentpageno}"
                                                                class="btn btn-default btn-sm"><i class="fa fa-times"></i> 删除</a>
                                                         </td>
                                                     </tr>

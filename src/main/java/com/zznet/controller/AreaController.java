@@ -2,16 +2,16 @@ package com.zznet.controller;
 
 import com.zznet.dao.AreaDao;
 import com.zznet.entity.AreaInfo;
-import net.sf.json.JSONObject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletResponse;
-import java.io.PrintWriter;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by zz on 2017/1/16.
@@ -22,46 +22,28 @@ public class AreaController {
     private AreaDao areaDaoImpl;
 
     @RequestMapping("/getarealist/{pcode}")
-    public String getareaList(HttpServletResponse response, @PathVariable int pcode) {
-        response.setContentType("text/xml;charset=utf-8");
-        PrintWriter out = null;
-        String json = "{}";
-        JSONObject jsonObj = JSONObject.fromObject(json);
+    @ResponseBody
+    public Map<String, Object> getareaList(@PathVariable int pcode) {
+        HashMap<String, Object> hashMap = new HashMap<>();
         try {
-            out = response.getWriter();
             List<AreaInfo> areaList = areaDaoImpl.getAreaListByParent(String.valueOf(pcode));
-            jsonObj.put("areaList", areaList);
+            hashMap.put("areaList", areaList);
         } catch (Exception e) {
             e.printStackTrace();
-        } finally {
-            if (out != null) {
-                out.println(jsonObj.toString());
-                out.flush();
-                out.close();
-            }
         }
-        return null;
+        return hashMap;
     }
 
     @RequestMapping("/getarealistbyname")
-    public String getareaListByName(HttpServletResponse response, @RequestParam(value = "pname") String pname, @RequestParam(value = "pcode") String pcode) {
-        response.setContentType("text/xml;charset=utf-8");
-        PrintWriter out = null;
-        String json = "{}";
-        JSONObject jsonObj = JSONObject.fromObject(json);
+    @ResponseBody
+    public Map<String, Object> getareaListByName( @RequestParam(value = "pname") String pname, @RequestParam(value = "pcode") String pcode) {
+        HashMap<String, Object> hashMap = new HashMap<>();
         try {
-            out = response.getWriter();
             List<AreaInfo> areaList = areaDaoImpl.getAreaList(pname, pcode);
-            jsonObj.put("areaList", areaList);
+            hashMap.put("areaList", areaList);
         } catch (Exception e) {
             e.printStackTrace();
-        } finally {
-            if (out != null) {
-                out.println(jsonObj.toString());
-                out.flush();
-                out.close();
-            }
         }
-        return null;
+        return hashMap;
     }
 }

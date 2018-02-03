@@ -23,7 +23,7 @@ public class DBuserController {
     @RequestMapping("/iuser/login")
     public String iuserlogin(HttpServletRequest request,
                              @RequestParam(value = "username") String username,
-                             @RequestParam(value = "pswd") String pswd) throws Exception {
+                             @RequestParam(value = "pswd") String pswd) {
         try {
             DBuser dbuser;
             dbuser = dbuserDaoImpl.checkDBuser(username, pswd);
@@ -50,7 +50,7 @@ public class DBuserController {
 
     @RequestMapping("/iuser/userinfo/{userid}")
     public String iuserinfo(HttpServletRequest request,
-                            @PathVariable int userid) throws Exception {
+                            @PathVariable int userid) {
         try {
             DBuser dbuser = dbuserDaoImpl.getDBuser(userid);
             request.setAttribute("dbuser", dbuser);
@@ -75,7 +75,7 @@ public class DBuserController {
             @RequestParam(value = "mobileno") String mobileno,
             @RequestParam(value = "headpic",required = false) String headpic,
             @RequestParam(value = "wx") String wx,
-            @RequestParam(value = "email") String email, HttpSession session) throws Exception {
+            @RequestParam(value = "email") String email, HttpSession session) {
         DBuser dbuser = dbuserDaoImpl.getDBuser(userid);
 
         if (!"".equalsIgnoreCase(pswd) && pswd.equals(repswd)) {

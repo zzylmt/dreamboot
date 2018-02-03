@@ -36,7 +36,7 @@ public class GoodsController {
     private GoodsClassDao goodsclassDaoImpl;
 
     @RequestMapping("/master/newgoods")
-    public String masternewgoods(HttpSession session, HttpServletRequest request) throws Exception {
+    public String masternewgoods(HttpSession session, HttpServletRequest request) {
         GoodsInfo goodsinfo_old = new GoodsInfo();
         GoodsInfo goodsinfo_new;
         try {
@@ -67,7 +67,7 @@ public class GoodsController {
     }
 
     @RequestMapping("/master/mygoodslist")
-    public String mastermygoodslist(HttpServletRequest request, @RequestParam(value = "createrid") int createrid, @RequestParam(value = "curpageno") int curpageno) throws Exception {
+    public String mastermygoodslist(HttpServletRequest request, @RequestParam(value = "createrid") int createrid, @RequestParam(value = "curpageno") int curpageno) {
         try {
             ThePage<GoodsInfo> goodspage = new ThePage<>();
 
@@ -104,7 +104,7 @@ public class GoodsController {
     }
 
     @RequestMapping("/master/goodsinfo/{gid}")
-    public String mastergoodsinfo(HttpServletRequest request, @PathVariable int gid) throws Exception {
+    public String mastergoodsinfo(HttpServletRequest request, @PathVariable int gid) {
         try {
             GoodsInfo goodsinfo = goodsDaoImpl.getGoods(gid);
             List<Dict> gstatusList = dictDaoImpl.getDictList("iStatus");
@@ -131,7 +131,7 @@ public class GoodsController {
                                @RequestParam(value = "salesurl") String salesurl,
                                @RequestParam(value = "merchantid") int merchantid,
                                @RequestParam(value = "goodsclass") int goodsclass,
-                               @RequestParam(value = "gstatus") int gstatus) throws Exception {
+                               @RequestParam(value = "gstatus") int gstatus) {
         boolean result;
         GoodsInfo goodsinfo;
         try {

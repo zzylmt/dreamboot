@@ -33,7 +33,7 @@ public class DeliAddrController {
     private StreetDao streetDaoImpl;
 
     @RequestMapping("/iuser/deliaddrlist")
-    public String iuserdeliaddrlist(HttpServletRequest request, HttpSession session) throws Exception {
+    public String iuserdeliaddrlist(HttpServletRequest request, HttpSession session) {
         List<DeliAddr> deliaddrlist;
 
         try {
@@ -49,7 +49,7 @@ public class DeliAddrController {
     }
 
     @RequestMapping("/iuser/deliaddrinfo/{userid}/{orderno}")
-    public String iuserdeliaddrinfo(HttpServletRequest request, HttpSession session, @PathVariable int userid, @PathVariable int orderno) throws Exception {
+    public String iuserdeliaddrinfo(HttpServletRequest request, HttpSession session, @PathVariable int userid, @PathVariable int orderno) {
         DeliAddr deliaddrinfo;
 
         try {
@@ -76,8 +76,7 @@ public class DeliAddrController {
     }
 
     @RequestMapping("/iuser/deliaddrsave")
-    public String iuserdeliaddrsave(@RequestParam(value = "userid") int userid, @RequestParam(value = "orderno") int orderno, @RequestParam(value = "provincecode") String provincecode, @RequestParam(value = "citycode") String citycode, @RequestParam(value = "areacode") String areacode, @RequestParam(value = "consignee") String consignee, @RequestParam(value = "streetcode") String streetcode, @RequestParam(value = "detailinfo") String detailinfo, @RequestParam(value = "telno") String telno, @RequestParam(value = "isdefault", defaultValue = "0") int isdefault)
-            throws Exception {
+    public String iuserdeliaddrsave(@RequestParam(value = "userid") int userid, @RequestParam(value = "orderno") int orderno, @RequestParam(value = "provincecode") String provincecode, @RequestParam(value = "citycode") String citycode, @RequestParam(value = "areacode") String areacode, @RequestParam(value = "consignee") String consignee, @RequestParam(value = "streetcode") String streetcode, @RequestParam(value = "detailinfo") String detailinfo, @RequestParam(value = "telno") String telno, @RequestParam(value = "isdefault", defaultValue = "0") int isdefault) {
         boolean result;
         DeliAddr deliaddrinfo;
         try {
