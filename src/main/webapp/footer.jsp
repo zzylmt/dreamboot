@@ -16,7 +16,7 @@
                     <div class="row">
                         <div class="col-md-3 col-sm-3 col-xs-12">
                             <div class="footer_wid">
-                                <h2>风格</h2>
+                                <h2>风格1</h2>
                                 <div class="first_wid_text">
                                     <p>Suspendisse metus diam, pulvinar nec mas sa non, dignis sim imperdiet nulla. Suspen disse malesuada diam id ante
                                         mole.</p>
