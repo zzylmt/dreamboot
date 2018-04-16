@@ -1,17 +1,17 @@
-<%@ page language="java" pageEncoding="UTF-8" %>
+<%@ page contentType="text/html;charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ include file="../head/customer/init.jsp" %>
+<%@ include file="../head/iuser/init.jsp" %>
 <!DOCTYPE html>
 <html lang="zh">
 <head>
     <title>收货地址管理--我的风格</title>
-    <jsp:include page="/head/customer/css.jsp"/>
+    <jsp:include page="/head/iuser/css.jsp"/>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/fonts/ionicons.min.css">
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
-    <jsp:include page="/head/customer/top.jsp"/>
-    <jsp:include page="/head/customer/left.jsp">
+    <jsp:include page="/head/iuser/top.jsp"/>
+    <jsp:include page="/head/iuser/left.jsp">
         <jsp:param name="parentnode" value="2"/>
     </jsp:include>
 
@@ -81,7 +81,7 @@
     </div>
 </div>
 </body>
-<jsp:include page="/head/customer/js.jsp"/>
+<jsp:include page="/head/iuser/js.jsp"/>
 <script type="text/javascript">
     $(function () {
     });

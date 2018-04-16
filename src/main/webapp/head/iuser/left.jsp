@@ -1,4 +1,4 @@
-<%@ page language="java" import="com.zznet.entity.DBuser" pageEncoding="UTF-8" %>
+<%@ page import="com.zznet.entity.DBuser" pageEncoding="UTF-8" %>
 <%
     boolean isLegal = false;
     DBuser dbuser = (DBuser) session.getAttribute("dbuser");

@@ -1,16 +1,16 @@
-<%@ page language="java" pageEncoding="UTF-8" %>
+<%@ page contentType="text/html;charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ include file="../head/customer/init.jsp" %>
+<%@ include file="../head/iuser/init.jsp" %>
 <!DOCTYPE html>
 <html lang="zh">
 <head>
     <title>个人信息管理--风格网络</title>
-    <jsp:include page="/head/customer/css.jsp"/>
+    <jsp:include page="/head/iuser/css.jsp"/>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
-    <jsp:include page="/head/customer/top.jsp"/>
-    <jsp:include page="/head/customer/left.jsp"/>
+    <jsp:include page="/head/iuser/top.jsp"/>
+    <jsp:include page="/head/iuser/left.jsp"/>
 
     <div class="content-wrapper">
         <section class="content-header">
@@ -128,7 +128,7 @@
     </div>
 </div>
 </body>
-<jsp:include page="/head/customer/js.jsp"/>
+<jsp:include page="/head/iuser/js.jsp"/>
 <script type="text/javascript">
     $(function () {
         $("#infosave_btn").on("click", function () {

@@ -1,10 +1,10 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8"%>
 <!DOCTYPE html>
 <html lang="zh">
 <head>
     <meta charset="UTF-8"/>
     <title>客户登陆--江西风格网络</title>
-    <jsp:include page="/head/customer/css.jsp"/>
+    <jsp:include page="/head/iuser/css.jsp"/>
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
@@ -31,7 +31,7 @@
         </form>
     </div>
 </div>
-<jsp:include page="/head/customer/js.jsp"/>
+<jsp:include page="/head/iuser/js.jsp"/>
 </body>
 <script type="text/javascript">
     $(document).ready(function () {

@@ -1,6 +1,6 @@
-<%@ page language="java" pageEncoding="UTF-8" %>
+<%@ page contentType="text/html;charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ include file="../head/customer/init.jsp" %>
+<%@ include file="../head/iuser/init.jsp" %>
 <%
     String result = request.getParameter("result");
 %>
@@ -9,12 +9,12 @@
 <head>
     <title>收货地址详情--风格网络</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/select2/css/select2.min.css">
-    <jsp:include page="/head/customer/css.jsp"/>
+    <jsp:include page="/head/iuser/css.jsp"/>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
-    <jsp:include page="/head/customer/top.jsp"/>
-    <jsp:include page="/head/customer/left.jsp"/>
+    <jsp:include page="/head/iuser/top.jsp"/>
+    <jsp:include page="/head/iuser/left.jsp"/>
 
     <div class="content-wrapper">
         <section class="content-header">
@@ -145,7 +145,7 @@
     </div>
 </div>
 </body>
-<jsp:include page="/head/customer/js.jsp"/>
+<jsp:include page="/head/iuser/js.jsp"/>
 <script type="text/javascript" src="${pageContext.request.contextPath}/plugins/select2/js/select2.min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/plugins/select2/js/i18n/zh-CN.js"></script>
 <script type="text/javascript">

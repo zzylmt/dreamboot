@@ -1,4 +1,4 @@
-<%@ page language="java" import="com.zznet.entity.DBadmin" pageEncoding="UTF-8" %>
+<%@ page import="com.zznet.entity.DBadmin" pageEncoding="UTF-8" %>
 <%
     boolean isLegal;
     DBadmin admininfo = (DBadmin) session.getAttribute("dbadmininfo");
