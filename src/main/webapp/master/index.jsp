@@ -1,6 +1,6 @@
 <%@ page pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ include file="../head/master/init.jsp" %>
+<%@ include file="/head/master/init.jsp" %>
 <!DOCTYPE html>
 <html lang="zh">
 <head>
