@@ -22,13 +22,13 @@
                     <table class="table">
                         <thead>
                         <tr>
-                            <th><i class="fa  fa-file-text-o"></i> 文章标题</th>
-                            <th><i class="fa  fa-file-text"></i> 文章缩略标题</th>
+                            <th><i class="fa fa-file-text-o"></i> 文章标题</th>
+                            <th><i class="fa fa-file-text"></i> 文章缩略标题</th>
                             <th><i class="fa fa-user"></i> 编辑</th>
                             <th><i class="fa fa-clock-o"></i> 创建时间</th>
-                            <th><i class="fa  fa-bars"></i> 栏目</th>
+                            <th><i class="fa fa-bars"></i> 栏目</th>
                             <th><i class="fa fa-book"></i> 阅读量</th>
-                            <th><i class="fa  fa-thumbs-o-up"></i> 点赞量</th>
+                            <th><i class="fa fa-thumbs-o-up"></i> 点赞量</th>
                             <th><i class="fa fa-cog"></i> 操作</th>
                         </tr>
                         </thead>

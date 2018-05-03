@@ -21,12 +21,12 @@
                 <table class="table table-striped table-sm">
                     <thead>
                     <tr>
-                        <th><i class="fa  fa-file-text-o"></i> 商品名</th>
-                        <th><i class="fa  fa-file-text"></i> 商品标题</th>
+                        <th><i class="fa fa-file-text-o"></i> 商品名</th>
+                        <th><i class="fa fa-file-text"></i> 商品标题</th>
                         <th><i class="fa fa-user"></i> 原价</th>
                         <th><i class="fa fa-clock-o"></i> 商户</th>
                         <th><i class="fa fa-book"></i> 分类</th>
-                        <th><i class="fa  fa-thumbs-o-up"></i> 点赞量</th>
+                        <th><i class="fa fa-thumbs-o-up"></i> 点赞量</th>
                         <th><i class="fa fa-cog"></i> 操作</th>
                     </tr>
                     </thead>
