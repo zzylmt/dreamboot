@@ -24,7 +24,7 @@
     <section class="sidebar">
         <div class="user-panel">
             <div class="pull-left image">
-                <img src="${pageContext.request.contextPath}/dist/img/user2-160x160.jpg" class="img-circle"
+                <img src="${pageContext.request.contextPath}/static/dist/img/user2-160x160.jpg" class="img-circle"
                      alt="User Image">
             </div>
             <div class="pull-left info">

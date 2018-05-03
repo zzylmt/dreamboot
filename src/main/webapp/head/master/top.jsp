@@ -36,12 +36,12 @@
             <ul class="nav navbar-nav">
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img src="${pageContext.request.contextPath}/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                        <img src="${pageContext.request.contextPath}/static/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
                         <span class="hidden-xs"><%=sname%></span>
                     </a>
                     <ul class="dropdown-menu">
                         <li class="user-header">
-                            <img src="${pageContext.request.contextPath}/dist/img/user2-160x160.jpg" class="img-circle">
+                            <img src="${pageContext.request.contextPath}/static/dist/img/user2-160x160.jpg" class="img-circle">
                             <p>
                                 <%=sname%> - 岗位
                                 <small>部门</small>

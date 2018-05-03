@@ -17,7 +17,7 @@
 
     if (!isLegal) {
 %>
-<jsp:forward page="${pageContext.request.contextPath}/sys/"/>
+<jsp:forward page="${pageContext.request.contextPath}/master/"/>
 <%
     }
 %>

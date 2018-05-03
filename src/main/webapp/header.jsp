@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-3 col-sm-2 col-xs-12">
                 <div class="header_logo">
-                    <a href="index.html"><img src="${pageContext.request.contextPath}/image/logo.png" alt=""/></a>
+                    <a href="index.html"><img src="${pageContext.request.contextPath}/static/image/logo.png" alt=""/></a>
                 </div>
             </div>
             <div class="col-md-7 col-sm-8 col-xs-12">

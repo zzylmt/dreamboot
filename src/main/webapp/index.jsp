@@ -18,7 +18,7 @@
                     <!-- SLIDE  -->
                     <li data-transition="parallaxtoright,parallaxtoleft" data-slotamount="7" data-masterspeed="600" data-saveperformance="off">
                         <!-- MAIN IMAGE -->
-                        <img src="${pageContext.request.contextPath}/image/slide1.jpg" alt="slider1" data-bgposition="center top" data-bgfit="cover"
+                        <img src="${pageContext.request.contextPath}/static/image/slide1.jpg" alt="slider1" data-bgposition="center top" data-bgfit="cover"
                              data-bgrepeat="no-repeat">
                         <!-- LAYERS -->
 
@@ -77,7 +77,7 @@
                     <!-- SLIDE  -->
                     <li data-transition="parallaxtoright,parallaxtoleft" data-slotamount="7" data-masterspeed="600" data-saveperformance="off">
                         <!-- MAIN IMAGE -->
-                        <img src="${pageContext.request.contextPath}/image/slide2.jpg" alt="slider2" data-bgposition="center top" data-bgfit="cover"
+                        <img src="${pageContext.request.contextPath}/static/image/slide2.jpg" alt="slider2" data-bgposition="center top" data-bgfit="cover"
                              data-bgrepeat="no-repeat">
                         <!-- LAYERS -->
 
@@ -131,7 +131,7 @@
                     </li>
                     <li data-transition="parallaxtoright,parallaxtoleft" data-slotamount="7" data-masterspeed="600" data-saveperformance="off">
                         <!-- MAIN IMAGE -->
-                        <img src="${pageContext.request.contextPath}/image/slide3.jpg" alt="slider1" data-bgposition="center top" data-bgfit="cover"
+                        <img src="${pageContext.request.contextPath}/static/image/slide3.jpg" alt="slider1" data-bgposition="center top" data-bgfit="cover"
                              data-bgrepeat="no-repeat">
                         <!-- LAYERS -->
 
@@ -217,7 +217,7 @@
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="banner-top">
                                     <div class="banner-inner-content">
-                                        <img src="${pageContext.request.contextPath}/image/banner-1.jpg" alt=""/>
+                                        <img src="${pageContext.request.contextPath}/static/image/banner-1.jpg" alt=""/>
                                         <div class="overlay"></div>
                                     </div>
                                 </div>
@@ -228,7 +228,7 @@
                                 <div class="banner-top">
                                     <div class="banner-inner-content">
                                         <div class="overlay"></div>
-                                        <img src="${pageContext.request.contextPath}/image/banner-2.jpg" alt=""/>
+                                        <img src="${pageContext.request.contextPath}/static/image/banner-2.jpg" alt=""/>
                                         <div class="text-banner text-banner-2">
                                             <div class="banner-texthome">
                                                 <h3>collection</h3>
@@ -244,7 +244,7 @@
                                 <div class="banner-top">
                                     <div class="banner-inner-content">
                                         <div class="bg-overlay"></div>
-                                        <img src="${pageContext.request.contextPath}/image/banner-3-1.jpg" alt=""/>
+                                        <img src="${pageContext.request.contextPath}/static/image/banner-3-1.jpg" alt=""/>
                                         <div class="text-banner text-banner-3">
                                             <div class="banner-texthome">
                                                 <h3>NEW ARRIVALS</h3>
@@ -260,7 +260,7 @@
                     <div class="col-md-5 col-sm-5 col-xs-12">
                         <div class="banner-top">
                             <div class="banner-inner-content">
-                                <img src="${pageContext.request.contextPath}/image/banner-4.jpg" alt=""/>
+                                <img src="${pageContext.request.contextPath}/static/image/banner-4.jpg" alt=""/>
                                 <div class="text-banner text-banner-4">
                                     <div class="banner-texthome">
                                         <h3>NEW ARRIVALS</h3>
@@ -313,11 +313,11 @@
                                                 <div class="image_feature_change">
                                                     <div class="featured_img">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature1.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature1.jpg" alt=""/>
                                                     </div>
                                                     <div class="single_feature_img_hover">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature6.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature6.jpg" alt=""/>
                                                     </div>
                                                 </div>
                                                 <div class="heart-icon">
@@ -355,11 +355,11 @@
                                                 <div class="image_feature_change">
                                                     <div class="featured_img">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature2.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature2.jpg" alt=""/>
                                                     </div>
                                                     <div class="single_feature_img_hover">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature5.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature5.jpg" alt=""/>
                                                     </div>
                                                 </div>
                                                 <div class="heart-icon">
@@ -392,11 +392,11 @@
                                                 <div class="image_feature_change">
                                                     <div class="featured_img">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature3.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature3.jpg" alt=""/>
                                                     </div>
                                                     <div class="single_feature_img_hover">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature5.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature5.jpg" alt=""/>
                                                     </div>
                                                 </div>
                                                 <div class="heart-icon">
@@ -429,11 +429,11 @@
                                                 <div class="image_feature_change">
                                                     <div class="featured_img">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature4.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature4.jpg" alt=""/>
                                                     </div>
                                                     <div class="single_feature_img_hover">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature2.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature2.jpg" alt=""/>
                                                     </div>
                                                 </div>
                                                 <div class="heart-icon">
@@ -471,11 +471,11 @@
                                                 <div class="image_feature_change">
                                                     <div class="featured_img">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature5.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature5.jpg" alt=""/>
                                                     </div>
                                                     <div class="single_feature_img_hover">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature1.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature1.jpg" alt=""/>
                                                     </div>
                                                 </div>
                                                 <div class="heart-icon">
@@ -508,11 +508,11 @@
                                                 <div class="image_feature_change">
                                                     <div class="featured_img">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature5.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature5.jpg" alt=""/>
                                                     </div>
                                                     <div class="single_feature_img_hover">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature2.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature2.jpg" alt=""/>
                                                     </div>
                                                 </div>
                                                 <div class="heart-icon">
@@ -545,11 +545,11 @@
                                                 <div class="image_feature_change">
                                                     <div class="featured_img">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature6.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature6.jpg" alt=""/>
                                                     </div>
                                                     <div class="single_feature_img_hover">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature3.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature3.jpg" alt=""/>
                                                     </div>
                                                 </div>
                                                 <div class="heart-icon">
@@ -582,11 +582,11 @@
                                                 <div class="image_feature_change">
                                                     <div class="featured_img">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature3.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature3.jpg" alt=""/>
                                                     </div>
                                                     <div class="single_feature_img_hover">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature5.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature5.jpg" alt=""/>
                                                     </div>
                                                 </div>
                                                 <div class="heart-icon">
@@ -665,7 +665,7 @@
                                                             </div>
                                                             <div class="col-md-7 col-sm-7 col-xs-12">
                                                                 <div class="p_modal_img">
-                                                                    <img src="${pageContext.request.contextPath}/image/1014256_front.jpg" alt=""/>
+                                                                    <img src="${pageContext.request.contextPath}/static/image/1014256_front.jpg" alt=""/>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -725,7 +725,7 @@
                                                             </div>
                                                             <div class="col-md-7 col-sm-7 col-xs-12">
                                                                 <div class="p_modal_img">
-                                                                    <img src="${pageContext.request.contextPath}/image/1014256_front.jpg" alt=""/>
+                                                                    <img src="${pageContext.request.contextPath}/static/image/1014256_front.jpg" alt=""/>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -785,7 +785,7 @@
                                                             </div>
                                                             <div class="col-md-7 col-sm-7 col-xs-12">
                                                                 <div class="p_modal_img">
-                                                                    <img src="${pageContext.request.contextPath}/image/1014256_front.jpg" alt=""/>
+                                                                    <img src="${pageContext.request.contextPath}/static/image/1014256_front.jpg" alt=""/>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -845,7 +845,7 @@
                                                             </div>
                                                             <div class="col-md-7 col-sm-7 col-xs-12">
                                                                 <div class="p_modal_img">
-                                                                    <img src="${pageContext.request.contextPath}/image/1014256_front.jpg" alt=""/>
+                                                                    <img src="${pageContext.request.contextPath}/static/image/1014256_front.jpg" alt=""/>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -905,7 +905,7 @@
                                                             </div>
                                                             <div class="col-md-7 col-sm-7 col-xs-12">
                                                                 <div class="p_modal_img">
-                                                                    <img src="${pageContext.request.contextPath}/image/1014256_front.jpg" alt=""/>
+                                                                    <img src="${pageContext.request.contextPath}/static/image/1014256_front.jpg" alt=""/>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -965,7 +965,7 @@
                                                             </div>
                                                             <div class="col-md-7 col-sm-7 col-xs-12">
                                                                 <div class="p_modal_img">
-                                                                    <img src="${pageContext.request.contextPath}/image/1014256_front.jpg" alt=""/>
+                                                                    <img src="${pageContext.request.contextPath}/static/image/1014256_front.jpg" alt=""/>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1025,7 +1025,7 @@
                                                             </div>
                                                             <div class="col-md-7 col-sm-7 col-xs-12">
                                                                 <div class="p_modal_img">
-                                                                    <img src="${pageContext.request.contextPath}/image/1014256_front.jpg" alt=""/>
+                                                                    <img src="${pageContext.request.contextPath}/static/image/1014256_front.jpg" alt=""/>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1085,7 +1085,7 @@
                                                             </div>
                                                             <div class="col-md-7 col-sm-7 col-xs-12">
                                                                 <div class="p_modal_img">
-                                                                    <img src="${pageContext.request.contextPath}/image/1014256_front.jpg" alt=""/>
+                                                                    <img src="${pageContext.request.contextPath}/static/image/1014256_front.jpg" alt=""/>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1104,11 +1104,11 @@
                                                 <div class="image_feature_change">
                                                     <div class="featured_img">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature4.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature4.jpg" alt=""/>
                                                     </div>
                                                     <div class="single_feature_img_hover">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature2.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature2.jpg" alt=""/>
                                                     </div>
                                                 </div>
                                                 <div class="heart-icon">
@@ -1141,11 +1141,11 @@
                                                 <div class="image_feature_change">
                                                     <div class="featured_img">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature5.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature5.jpg" alt=""/>
                                                     </div>
                                                     <div class="single_feature_img_hover">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature4.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature4.jpg" alt=""/>
                                                     </div>
                                                 </div>
                                                 <div class="heart-icon">
@@ -1183,11 +1183,11 @@
                                                 <div class="image_feature_change">
                                                     <div class="featured_img">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature2.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature2.jpg" alt=""/>
                                                     </div>
                                                     <div class="single_feature_img_hover">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature6.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature6.jpg" alt=""/>
                                                     </div>
                                                 </div>
                                                 <div class="heart-icon">
@@ -1220,11 +1220,11 @@
                                                 <div class="image_feature_change">
                                                     <div class="featured_img">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature5.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature5.jpg" alt=""/>
                                                     </div>
                                                     <div class="single_feature_img_hover">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature3.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature3.jpg" alt=""/>
                                                     </div>
                                                 </div>
                                                 <div class="heart-icon">
@@ -1257,11 +1257,11 @@
                                                 <div class="image_feature_change">
                                                     <div class="featured_img">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature4.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature4.jpg" alt=""/>
                                                     </div>
                                                     <div class="single_feature_img_hover">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature6.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature6.jpg" alt=""/>
                                                     </div>
                                                 </div>
                                                 <div class="heart-icon">
@@ -1294,11 +1294,11 @@
                                                 <div class="image_feature_change">
                                                     <div class="featured_img">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature3.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature3.jpg" alt=""/>
                                                     </div>
                                                     <div class="single_feature_img_hover">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature1.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature1.jpg" alt=""/>
                                                     </div>
                                                 </div>
                                                 <div class="heart-icon">
@@ -1331,11 +1331,11 @@
                                                 <div class="image_feature_change">
                                                     <div class="featured_img">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature2.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature2.jpg" alt=""/>
                                                     </div>
                                                     <div class="single_feature_img_hover">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature4.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature4.jpg" alt=""/>
                                                     </div>
                                                 </div>
                                                 <div class="heart-icon">
@@ -1415,7 +1415,7 @@
                                                             </div>
                                                             <div class="col-md-7 col-sm-7 col-xs-12">
                                                                 <div class="p_modal_img">
-                                                                    <img src="${pageContext.request.contextPath}/image/1014256_front.jpg" alt=""/>
+                                                                    <img src="${pageContext.request.contextPath}/static/image/1014256_front.jpg" alt=""/>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1475,7 +1475,7 @@
                                                             </div>
                                                             <div class="col-md-7 col-sm-7 col-xs-12">
                                                                 <div class="p_modal_img">
-                                                                    <img src="${pageContext.request.contextPath}/image/1014256_front.jpg" alt=""/>
+                                                                    <img src="${pageContext.request.contextPath}/static/image/1014256_front.jpg" alt=""/>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1535,7 +1535,7 @@
                                                             </div>
                                                             <div class="col-md-7 col-sm-7 col-xs-12">
                                                                 <div class="p_modal_img">
-                                                                    <img src="${pageContext.request.contextPath}/image/1014256_front.jpg" alt=""/>
+                                                                    <img src="${pageContext.request.contextPath}/static/image/1014256_front.jpg" alt=""/>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1595,7 +1595,7 @@
                                                             </div>
                                                             <div class="col-md-7 col-sm-7 col-xs-12">
                                                                 <div class="p_modal_img">
-                                                                    <img src="${pageContext.request.contextPath}/image/1014256_front.jpg" alt=""/>
+                                                                    <img src="${pageContext.request.contextPath}/static/image/1014256_front.jpg" alt=""/>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1655,7 +1655,7 @@
                                                             </div>
                                                             <div class="col-md-7 col-sm-7 col-xs-12">
                                                                 <div class="p_modal_img">
-                                                                    <img src="${pageContext.request.contextPath}/image/1014256_front.jpg" alt=""/>
+                                                                    <img src="${pageContext.request.contextPath}/static/image/1014256_front.jpg" alt=""/>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1715,7 +1715,7 @@
                                                             </div>
                                                             <div class="col-md-7 col-sm-7 col-xs-12">
                                                                 <div class="p_modal_img">
-                                                                    <img src="${pageContext.request.contextPath}/image/1014256_front.jpg" alt=""/>
+                                                                    <img src="${pageContext.request.contextPath}/static/image/1014256_front.jpg" alt=""/>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1775,7 +1775,7 @@
                                                             </div>
                                                             <div class="col-md-7 col-sm-7 col-xs-12">
                                                                 <div class="p_modal_img">
-                                                                    <img src="${pageContext.request.contextPath}/image/1014256_front.jpg" alt=""/>
+                                                                    <img src="${pageContext.request.contextPath}/static/image/1014256_front.jpg" alt=""/>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1793,11 +1793,11 @@
                                                 <div class="image_feature_change">
                                                     <div class="featured_img">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature5.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature5.jpg" alt=""/>
                                                     </div>
                                                     <div class="single_feature_img_hover">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature3.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature3.jpg" alt=""/>
                                                     </div>
                                                 </div>
                                                 <div class="heart-icon">
@@ -1835,11 +1835,11 @@
                                                 <div class="image_feature_change">
                                                     <div class="featured_img">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature3.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature3.jpg" alt=""/>
                                                     </div>
                                                     <div class="single_feature_img_hover">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature6.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature6.jpg" alt=""/>
                                                     </div>
                                                 </div>
                                                 <div class="heart-icon">
@@ -1877,11 +1877,11 @@
                                                 <div class="image_feature_change">
                                                     <div class="featured_img">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature6.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature6.jpg" alt=""/>
                                                     </div>
                                                     <div class="single_feature_img_hover">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature2.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature2.jpg" alt=""/>
                                                     </div>
                                                 </div>
                                                 <div class="heart-icon">
@@ -1919,11 +1919,11 @@
                                                 <div class="image_feature_change">
                                                     <div class="featured_img">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature1.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature1.jpg" alt=""/>
                                                     </div>
                                                     <div class="single_feature_img_hover">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature2.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature2.jpg" alt=""/>
                                                     </div>
                                                 </div>
                                                 <div class="heart-icon">
@@ -1961,11 +1961,11 @@
                                                 <div class="image_feature_change">
                                                     <div class="featured_img">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature5.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature5.jpg" alt=""/>
                                                     </div>
                                                     <div class="single_feature_img_hover">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature4.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature4.jpg" alt=""/>
                                                     </div>
                                                 </div>
                                                 <div class="heart-icon">
@@ -2003,11 +2003,11 @@
                                                 <div class="image_feature_change">
                                                     <div class="featured_img">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature3.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature3.jpg" alt=""/>
                                                     </div>
                                                     <div class="single_feature_img_hover">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature1.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature1.jpg" alt=""/>
                                                     </div>
                                                 </div>
                                                 <div class="heart-icon">
@@ -2045,11 +2045,11 @@
                                                 <div class="image_feature_change">
                                                     <div class="featured_img">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature1.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature1.jpg" alt=""/>
                                                     </div>
                                                     <div class="single_feature_img_hover">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature4.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature4.jpg" alt=""/>
                                                     </div>
                                                 </div>
                                                 <div class="heart-icon">
@@ -2087,11 +2087,11 @@
                                                 <div class="image_feature_change">
                                                     <div class="featured_img">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature6.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature6.jpg" alt=""/>
                                                     </div>
                                                     <div class="single_feature_img_hover">
                                                         <div class="image-overlay"></div>
-                                                        <img src="${pageContext.request.contextPath}/image/feature3.jpg" alt=""/>
+                                                        <img src="${pageContext.request.contextPath}/static/image/feature3.jpg" alt=""/>
                                                     </div>
                                                 </div>
                                                 <div class="heart-icon">
@@ -2175,7 +2175,7 @@
                                                             </div>
                                                             <div class="col-md-7 col-sm-7 col-xs-12">
                                                                 <div class="p_modal_img">
-                                                                    <img src="${pageContext.request.contextPath}/image/1014256_front.jpg" alt=""/>
+                                                                    <img src="${pageContext.request.contextPath}/static/image/1014256_front.jpg" alt=""/>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -2235,7 +2235,7 @@
                                                             </div>
                                                             <div class="col-md-7 col-sm-7 col-xs-12">
                                                                 <div class="p_modal_img">
-                                                                    <img src="${pageContext.request.contextPath}/image/1014256_front.jpg" alt=""/>
+                                                                    <img src="${pageContext.request.contextPath}/static/image/1014256_front.jpg" alt=""/>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -2295,7 +2295,7 @@
                                                             </div>
                                                             <div class="col-md-7 col-sm-7 col-xs-12">
                                                                 <div class="p_modal_img">
-                                                                    <img src="${pageContext.request.contextPath}/image/1014256_front.jpg" alt=""/>
+                                                                    <img src="${pageContext.request.contextPath}/static/image/1014256_front.jpg" alt=""/>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -2355,7 +2355,7 @@
                                                             </div>
                                                             <div class="col-md-7 col-sm-7 col-xs-12">
                                                                 <div class="p_modal_img">
-                                                                    <img src="${pageContext.request.contextPath}/image/1014256_front.jpg" alt=""/>
+                                                                    <img src="${pageContext.request.contextPath}/static/image/1014256_front.jpg" alt=""/>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -2415,7 +2415,7 @@
                                                             </div>
                                                             <div class="col-md-7 col-sm-7 col-xs-12">
                                                                 <div class="p_modal_img">
-                                                                    <img src="${pageContext.request.contextPath}/image/1014256_front.jpg" alt=""/>
+                                                                    <img src="${pageContext.request.contextPath}/static/image/1014256_front.jpg" alt=""/>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -2475,7 +2475,7 @@
                                                             </div>
                                                             <div class="col-md-7 col-sm-7 col-xs-12">
                                                                 <div class="p_modal_img">
-                                                                    <img src="${pageContext.request.contextPath}/image/1014256_front.jpg" alt=""/>
+                                                                    <img src="${pageContext.request.contextPath}/static/image/1014256_front.jpg" alt=""/>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -2535,7 +2535,7 @@
                                                             </div>
                                                             <div class="col-md-7 col-sm-7 col-xs-12">
                                                                 <div class="p_modal_img">
-                                                                    <img src="${pageContext.request.contextPath}/image/1014256_front.jpg" alt=""/>
+                                                                    <img src="${pageContext.request.contextPath}/static/image/1014256_front.jpg" alt=""/>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -2595,7 +2595,7 @@
                                                             </div>
                                                             <div class="col-md-7 col-sm-7 col-xs-12">
                                                                 <div class="p_modal_img">
-                                                                    <img src="${pageContext.request.contextPath}/image/1014256_front.jpg" alt=""/>
+                                                                    <img src="${pageContext.request.contextPath}/static/image/1014256_front.jpg" alt=""/>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -2618,7 +2618,7 @@
 
 <!--==| testimonial Start |==-->
 <section class="testimonial_area"
-         style="background: rgba(0, 0, 0, 0) url(${pageContext.request.contextPath}/image/our-clients-bg-2.jpg) no-repeat fixed top center / cover ;">
+         style="background: rgba(0, 0, 0, 0) url(${pageContext.request.contextPath}/static/image/our-clients-bg-2.jpg) no-repeat fixed top center / cover ;">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
@@ -2641,7 +2641,7 @@
                                     <span> “ Quisque faucibus enim non tempus gravida. Morbi non sem sagittis, venenatis neque at, consequat justo. Cras dignissim, nunc sit amet cursus suscipit, neque nisi ultrices enim, tempus rhoncus sapie” ...  </span>
                                 </div>
                                 <div class="client">
-                                    <img src="${pageContext.request.contextPath}/image/client1.png" alt=""/>
+                                    <img src="${pageContext.request.contextPath}/static/image/client1.png" alt=""/>
                                     <div class="client_name">
                                         <a href="">BERY THEMES</a>
                                     </div>
@@ -2665,7 +2665,7 @@
                                     <span> “ Quisque faucibus enim non tempus gravida. Morbi non sem sagittis, venenatis neque at, consequat justo. Cras dignissim, nunc sit amet cursus suscipit, neque nisi ultrices enim, tempus rhoncus sapie” ...  </span>
                                 </div>
                                 <div class="client">
-                                    <img src="${pageContext.request.contextPath}/image/client2.jpg" alt=""/>
+                                    <img src="${pageContext.request.contextPath}/static/image/client2.jpg" alt=""/>
                                     <div class="client_name">
                                         <a href="">Lee THEMES</a>
                                     </div>
@@ -2719,11 +2719,11 @@
                                             <div class="image_weekly_change">
                                                 <div class="single_weekly_img">
                                                     <div class="weekly_overlay"></div>
-                                                    <img src="${pageContext.request.contextPath}/image/1013424_07_1.jpg" alt=""/>
+                                                    <img src="${pageContext.request.contextPath}/static/image/1013424_07_1.jpg" alt=""/>
                                                 </div>
                                                 <div class="single_weekly_img_hover">
                                                     <div class="weekly_overlay"></div>
-                                                    <img src="${pageContext.request.contextPath}/image/1008627-4_1.jpg" alt=""/>
+                                                    <img src="${pageContext.request.contextPath}/static/image/1008627-4_1.jpg" alt=""/>
                                                 </div>
                                             </div>
                                             <!-- Modal Start -->
@@ -2776,7 +2776,7 @@
                                                                     </div>
                                                                     <div class="col-md-7 col-sm-7 col-xs-12">
                                                                         <div class="p_modal_img">
-                                                                            <img src="${pageContext.request.contextPath}/image/1014256_front.jpg" alt=""/>
+                                                                            <img src="${pageContext.request.contextPath}/static/image/1014256_front.jpg" alt=""/>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -2828,11 +2828,11 @@
                                             <div class="image_weekly_change">
                                                 <div class="single_weekly_img">
                                                     <div class="weekly_overlay"></div>
-                                                    <img src="${pageContext.request.contextPath}/image/1010681-4.jpg" alt=""/>
+                                                    <img src="${pageContext.request.contextPath}/static/image/1010681-4.jpg" alt=""/>
                                                 </div>
                                                 <div class="single_weekly_img_hover">
                                                     <div class="weekly_overlay"></div>
-                                                    <img src="${pageContext.request.contextPath}/image/1009859_2_1.jpg" alt=""/>
+                                                    <img src="${pageContext.request.contextPath}/static/image/1009859_2_1.jpg" alt=""/>
                                                 </div>
                                             </div>
                                             <!-- Modal Start -->
@@ -2885,7 +2885,7 @@
                                                                     </div>
                                                                     <div class="col-md-7 col-sm-7 col-xs-12">
                                                                         <div class="p_modal_img">
-                                                                            <img src="${pageContext.request.contextPath}/image/1014256_front.jpg" alt=""/>
+                                                                            <img src="${pageContext.request.contextPath}/static/image/1014256_front.jpg" alt=""/>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -2937,11 +2937,11 @@
                                             <div class="image_weekly_change">
                                                 <div class="single_weekly_img">
                                                     <div class="weekly_overlay"></div>
-                                                    <img src="${pageContext.request.contextPath}/image/1009859_2_1.jpg" alt=""/>
+                                                    <img src="${pageContext.request.contextPath}/static/image/1009859_2_1.jpg" alt=""/>
                                                 </div>
                                                 <div class="single_weekly_img_hover">
                                                     <div class="weekly_overlay"></div>
-                                                    <img src="${pageContext.request.contextPath}/image/1010681-4.jpg" alt=""/>
+                                                    <img src="${pageContext.request.contextPath}/static/image/1010681-4.jpg" alt=""/>
                                                 </div>
                                             </div>
                                             <!-- Modal Start -->
@@ -2994,7 +2994,7 @@
                                                                     </div>
                                                                     <div class="col-md-7 col-sm-7 col-xs-12">
                                                                         <div class="p_modal_img">
-                                                                            <img src="${pageContext.request.contextPath}/image/1014256_front.jpg" alt=""/>
+                                                                            <img src="${pageContext.request.contextPath}/static/image/1014256_front.jpg" alt=""/>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -3046,11 +3046,11 @@
                                             <div class="image_weekly_change">
                                                 <div class="single_weekly_img">
                                                     <div class="weekly_overlay"></div>
-                                                    <img src="${pageContext.request.contextPath}/image/1012630_45.jpg" alt=""/>
+                                                    <img src="${pageContext.request.contextPath}/static/image/1012630_45.jpg" alt=""/>
                                                 </div>
                                                 <div class="single_weekly_img_hover">
                                                     <div class="weekly_overlay"></div>
-                                                    <img src="${pageContext.request.contextPath}/image/1012628_25.jpg" alt=""/>
+                                                    <img src="${pageContext.request.contextPath}/static/image/1012628_25.jpg" alt=""/>
                                                 </div>
                                             </div>
                                             <!-- Modal Start -->
@@ -3103,7 +3103,7 @@
                                                                     </div>
                                                                     <div class="col-md-7 col-sm-7 col-xs-12">
                                                                         <div class="p_modal_img">
-                                                                            <img src="${pageContext.request.contextPath}/image/1014256_front.jpg" alt=""/>
+                                                                            <img src="${pageContext.request.contextPath}/static/image/1014256_front.jpg" alt=""/>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -3155,11 +3155,11 @@
                                             <div class="image_weekly_change">
                                                 <div class="single_weekly_img">
                                                     <div class="weekly_overlay"></div>
-                                                    <img src="${pageContext.request.contextPath}/image/8501304098_1_1_1.jpg" alt=""/>
+                                                    <img src="${pageContext.request.contextPath}/static/image/8501304098_1_1_1.jpg" alt=""/>
                                                 </div>
                                                 <div class="single_weekly_img_hover">
                                                     <div class="weekly_overlay"></div>
-                                                    <img src="${pageContext.request.contextPath}/image/front_marketbag_1.jpg" alt=""/>
+                                                    <img src="${pageContext.request.contextPath}/static/image/front_marketbag_1.jpg" alt=""/>
                                                 </div>
                                             </div>
                                             <!-- Modal Start -->
@@ -3212,7 +3212,7 @@
                                                                     </div>
                                                                     <div class="col-md-7 col-sm-7 col-xs-12">
                                                                         <div class="p_modal_img">
-                                                                            <img src="${pageContext.request.contextPath}/image/1014256_front.jpg" alt=""/>
+                                                                            <img src="${pageContext.request.contextPath}/static/image/1014256_front.jpg" alt=""/>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -3264,11 +3264,11 @@
                                             <div class="image_weekly_change">
                                                 <div class="single_weekly_img">
                                                     <div class="weekly_overlay"></div>
-                                                    <img src="${pageContext.request.contextPath}/image/feature12.jpg" alt=""/>
+                                                    <img src="${pageContext.request.contextPath}/static/image/feature12.jpg" alt=""/>
                                                 </div>
                                                 <div class="single_weekly_img_hover">
                                                     <div class="weekly_overlay"></div>
-                                                    <img src="${pageContext.request.contextPath}/image/feature13.jpg" alt=""/>
+                                                    <img src="${pageContext.request.contextPath}/static/image/feature13.jpg" alt=""/>
                                                 </div>
                                             </div>
                                             <!-- Modal Start -->
@@ -3321,7 +3321,7 @@
                                                                     </div>
                                                                     <div class="col-md-7 col-sm-7 col-xs-12">
                                                                         <div class="p_modal_img">
-                                                                            <img src="${pageContext.request.contextPath}/image/1014256_front.jpg" alt=""/>
+                                                                            <img src="${pageContext.request.contextPath}/static/image/1014256_front.jpg" alt=""/>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -3378,18 +3378,18 @@
                 <div class="brands">
                     <div id="brand-carousel">
 
-                        <div class="item"><a href=""><img src="${pageContext.request.contextPath}/image/brand1.png" alt="Owl Image"></a></div>
-                        <div class="item"><a href=""><img src="${pageContext.request.contextPath}/image/brand2.png" alt="Owl Image"></a></div>
-                        <div class="item"><a href=""><img src="${pageContext.request.contextPath}/image/brand3.png" alt="Owl Image"></a></div>
-                        <div class="item"><a href=""><img src="${pageContext.request.contextPath}/image/brand4.png" alt="Owl Image"></a></div>
-                        <div class="item"><a href=""><img src="${pageContext.request.contextPath}/image/brand5.png" alt="Owl Image"></a></div>
-                        <div class="item"><a href=""><img src="${pageContext.request.contextPath}/image/brand6.png" alt="Owl Image"></a></div>
-                        <div class="item"><a href=""><img src="${pageContext.request.contextPath}/image/brand1.png" alt="Owl Image"></a></div>
-                        <div class="item"><a href=""><img src="${pageContext.request.contextPath}/image/brand2.png" alt="Owl Image"></a></div>
-                        <div class="item"><a href=""><img src="${pageContext.request.contextPath}/image/brand3.png" alt="Owl Image"></a></div>
-                        <div class="item"><a href=""><img src="${pageContext.request.contextPath}/image/brand4.png" alt="Owl Image"></a></div>
-                        <div class="item"><a href=""><img src="${pageContext.request.contextPath}/image/brand5.png" alt="Owl Image"></a></div>
-                        <div class="item"><a href=""><img src="${pageContext.request.contextPath}/image/brand6.png" alt="Owl Image"></a></div>
+                        <div class="item"><a href=""><img src="${pageContext.request.contextPath}/static/image/brand1.png" alt="Owl Image"></a></div>
+                        <div class="item"><a href=""><img src="${pageContext.request.contextPath}/static/image/brand2.png" alt="Owl Image"></a></div>
+                        <div class="item"><a href=""><img src="${pageContext.request.contextPath}/static/image/brand3.png" alt="Owl Image"></a></div>
+                        <div class="item"><a href=""><img src="${pageContext.request.contextPath}/static/image/brand4.png" alt="Owl Image"></a></div>
+                        <div class="item"><a href=""><img src="${pageContext.request.contextPath}/static/image/brand5.png" alt="Owl Image"></a></div>
+                        <div class="item"><a href=""><img src="${pageContext.request.contextPath}/static/image/brand6.png" alt="Owl Image"></a></div>
+                        <div class="item"><a href=""><img src="${pageContext.request.contextPath}/static/image/brand1.png" alt="Owl Image"></a></div>
+                        <div class="item"><a href=""><img src="${pageContext.request.contextPath}/static/image/brand2.png" alt="Owl Image"></a></div>
+                        <div class="item"><a href=""><img src="${pageContext.request.contextPath}/static/image/brand3.png" alt="Owl Image"></a></div>
+                        <div class="item"><a href=""><img src="${pageContext.request.contextPath}/static/image/brand4.png" alt="Owl Image"></a></div>
+                        <div class="item"><a href=""><img src="${pageContext.request.contextPath}/static/image/brand5.png" alt="Owl Image"></a></div>
+                        <div class="item"><a href=""><img src="${pageContext.request.contextPath}/static/image/brand6.png" alt="Owl Image"></a></div>
 
                     </div>
                 </div>
@@ -3422,11 +3422,11 @@
                                 <div class="image_feature_change">
                                     <div class="featured_img">
                                         <div class="image-overlay"></div>
-                                        <img src="${pageContext.request.contextPath}/image/1013424_07_1.jpg" alt=""/>
+                                        <img src="${pageContext.request.contextPath}/static/image/1013424_07_1.jpg" alt=""/>
                                     </div>
                                     <div class="single_feature_img_hover">
                                         <div class="image-overlay"></div>
-                                        <img src="${pageContext.request.contextPath}/image/feature9.jpg" alt=""/>
+                                        <img src="${pageContext.request.contextPath}/static/image/feature9.jpg" alt=""/>
                                     </div>
                                 </div>
                                 <div class="heart-icon">
@@ -3458,11 +3458,11 @@
                                 <div class="image_feature_change">
                                     <div class="featured_img">
                                         <div class="image-overlay"></div>
-                                        <img src="${pageContext.request.contextPath}/image/1008627-4_1.jpg" alt=""/>
+                                        <img src="${pageContext.request.contextPath}/static/image/1008627-4_1.jpg" alt=""/>
                                     </div>
                                     <div class="single_feature_img_hover">
                                         <div class="image-overlay"></div>
-                                        <img src="${pageContext.request.contextPath}/image/1012630_45.jpg" alt=""/>
+                                        <img src="${pageContext.request.contextPath}/static/image/1012630_45.jpg" alt=""/>
                                     </div>
                                 </div>
                                 <div class="heart-icon">
@@ -3494,11 +3494,11 @@
                                 <div class="image_feature_change">
                                     <div class="featured_img">
                                         <div class="image-overlay"></div>
-                                        <img src="${pageContext.request.contextPath}/image/feature9.jpg" alt=""/>
+                                        <img src="${pageContext.request.contextPath}/static/image/feature9.jpg" alt=""/>
                                     </div>
                                     <div class="single_feature_img_hover">
                                         <div class="image-overlay"></div>
-                                        <img src="${pageContext.request.contextPath}/image/1008627-4_1.jpg" alt=""/>
+                                        <img src="${pageContext.request.contextPath}/static/image/1008627-4_1.jpg" alt=""/>
                                     </div>
                                 </div>
                                 <div class="heart-icon">
@@ -3531,11 +3531,11 @@
                                 <div class="image_feature_change">
                                     <div class="featured_img">
                                         <div class="image-overlay"></div>
-                                        <img src="${pageContext.request.contextPath}/image/1012630_45.jpg" alt=""/>
+                                        <img src="${pageContext.request.contextPath}/static/image/1012630_45.jpg" alt=""/>
                                     </div>
                                     <div class="single_feature_img_hover">
                                         <div class="image-overlay"></div>
-                                        <img src="${pageContext.request.contextPath}/image/03.jpg" alt=""/>
+                                        <img src="${pageContext.request.contextPath}/static/image/03.jpg" alt=""/>
                                     </div>
                                 </div>
                                 <div class="heart-icon">
@@ -3567,11 +3567,11 @@
                                 <div class="image_feature_change">
                                     <div class="featured_img">
                                         <div class="image-overlay"></div>
-                                        <img src="${pageContext.request.contextPath}/image/1009859_2_1.jpg" alt=""/>
+                                        <img src="${pageContext.request.contextPath}/static/image/1009859_2_1.jpg" alt=""/>
                                     </div>
                                     <div class="single_feature_img_hover">
                                         <div class="image-overlay"></div>
-                                        <img src="${pageContext.request.contextPath}/image/feature8.jpg" alt=""/>
+                                        <img src="${pageContext.request.contextPath}/static/image/feature8.jpg" alt=""/>
                                     </div>
                                 </div>
                                 <div class="heart-icon">
@@ -3603,11 +3603,11 @@
                                 <div class="image_feature_change">
                                     <div class="featured_img">
                                         <div class="image-overlay"></div>
-                                        <img src="${pageContext.request.contextPath}/image/03.jpg" alt=""/>
+                                        <img src="${pageContext.request.contextPath}/static/image/03.jpg" alt=""/>
                                     </div>
                                     <div class="single_feature_img_hover">
                                         <div class="image-overlay"></div>
-                                        <img src="${pageContext.request.contextPath}/image/feature12.jpg" alt=""/>
+                                        <img src="${pageContext.request.contextPath}/static/image/feature12.jpg" alt=""/>
                                     </div>
                                 </div>
                                 <div class="heart-icon">
@@ -3639,11 +3639,11 @@
                                 <div class="image_feature_change">
                                     <div class="featured_img">
                                         <div class="image-overlay"></div>
-                                        <img src="${pageContext.request.contextPath}/image/1012628_25.jpg" alt=""/>
+                                        <img src="${pageContext.request.contextPath}/static/image/1012628_25.jpg" alt=""/>
                                     </div>
                                     <div class="single_feature_img_hover">
                                         <div class="image-overlay"></div>
-                                        <img src="${pageContext.request.contextPath}/image/feature10.jpg" alt=""/>
+                                        <img src="${pageContext.request.contextPath}/static/image/feature10.jpg" alt=""/>
                                     </div>
                                 </div>
                                 <div class="heart-icon">
@@ -3675,11 +3675,11 @@
                                 <div class="image_feature_change">
                                     <div class="featured_img">
                                         <div class="image-overlay"></div>
-                                        <img src="${pageContext.request.contextPath}/image/feature8.jpg" alt=""/>
+                                        <img src="${pageContext.request.contextPath}/static/image/feature8.jpg" alt=""/>
                                     </div>
                                     <div class="single_feature_img_hover">
                                         <div class="image-overlay"></div>
-                                        <img src="${pageContext.request.contextPath}/image/feature11.jpg" alt=""/>
+                                        <img src="${pageContext.request.contextPath}/static/image/feature11.jpg" alt=""/>
                                     </div>
                                 </div>
                                 <div class="heart-icon">
@@ -3711,11 +3711,11 @@
                                 <div class="image_feature_change">
                                     <div class="featured_img">
                                         <div class="image-overlay"></div>
-                                        <img src="${pageContext.request.contextPath}/image/feature12.jpg" alt=""/>
+                                        <img src="${pageContext.request.contextPath}/static/image/feature12.jpg" alt=""/>
                                     </div>
                                     <div class="single_feature_img_hover">
                                         <div class="image-overlay"></div>
-                                        <img src="${pageContext.request.contextPath}/image/02.jpg" alt=""/>
+                                        <img src="${pageContext.request.contextPath}/static/image/02.jpg" alt=""/>
                                     </div>
                                 </div>
                                 <div class="heart-icon">
@@ -3747,11 +3747,11 @@
                                 <div class="image_feature_change">
                                     <div class="featured_img">
                                         <div class="image-overlay"></div>
-                                        <img src="${pageContext.request.contextPath}/image/feature11.jpg" alt=""/>
+                                        <img src="${pageContext.request.contextPath}/static/image/feature11.jpg" alt=""/>
                                     </div>
                                     <div class="single_feature_img_hover">
                                         <div class="image-overlay"></div>
-                                        <img src="${pageContext.request.contextPath}/image/feature10.jpg" alt=""/>
+                                        <img src="${pageContext.request.contextPath}/static/image/feature10.jpg" alt=""/>
                                     </div>
                                 </div>
                                 <div class="heart-icon">
@@ -3783,11 +3783,11 @@
                                 <div class="image_feature_change">
                                     <div class="featured_img">
                                         <div class="image-overlay"></div>
-                                        <img src="${pageContext.request.contextPath}/image/feature10.jpg" alt=""/>
+                                        <img src="${pageContext.request.contextPath}/static/image/feature10.jpg" alt=""/>
                                     </div>
                                     <div class="single_feature_img_hover">
                                         <div class="image-overlay"></div>
-                                        <img src="${pageContext.request.contextPath}/image/1010681-4.jpg" alt=""/>
+                                        <img src="${pageContext.request.contextPath}/static/image/1010681-4.jpg" alt=""/>
                                     </div>
                                 </div>
                                 <div class="heart-icon">
@@ -3819,11 +3819,11 @@
                                 <div class="image_feature_change">
                                     <div class="featured_img">
                                         <div class="image-overlay"></div>
-                                        <img src="${pageContext.request.contextPath}/image/02.jpg" alt=""/>
+                                        <img src="${pageContext.request.contextPath}/static/image/02.jpg" alt=""/>
                                     </div>
                                     <div class="single_feature_img_hover">
                                         <div class="image-overlay"></div>
-                                        <img src="${pageContext.request.contextPath}/image/feature12.jpg" alt=""/>
+                                        <img src="${pageContext.request.contextPath}/static/image/feature12.jpg" alt=""/>
                                     </div>
                                 </div>
                                 <div class="heart-icon">
@@ -3855,11 +3855,11 @@
                                 <div class="image_feature_change">
                                     <div class="featured_img">
                                         <div class="image-overlay"></div>
-                                        <img src="${pageContext.request.contextPath}/image/1010681-4.jpg" alt=""/>
+                                        <img src="${pageContext.request.contextPath}/static/image/1010681-4.jpg" alt=""/>
                                     </div>
                                     <div class="single_feature_img_hover">
                                         <div class="image-overlay"></div>
-                                        <img src="${pageContext.request.contextPath}/image/feature9.jpg" alt=""/>
+                                        <img src="${pageContext.request.contextPath}/static/image/feature9.jpg" alt=""/>
                                     </div>
                                 </div>
                                 <div class="heart-icon">
@@ -3936,7 +3936,7 @@
                                             </div>
                                             <div class="col-md-7 col-sm-7 col-xs-12">
                                                 <div class="p_modal_img">
-                                                    <img src="${pageContext.request.contextPath}/image/1014256_front.jpg" alt=""/>
+                                                    <img src="${pageContext.request.contextPath}/static/image/1014256_front.jpg" alt=""/>
                                                 </div>
                                             </div>
                                         </div>
@@ -3995,7 +3995,7 @@
                                             </div>
                                             <div class="col-md-7 col-sm-7 col-xs-12">
                                                 <div class="p_modal_img">
-                                                    <img src="${pageContext.request.contextPath}/image/1014256_front.jpg" alt=""/>
+                                                    <img src="${pageContext.request.contextPath}/static/image/1014256_front.jpg" alt=""/>
                                                 </div>
                                             </div>
                                         </div>
@@ -4054,7 +4054,7 @@
                                             </div>
                                             <div class="col-md-7 col-sm-7 col-xs-12">
                                                 <div class="p_modal_img">
-                                                    <img src="${pageContext.request.contextPath}/image/1014256_front.jpg" alt=""/>
+                                                    <img src="${pageContext.request.contextPath}/static/image/1014256_front.jpg" alt=""/>
                                                 </div>
                                             </div>
                                         </div>
@@ -4113,7 +4113,7 @@
                                             </div>
                                             <div class="col-md-7 col-sm-7 col-xs-12">
                                                 <div class="p_modal_img">
-                                                    <img src="${pageContext.request.contextPath}/image/1014256_front.jpg" alt=""/>
+                                                    <img src="${pageContext.request.contextPath}/static/image/1014256_front.jpg" alt=""/>
                                                 </div>
                                             </div>
                                         </div>
@@ -4172,7 +4172,7 @@
                                             </div>
                                             <div class="col-md-7 col-sm-7 col-xs-12">
                                                 <div class="p_modal_img">
-                                                    <img src="${pageContext.request.contextPath}/image/1014256_front.jpg" alt=""/>
+                                                    <img src="${pageContext.request.contextPath}/static/image/1014256_front.jpg" alt=""/>
                                                 </div>
                                             </div>
                                         </div>
@@ -4231,7 +4231,7 @@
                                             </div>
                                             <div class="col-md-7 col-sm-7 col-xs-12">
                                                 <div class="p_modal_img">
-                                                    <img src="${pageContext.request.contextPath}/image/1014256_front.jpg" alt=""/>
+                                                    <img src="${pageContext.request.contextPath}/static/image/1014256_front.jpg" alt=""/>
                                                 </div>
                                             </div>
                                         </div>
@@ -4290,7 +4290,7 @@
                                             </div>
                                             <div class="col-md-7 col-sm-7 col-xs-12">
                                                 <div class="p_modal_img">
-                                                    <img src="${pageContext.request.contextPath}/image/1014256_front.jpg" alt=""/>
+                                                    <img src="${pageContext.request.contextPath}/static/image/1014256_front.jpg" alt=""/>
                                                 </div>
                                             </div>
                                         </div>
@@ -4349,7 +4349,7 @@
                                             </div>
                                             <div class="col-md-7 col-sm-7 col-xs-12">
                                                 <div class="p_modal_img">
-                                                    <img src="${pageContext.request.contextPath}/image/1014256_front.jpg" alt=""/>
+                                                    <img src="${pageContext.request.contextPath}/static/image/1014256_front.jpg" alt=""/>
                                                 </div>
                                             </div>
                                         </div>
@@ -4408,7 +4408,7 @@
                                             </div>
                                             <div class="col-md-7 col-sm-7 col-xs-12">
                                                 <div class="p_modal_img">
-                                                    <img src="${pageContext.request.contextPath}/image/1014256_front.jpg" alt=""/>
+                                                    <img src="${pageContext.request.contextPath}/static/image/1014256_front.jpg" alt=""/>
                                                 </div>
                                             </div>
                                         </div>
@@ -4467,7 +4467,7 @@
                                             </div>
                                             <div class="col-md-7 col-sm-7 col-xs-12">
                                                 <div class="p_modal_img">
-                                                    <img src="${pageContext.request.contextPath}/image/1014256_front.jpg" alt=""/>
+                                                    <img src="${pageContext.request.contextPath}/static/image/1014256_front.jpg" alt=""/>
                                                 </div>
                                             </div>
                                         </div>
@@ -4526,7 +4526,7 @@
                                             </div>
                                             <div class="col-md-7 col-sm-7 col-xs-12">
                                                 <div class="p_modal_img">
-                                                    <img src="${pageContext.request.contextPath}/image/1014256_front.jpg" alt=""/>
+                                                    <img src="${pageContext.request.contextPath}/static/image/1014256_front.jpg" alt=""/>
                                                 </div>
                                             </div>
                                         </div>
@@ -4585,7 +4585,7 @@
                                             </div>
                                             <div class="col-md-7 col-sm-7 col-xs-12">
                                                 <div class="p_modal_img">
-                                                    <img src="${pageContext.request.contextPath}/image/1014256_front.jpg" alt=""/>
+                                                    <img src="${pageContext.request.contextPath}/static/image/1014256_front.jpg" alt=""/>
                                                 </div>
                                             </div>
                                         </div>
@@ -4644,7 +4644,7 @@
                                             </div>
                                             <div class="col-md-7 col-sm-7 col-xs-12">
                                                 <div class="p_modal_img">
-                                                    <img src="${pageContext.request.contextPath}/image/1014256_front.jpg" alt=""/>
+                                                    <img src="${pageContext.request.contextPath}/static/image/1014256_front.jpg" alt=""/>
                                                 </div>
                                             </div>
                                         </div>
@@ -4681,7 +4681,7 @@
                         <div class="col-md-4 col-sm-4 col-xs-12">
                             <div class="single_latest_f_blog">
                                 <div class="f_blog_img">
-                                    <a href=""><img src="${pageContext.request.contextPath}/image/blog1_2.jpg" alt=""/></a>
+                                    <a href=""><img src="${pageContext.request.contextPath}/static/image/blog1_2.jpg" alt=""/></a>
                                     <div class="nd-content text-center">
                                         <div class="nd-content_inner">
                                             <div class="nd-content_inner1">
@@ -4712,7 +4712,7 @@
                         <div class="col-md-4 col-sm-4 col-xs-12">
                             <div class="single_latest_f_blog">
                                 <div class="f_blog_img">
-                                    <a href=""><img src="${pageContext.request.contextPath}/image/blog3_1.jpg" alt=""/></a>
+                                    <a href=""><img src="${pageContext.request.contextPath}/static/image/blog3_1.jpg" alt=""/></a>
                                     <div class="nd-content text-center">
                                         <div class="nd-content_inner">
                                             <div class="nd-content_inner1">
@@ -4743,7 +4743,7 @@
                         <div class="col-md-4 col-sm-4 col-xs-12">
                             <div class="single_latest_f_blog">
                                 <div class="f_blog_img">
-                                    <a href=""><img src="${pageContext.request.contextPath}/image/blog2.jpg" alt=""/></a>
+                                    <a href=""><img src="${pageContext.request.contextPath}/static/image/blog2.jpg" alt=""/></a>
                                     <div class="nd-content text-center">
                                         <div class="nd-content_inner">
                                             <div class="nd-content_inner1">
