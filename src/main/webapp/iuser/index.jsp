@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ include file="../head/iuser/init.jsp" %>
+<%@ include file="/head/iuser/init.jsp" %>
 <!DOCTYPE html>
 <html lang="zh">
 <head>
@@ -8,9 +8,8 @@
     <jsp:include page="/head/iuser/css.jsp"/>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/fonts/ionicons.min.css">
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
-<div class="wrapper">
-
+<body>
+<div>
     <jsp:include page="/head/iuser/top.jsp"/>
     <jsp:include page="/head/iuser/left.jsp"/>
     <div class="content-wrapper">
