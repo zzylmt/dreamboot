@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ include file="../head/master/init.jsp" %>
 <!DOCTYPE html>
@@ -7,27 +7,18 @@
     <title>商品列表--江西风格网络后台管理系统</title>
     <jsp:include page="/head/master/css.jsp"/>
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
+<body>
 <jsp:include page="/head/master/top.jsp"/>
-<jsp:include page="/head/master/left.jsp">
-    <jsp:param name="parentnode" value="5"/>
-    <jsp:param name="childnode" value="2"/>
-</jsp:include>
-<div class="content-wrapper">
-    <section class="content-header">
-        <h1>
-            所有商品
-        </h1>
-        <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> 主页</a></li>
-            <li><a href="#"><i class="fa fa-dashboard"></i> 商品管理</a></li>
-        </ol>
-    </section>
+<div class="container-fluid">
+    <div class="row">
+        <jsp:include page="/head/master/left.jsp"/>
 
-    <section class="content">
-        <div class="row">
-            <div class="col-xs-12">
-                <table class="table table-hover">
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+                <h1 class="h2">商品列表</h1>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-striped table-sm">
                     <thead>
                     <tr>
                         <th><i class="fa  fa-file-text-o"></i> 商品名</th>
@@ -50,7 +41,10 @@
                         </c:when>
                         <c:otherwise>
                             <c:forEach items="${thelist}" var="thelist" varStatus="status">
-                                <tr <c:choose><c:when test="${thelist.gstatus==0}">class="warning"</c:when></c:choose>>
+                                <tr
+                                        <c:choose>
+                                            <c:when test="${thelist.gstatus==0}">class="warning"</c:when>
+                                        </c:choose>>
                                     <td>${thelist.goodsname}</td>
                                     <td>${thelist.goodstitle}</td>
                                     <td>${thelist.gprice}</td>
@@ -69,36 +63,36 @@
                     </c:choose>
                     </tbody>
                 </table>
+
                 <nav>
-                    <ul class="pagination">
-                        <li><a href="#">共${totalrecode}条记录</a></li>
-                        <li><a href="#">共${totalpage }页</a></li>
+                    <ul class="pagination justify-content-end">
+                        <li class="page-item"><a class="page-link" href="#">共${totalrecode}条记录</a></li>
+                        <li class="page-item"><a class="page-link" href="#">共${totalpage }页</a></li>
                     </ul>
-                    <ul class="pagination pull-right">
-                        <li>
-                            <a href="${pageContext.request.contextPath}/sys/myarticlelist?curpageno=1">
+                    <ul class="pagination justify-content-end">
+                        <li class="page-item">
+                            <a class="page-link" href="${pageContext.request.contextPath}/master/myarticlelist?curpageno=1">
                                 <span aria-hidden="true">&laquo;首页</span>
                             </a>
                         </li>
-                        <li>
-                            <a href="${pageContext.request.contextPath}/sys/myarticlelist?curpageno=${prepage}">上一页</a>
+                        <li class="page-item">
+                            <a class="page-link" href="${pageContext.request.contextPath}/master/myarticlelist?curpageno=${prepage}">上一页</a>
                         </li>
-                        <li><a href="#">${currentpageno}</a></li>
-                        <li>
-                            <a href="${pageContext.request.contextPath}/sys/myarticlelist?curpageno=${nextpage}">下一页</a>
+                        <li class="page-item"><a class="page-link" href="#">${currentpageno}</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="${pageContext.request.contextPath}/master/myarticlelist?curpageno=${nextpage}">下一页</a>
                         </li>
-                        <li>
-                            <a href="${pageContext.request.contextPath}/sys/myarticlelist?curpageno=${totalpage}">
+                        <li class="page-item">
+                            <a class="page-link" href="${pageContext.request.contextPath}/master/myarticlelist?curpageno=${totalpage}">
                                 尾页<span aria-hidden="true">&raquo;</span>
                             </a>
                         </li>
                     </ul>
                 </nav>
             </div>
-        </div>
-    </section>
+        </main>
+    </div>
 </div>
-
 </body>
 <jsp:include page="/head/master/js.jsp"/>
 </html>

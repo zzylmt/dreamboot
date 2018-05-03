@@ -34,6 +34,7 @@ public class ArticleController {
     public String masternewarticle(HttpSession session,HttpServletRequest request) {
         ArticleInfo articleInfo_old = new ArticleInfo();
         ArticleInfo articleInfo_new;
+
         try {
             articleInfo_old.setAtitle("请修改文章标题");
             articleInfo_old.setAtitle_min("请修改文章缩略标题");
