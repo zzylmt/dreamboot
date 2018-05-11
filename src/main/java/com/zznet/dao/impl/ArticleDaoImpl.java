@@ -1,15 +1,15 @@
 package com.zznet.dao.impl;
 
+import com.zznet.common.PageSize;
+import com.zznet.dao.ArticleDao;
+import com.zznet.entity.ArticleInfo;
+import com.zznet.entity.ThePage;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-import com.zznet.common.PageSize;
-import com.zznet.dao.ArticleDao;
-import com.zznet.entity.ArticleInfo;
-import com.zznet.entity.ThePage;
 
 import javax.annotation.Resource;
 import java.sql.PreparedStatement;
@@ -161,41 +161,44 @@ public class ArticleDaoImpl implements ArticleDao, PageSize {
         int startrecord = (pageno - 1) * pagesize;
         int totalrecord;
         int totalpage;
+        try {
+            RowMapper<ArticleInfo> mapper = (rs, rowNum) -> {
+                ArticleInfo a = new ArticleInfo();
+                a.setId(rs.getInt(1));
+                a.setAtitle(rs.getString(2));
+                a.setAtitle_min(rs.getString(3));
+                a.setThumb_pic(rs.getString(4));
+                a.setAtext(rs.getString(5));
+                a.setCreaterid(rs.getInt(6));
+                a.setCreatername(rs.getString(7));
+                a.setCreatedatetime(rs.getString(8));
+                a.setColumnid(rs.getInt(9));
+                a.setReadcount(rs.getInt(10));
+                a.setGoodcount(rs.getInt(11));
+                a.setOrderscore(rs.getBigDecimal(12));
+                a.setColumnname(rs.getString(13));
+                a.setProfile(rs.getString(14));
+                a.setAstatus(rs.getInt(15));
+                return a;
+            };
 
-        RowMapper<ArticleInfo> mapper = (rs, rowNum) -> {
-            ArticleInfo a = new ArticleInfo();
-            a.setId(rs.getInt(1));
-            a.setAtitle(rs.getString(2));
-            a.setAtitle_min(rs.getString(3));
-            a.setThumb_pic(rs.getString(4));
-            a.setAtext(rs.getString(5));
-            a.setCreaterid(rs.getInt(6));
-            a.setCreatername(rs.getString(7));
-            a.setCreatedatetime(rs.getString(8));
-            a.setColumnid(rs.getInt(9));
-            a.setReadcount(rs.getInt(10));
-            a.setGoodcount(rs.getInt(11));
-            a.setOrderscore(rs.getBigDecimal(12));
-            a.setColumnname(rs.getString(13));
-            a.setProfile(rs.getString(14));
-            a.setAstatus(rs.getInt(15));
-            return a;
-        };
+            totalrecord = jdbcTemplate.queryForObject(sql_count,
+                    new Object[]{adminid}, Integer.class);
+            articlepage.setTotalrecord(totalrecord);
 
-        totalrecord = jdbcTemplate.queryForObject(sql_count,
-                new Object[]{adminid}, Integer.class);
-        articlepage.setTotalrecord(totalrecord);
+            totalpage = (int) Math.ceil((double) totalrecord / (double) pagesize);
 
-        totalpage = (int) Math.ceil((double) totalrecord / (double) pagesize);
+            articlepage.setPageItems(jdbcTemplate.query(sql, new Object[]{adminid,
+                    startrecord, pagesize}, mapper));
 
-        articlepage.setPageItems(jdbcTemplate.query(sql, new Object[]{adminid,
-                startrecord, pagesize}, mapper));
-
-        articlepage.setCurrent(pageno);
-        if (totalpage <= 0) {
-            totalpage = 1;
+            articlepage.setCurrent(pageno);
+            if (totalpage <= 0) {
+                totalpage = 1;
+            }
+            articlepage.setTotalpages(totalpage);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        articlepage.setTotalpages(totalpage);
 
         return articlepage;
     }

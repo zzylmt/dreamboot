@@ -27,20 +27,22 @@ public class LabelDaoImpl implements LabelDao, PageSize {
     public LabelInfo addLabel(final LabelInfo label_old) {
         final String mysql = "INSERT into labelinfo (labelname) values (?)";
 
-        LabelInfo label;
+        LabelInfo label = new LabelInfo();
         KeyHolder keyHolder = new GeneratedKeyHolder();
+        try {
+            jdbcTemplate.update(connection -> {
+                        PreparedStatement ps = connection.prepareStatement(mysql,
+                                new String[]{"id"});
+                        ps.setString(1, label_old.getLabelname());
+                        return ps;
+                    }
+                    , keyHolder);
 
-        jdbcTemplate.update(connection -> {
-                    PreparedStatement ps = connection.prepareStatement(mysql,
-                            new String[]{"id"});
-                    ps.setString(1, label_old.getLabelname());
-                    return ps;
-                }
-                , keyHolder);
-
-        label = label_old;
-        label.setId(keyHolder.getKey().intValue());
-
+            label = label_old;
+            label.setId(keyHolder.getKey().intValue());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return label;
     }
 
@@ -92,29 +94,31 @@ public class LabelDaoImpl implements LabelDao, PageSize {
         int startrecord = (pageno - 1) * pagesize;
         int totalrecord;
         int totalpage;
+        try {
+            RowMapper<LabelInfo> mapper = (rs, rowNum) -> {
+                LabelInfo a = new LabelInfo();
+                a.setId(rs.getInt(1));
+                a.setLabelname(rs.getString(2));
+                return a;
+            };
 
-        RowMapper<LabelInfo> mapper = (rs, rowNum) -> {
-            LabelInfo a = new LabelInfo();
-            a.setId(rs.getInt(1));
-            a.setLabelname(rs.getString(2));
-            return a;
-        };
+            totalrecord = jdbcTemplate.queryForObject(sql_count,
+                    new Object[]{labelname}, Integer.class);
+            labelpage.setTotalrecord(totalrecord);
 
-        totalrecord = jdbcTemplate.queryForObject(sql_count,
-                new Object[]{labelname}, Integer.class);
-        labelpage.setTotalrecord(totalrecord);
+            totalpage = (int) Math.ceil((double) totalrecord / (double) pagesize);
 
-        totalpage = (int) Math.ceil((double) totalrecord / (double) pagesize);
+            labelpage.setPageItems(jdbcTemplate.query(sql, new Object[]{labelname,
+                    startrecord, pagesize}, mapper));
 
-        labelpage.setPageItems(jdbcTemplate.query(sql, new Object[]{labelname,
-                startrecord, pagesize}, mapper));
-
-        labelpage.setCurrent(pageno);
-        if (totalpage <= 0) {
-            totalpage = 1;
+            labelpage.setCurrent(pageno);
+            if (totalpage <= 0) {
+                totalpage = 1;
+            }
+            labelpage.setTotalpages(totalpage);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        labelpage.setTotalpages(totalpage);
-
         return labelpage;
     }
 }
